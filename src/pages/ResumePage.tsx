@@ -30,23 +30,13 @@ export default function ResumePage() {
   return (
     <PageLayout>
       <div className="max-w-5xl mx-auto">
-        <div className="flex items-center justify-between mb-12">
-          <div>
-            <p className="text-xs text-white/50 uppercase tracking-widest mb-4">
-              Resume
-            </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide uppercase font-normal leading-[0.9]">
-              Raqeeb Hussain
-            </h1>
-          </div>
-          <a
-            href="/Raqeeb_Hussain_Resume.pdf"
-            download
-            className="inline-flex items-center gap-2 px-4 py-2 text-sm tracking-wide uppercase bg-white text-black hover:bg-white/90 transition-colors"
-          >
-            <Download size={16} />
-            Download PDF
-          </a>
+        <div className="mb-12">
+          <p className="text-xs text-white/50 uppercase tracking-widest mb-4">
+            Resume
+          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide uppercase font-normal leading-[0.9]">
+            Raqeeb Hussain
+          </h1>
         </div>
 
         {/* Contact strip */}
