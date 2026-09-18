@@ -54,7 +54,7 @@ export default function HomePage() {
 
           {/* Column 4 — Services */}
           <div className="flex flex-col">
-            <span className="font-pixel text-sm uppercase tracking-wide text-white/60">Services</span>
+            <span className="font-pixel text-sm uppercase tracking-wide text-white/60">My Expertise</span>
             <ul className="mt-2 space-y-1 text-sm text-white/80">
               <li>Brand Identity</li>
               <li>Presentation Design</li>
@@ -74,7 +74,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 items-end">
             {/* Hero Headline */}
             <div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] tracking-wide uppercase font-normal leading-[0.72]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] tracking-wide uppercase font-normal leading-[0.85]">
                 I CREATE
                 <br />
                 <span className="font-pixel font-normal text-[1.25em] inline-block leading-none align-baseline">VISUAL SYSTEMS</span>
