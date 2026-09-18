@@ -4,24 +4,24 @@ import { getProjectsByCategory, getCategory } from '../data/portfolio'
 import SqueezeCarousel from '../components/ui/carousel-squeeze'
 
 const brandSlides = [
-  { id: 'buyology', image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1200&q=80', title: 'Buyology', subtitle: 'Visual identity system' },
-  { id: 'nasi-packaging', image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80', title: 'Nasi Packaging', subtitle: 'FMCG visual system' },
-  { id: 'euphoria-brand', image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80', title: 'Euphoria', subtitle: 'Brand mark & identity' },
+  { id: 'buyology', image: '/assets/projects/buyology/buyology-01.png', title: 'Buyology', subtitle: 'Visual identity system' },
+  { id: 'nasi-packaging', image: '/assets/brand/nasi/nasi-01.jpg', title: 'Nasi Packaging', subtitle: 'FMCG visual system' },
+  { id: 'euphoria-brand', image: '/assets/brand/euphoria/cover.png', title: 'Euphoria', subtitle: 'Brand mark & identity' },
 ]
 
 const presentationSlides = [
-  { id: 'blaize', image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80', title: 'Blaize', subtitle: 'AI hardware pitch deck' },
-  { id: 'flowserve', image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80', title: 'Flowserve', subtitle: 'Widescreen keynote system' },
+  { id: 'blaize', image: '/assets/presentation/blaize/blaize-01.jpg', title: 'Blaize', subtitle: 'AI hardware pitch deck' },
+  { id: 'flowserve', image: '/assets/presentation/flowserve/flowserve-01.jpg', title: 'Flowserve', subtitle: 'Widescreen keynote system' },
 ]
 
 const socialSlides = [
-  { id: 'arata', image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80', title: 'Arata', subtitle: 'Visual campaign system' },
-  { id: 'dot-key', image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80', title: 'Dot & Key', subtitle: 'Visual drop campaign' },
+  { id: 'arata', image: '/assets/social/arata/arata-1.png', title: 'Arata', subtitle: 'Visual campaign system' },
+  { id: 'dot-key', image: '/assets/social/dot-and-key/1.png', title: 'Dot & Key', subtitle: 'Visual drop campaign' },
 ]
 
 const websiteSlides = [
-  { id: 'euphoria-web', image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80', title: 'Euphoria Web', subtitle: 'Dark-mode UI design' },
-  { id: 'marsa-atelier', image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80', title: 'Marsa Atelier', subtitle: 'Storefront UI concept' },
+  { id: 'euphoria-web', image: '/assets/websites/euphoria-experiences@1400w.jpg', title: 'Euphoria Web', subtitle: 'Dark-mode UI design' },
+  { id: 'marsa-atelier', image: '/assets/websites/marsa-atelier@1400w.jpg', title: 'Marsa Atelier', subtitle: 'Storefront UI concept' },
 ]
 
 export default function CategoryPage() {

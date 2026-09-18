@@ -5,14 +5,17 @@ import { categories } from '../data/portfolio'
 
 const NAV_LINKS = [
   { label: 'ABOUT', path: '/about' },
+  { label: 'PROCESS', path: '#' },
   { label: 'PROJECTS', path: '/projects' },
   { label: 'CATALOG', path: '/catalog' },
+  { label: 'D.O.T', path: '#' },
+  { label: 'TALK', path: '#' },
   { label: 'RESUME', path: '/resume' },
 ]
 
 
 
-const STAGGER_DELAYS = [100, 160, 220, 280]
+const STAGGER_DELAYS = [100, 160, 220, 280, 340, 400, 460]
 
 // Client names by category for hover menus
 const categoryClients: Record<string, { name: string; slug: string }[]> = {

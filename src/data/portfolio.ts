@@ -305,7 +305,7 @@ export const projects: Project[] = [
     year: null,
     client: 'Jalal',
     description: 'Event presentation and accompanying A4 booklet design.',
-    thumbnail: '/assets/presentation/jalal/cover.jpg',
+    thumbnail: '/assets/presentation/jalal/jalal-01.jpg',
     media: [
       '/assets/presentation/jalal/jalal-01.jpg',
       '/assets/presentation/jalal/jalal-02.jpg',
@@ -334,7 +334,7 @@ export const projects: Project[] = [
     year: null,
     client: 'Shafa Al Shams',
     description: 'Presentation deck for Shafa Al Shams.',
-    thumbnail: '/assets/presentation/shafa-al-shams/cover.jpg',
+    thumbnail: '/assets/presentation/shafa-al-shams/shafa-al-shams-01.jpg',
     media: [
       '/assets/presentation/shafa-al-shams/shafa-al-shams-01.jpg',
       '/assets/presentation/shafa-al-shams/shafa-al-shams-02.jpg',
@@ -414,7 +414,7 @@ export const projects: Project[] = [
     year: null,
     client: 'White Graphics',
     description: 'Corporate brochure design for White Graphics.',
-    thumbnail: '/assets/presentation/white-graphics/white-graphics-01.jpg',
+    thumbnail: '/assets/presentation/white-graphics-brochure/white-graphics-brochure-01.jpg',
     media: [
       '/assets/presentation/white-graphics-brochure/white-graphics-brochure-01.jpg',
       '/assets/presentation/white-graphics-brochure/white-graphics-brochure-02.jpg',
