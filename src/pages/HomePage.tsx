@@ -87,16 +87,6 @@ export default function HomePage() {
 
             {/* Right Side — Niche Area */}
             <div className="flex flex-col gap-4 sm:gap-6 justify-end">
-              <div className="flex flex-wrap gap-2">
-                {['BRAND IDENTITY', 'PRESENTATION DESIGN', 'SOCIAL MEDIA', 'DIGITAL EXPERIENCES'].map((niche) => (
-                  <span
-                    key={niche}
-                    className="bg-[#0B0B0B] px-3 sm:px-4 py-2 text-xs tracking-wide text-white/80"
-                  >
-                    {niche}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
 

@@ -109,6 +109,20 @@ export const projects: Project[] = [
     brandColors: ['#FF6B35', '#1B3A5C', '#FFFFFF', '#F5F5F5'],
     brandFonts: ['Biennale', 'Manrope'],
   },
+  {
+    id: 'euphoria-experiences-brand',
+    title: 'Euphoria Experiences',
+    slug: 'euphoria-experiences-brand',
+    category: 'brand-identity',
+    sourceFolder: 'E:\Portfolio\Brand Identity',
+    year: null,
+    client: 'Euphoria Experiences',
+    description: 'Brand identity and logo design for the creative agency itself.',
+    thumbnail: '/assets/brand/euphoria/cover.png',
+    media: ['/assets/brand/euphoria/cover.png'],
+    mediaTypes: ['image'],
+    originalFiles: ['E:\Portfolio\Brand Identity\logo\Euphoria Experiences.pdf (1).png'],
+  },
 
   {
     id: 'chashmawala',

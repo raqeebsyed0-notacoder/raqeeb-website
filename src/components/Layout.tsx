@@ -5,7 +5,6 @@ import { categories } from '../data/portfolio'
 
 const NAV_LINKS = [
   { label: 'ABOUT', path: '/about' },
-  { label: 'PROCESS', path: '#' },
   { label: 'PROJECTS', path: '/projects' },
   { label: 'RESUME', path: '/resume' },
 ]
