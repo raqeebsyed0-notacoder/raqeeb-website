@@ -42,7 +42,7 @@ export default function ProjectsPage() {
               to={`/projects/brand-identity/${brandIdentity[0]?.slug}`}
               className="group block md:row-span-2"
             >
-              <div className="aspect-[4/3] md:aspect-[3/4] lg:aspect-[4/5] overflow-hidden bg-[#0a0a0a]">
+              <div className="aspect-[4/3] md:aspect-[3/2] lg:aspect-[16/9] overflow-hidden bg-[#0a0a0a]">
                 <img
                   src={brandIdentity[0]?.thumbnail}
                   alt={brandIdentity[0]?.title}
@@ -106,12 +106,17 @@ export default function ProjectsPage() {
                 className="group block flex-shrink-0 w-[70%] sm:w-[50%] md:w-[35%]"
               >
                 <div className="aspect-video overflow-hidden bg-[#0a0a0a] relative">
-                  {/* Simulated presentation cover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900 flex flex-col justify-center px-6">
-                    <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-2">
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end px-4 pb-4">
+                    <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-1">
                       {String(index + 1).padStart(2, '0')}
                     </p>
-                    <h3 className="text-lg sm:text-xl tracking-wide uppercase font-normal leading-tight">
+                    <h3 className="text-lg sm:text-xl tracking-wide uppercase font-normal leading-tight text-white">
                       {project.title}
                     </h3>
                   </div>
