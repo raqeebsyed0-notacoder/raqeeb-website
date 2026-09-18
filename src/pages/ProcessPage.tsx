@@ -31,7 +31,7 @@ const steps = [
 const capabilities = [
   { category: 'Brand', items: ['Logo Systems', 'Visual Identity', 'Brand Guidelines', 'Packaging'] },
   { category: 'Presentation', items: ['Executive Decks', 'Event Presentations', 'Proposals', 'Brochures'] },
-  { category: 'Digital', items: ['Social Media Creative', 'Web Concepts', 'UI Systems', 'AI-Assisted Production'] },
+  { category: 'Digital', items: ['Social Media Creative', 'Web Concepts', 'UI Systems'] },
 ]
 
 export default function ProcessPage() {

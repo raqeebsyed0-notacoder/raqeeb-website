@@ -10,8 +10,6 @@ export default function AboutPage() {
     { title: 'Presentation Design', desc: 'Executive decks, event presentations, proposals', icon: '◇' },
     { title: 'Social Media Creative', desc: 'Campaign systems, editorial posters, ad creatives', icon: '○' },
     { title: 'Website & Digital Design', desc: 'UI concepts, digital experiences, web systems', icon: '□' },
-    { title: 'Visual Communication', desc: 'Corporate communications, infographics, print', icon: '△' },
-    { title: 'AI-Assisted Production', desc: 'AI image generation, concept exploration', icon: '⬡' },
   ]
 
   const tools = [
@@ -50,7 +48,7 @@ export default function AboutPage() {
                 <span className="font-pixel font-normal text-[1.1em]">Hussain</span>
               </h1>
               <p className="text-sm text-white/60 mb-6">
-                Graphic & Visual Designer — AI-Assisted Creative Production
+                Graphic & Visual Designer
               </p>
               <p className="text-sm text-white/70 leading-relaxed mb-8">
                 Based in Dammam, Saudi Arabia. I translate complex briefs into clear, polished visual communication for brands, presentations, campaigns and digital experiences.

@@ -58,22 +58,6 @@ export const categories: Category[] = [
     description: 'Digital experience design, website concepts and UI systems for brands and services.',
     sourceFolder: 'E:\\Portfolio\\Websites',
   },
-  {
-    id: 'visual-communication',
-    slug: 'visual-communication',
-    title: 'Visual Communication',
-    shortTitle: 'Visual',
-    description: 'Corporate communications, infographics, print collateral, and environmental graphics.',
-    sourceFolder: '',
-  },
-  {
-    id: 'ai-production',
-    slug: 'ai-production',
-    title: 'AI-Assisted Production',
-    shortTitle: 'AI',
-    description: 'AI-assisted image generation, concept exploration, and automated asset workflows.',
-    sourceFolder: '',
-  },
 ]
 
 export const projects: Project[] = [

@@ -60,8 +60,6 @@ export default function HomePage() {
               <li>Presentation Design</li>
               <li>Social Media Creative</li>
               <li>Website & Digital Design</li>
-              <li>Visual Communication</li>
-              <li>AI-Assisted Creative Production</li>
             </ul>
           </div>
         </div>
