@@ -7,6 +7,7 @@ export interface SqueezeSlide {
   subtitle?: string
   objectFit?: "cover" | "contain"
   overlay?: React.ReactNode
+  aspectRatio?: string
 }
 
 interface SqueezeCarouselProps {
@@ -63,7 +64,7 @@ export default function SqueezeCarousel({
   const currentSlide = slides[activeIndex]
 
   return (
-    <div className={`relative w-full ${className}`} style={{ height: `${height + 60}px` }}>
+    <div className={`relative w-full ${className}`} style={currentSlide.aspectRatio ? undefined : { height: `${height + 60}px` }}>
       {label && (
         <p className="text-[10px] text-white/40 uppercase tracking-widest mb-4 px-5 sm:px-6 md:px-10 lg:px-14">
           {label}
@@ -73,7 +74,11 @@ export default function SqueezeCarousel({
       <div
         ref={containerRef}
         className="relative w-full overflow-hidden"
-        style={{ height: `${height}px`, borderRadius: `${radius}px` }}
+        style={{
+          height: currentSlide.aspectRatio ? undefined : `${height}px`,
+          aspectRatio: currentSlide.aspectRatio,
+          borderRadius: `${radius}px`,
+        }}
       >
         {/* Background image */}
         <div className="absolute inset-0">

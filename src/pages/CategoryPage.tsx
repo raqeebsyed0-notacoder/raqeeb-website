@@ -4,8 +4,7 @@ import { getProjectsByCategory, getCategory } from '../data/portfolio'
 import SqueezeCarousel from '../components/ui/carousel-squeeze'
 
 const brandSlides = [
-  { id: 'buyology', image: '/assets/projects/buyology/buyology-01.png', title: 'Buyology', subtitle: 'Visual identity system' },
-  { id: 'nasi-packaging', image: '/assets/brand/nasi/nasi-01.jpg', title: 'Nasi Packaging', subtitle: 'FMCG visual system' },
+  { id: 'buyology', image: '/assets/projects/buyology/buyology-banner.png', title: 'Buyology', subtitle: 'Visual identity system', aspectRatio: '2501 / 834', objectFit: 'cover' },
   { id: 'euphoria-brand', image: '/assets/brand/euphoria/cover.png', title: 'Euphoria', subtitle: 'Brand mark & identity' },
 ]
 
