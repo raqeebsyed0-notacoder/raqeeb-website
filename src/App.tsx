@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ProjectsPage from './pages/ProjectsPage'
+import ProcessPage from './pages/ProcessPage'
 import CategoryPage from './pages/CategoryPage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
 import ResumePage from './pages/ResumePage'
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/process" element={<ProcessPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/projects/:category" element={<CategoryPage />} />
         <Route path="/projects/:category/:slug" element={<ProjectDetailPage />} />
