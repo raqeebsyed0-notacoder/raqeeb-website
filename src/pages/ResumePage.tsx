@@ -57,7 +57,7 @@ export default function ResumePage() {
           </span>
           <span className="flex items-center gap-1.5">
             <Phone size={12} />
-            +966 58 308 1453
+            +966 58 118 6819
           </span>
           <span className="flex items-center gap-1.5">
             <MapPin size={12} />
