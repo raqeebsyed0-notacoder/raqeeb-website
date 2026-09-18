@@ -5,7 +5,7 @@ import SqueezeCarousel from '../components/ui/carousel-squeeze'
 
 const brandSlides = [
   { id: 'buyology', image: '/assets/projects/buyology/buyology-banner.png', title: 'Buyology', subtitle: 'Visual identity system', aspectRatio: '2501 / 834', objectFit: 'cover' },
-  { id: 'euphoria-brand', image: '/assets/brand/euphoria/cover.png', title: 'Euphoria', subtitle: 'Brand mark & identity' },
+  { id: 'euphoria-brand', image: '/assets/brand/euphoria/euphoria-banner.png', title: 'Euphoria', subtitle: 'Brand mark & identity', aspectRatio: '2501 / 834', objectFit: 'cover' },
 ]
 
 const presentationSlides = [
