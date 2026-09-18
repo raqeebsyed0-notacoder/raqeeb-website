@@ -49,40 +49,9 @@ export default function ProjectsPage() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-              </div>
-              <h3 className="text-lg sm:text-xl tracking-wide uppercase font-normal mt-4">
-                {brandIdentity[0]?.title}
-              </h3>
-              {brandIdentity[0]?.client && (
-                <p className="text-sm text-white/50 mt-1">{brandIdentity[0]?.client}</p>
-              )}
-            </Link>
-            {/* Supporting projects */}
-            <div className="space-y-6">
-              {brandIdentity.slice(1, 3).map((project) => (
-                <Link
-                  key={project.id}
-                  to={`/projects/brand-identity/${project.slug}`}
-                  className="group block"
-                >
-                  <div className="aspect-[16/9] overflow-hidden bg-[#0a0a0a]">
-                    <img
-                      src={project.thumbnail}
-                      alt={project.title}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 className="text-base tracking-wide uppercase font-normal mt-3">
-                    {project.title}
-                  </h3>
-                  {project.client && (
-                    <p className="text-xs text-white/50 mt-1">{project.client}</p>
-                  )}
+                </div>
                 </Link>
-              ))}
-            </div>
-          </div>
+                </div>
         </section>
 
         {/* Presentations — Horizontal carousel style */}
@@ -116,12 +85,8 @@ export default function ProjectsPage() {
                     <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-1">
                       {String(index + 1).padStart(2, '0')}
                     </p>
-                    <h3 className="text-lg sm:text-xl tracking-wide uppercase font-normal leading-tight text-white">
-                      {project.title}
-                    </h3>
                   </div>
                 </div>
-                <p className="text-sm text-white/60 mt-2">{project.client}</p>
               </Link>
             ))}
           </div>
@@ -155,7 +120,6 @@ export default function ProjectsPage() {
                     loading="lazy"
                   />
                 </div>
-                <p className="text-xs text-white/60 mt-2 truncate">{project.title}</p>
               </Link>
             ))}
           </div>
@@ -195,12 +159,6 @@ export default function ProjectsPage() {
                     <div className="w-1.5 h-1.5 rounded-full bg-green-500/60" />
                   </div>
                 </div>
-                <h3 className="text-base tracking-wide uppercase font-normal mt-3">
-                  {project.title}
-                </h3>
-                {project.client && (
-                  <p className="text-xs text-white/50 mt-1">{project.client}</p>
-                )}
               </Link>
             ))}
           </div>
