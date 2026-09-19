@@ -24,13 +24,14 @@ export default function ProjectsPage() {
             <h2 className="text-2xl tracking-wide uppercase font-normal">Brand Identity</h2>
             <Link to="/projects/brand-identity" className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest">View All →</Link>
           </div>
-          <div className="-mx-5 sm:-mx-6 md:-mx-10 lg:-mx-14">
+          <div className="mb-16">
             <SqueezeCarousel
               slides={[
-                { id: 'buyology', slug: 'buyology', image: '/assets/projects/buyology/buyology-01.jpg', title: 'Buyology', aspectRatio: '2501 / 834', objectFit: 'cover' },
-                { id: 'euphoria-experiences-brand', slug: 'euphoria-experiences-brand', image: '/assets/brand/euphoria/cover.png', title: 'Euphoria' },
+                { id: 'buyology', slug: 'buyology', image: '/assets/projects/buyology/buyology-banner.png', title: 'Buyology', subtitle: 'Visual identity system', aspectRatio: '2501 / 834', objectFit: 'cover' },
+                { id: 'euphoria-experiences-brand', slug: 'euphoria-experiences-brand', image: '/assets/brand/euphoria/euphoria-banner.png', title: 'Euphoria', subtitle: 'Brand mark & identity', aspectRatio: '2501 / 834', objectFit: 'cover' },
               ]}
               gap={16} slatWidth={10} radius={8} controls={true}
+              label="Brand Identity Gallery"
               categorySlug="brand-identity"
             />
           </div>
