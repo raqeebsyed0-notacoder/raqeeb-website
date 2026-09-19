@@ -1,6 +1,7 @@
 import PageLayout from '../components/PageLayout'
 import { getProjectsByCategory } from '../data/portfolio'
 import { Link } from 'react-router-dom'
+import SqueezeCarousel from '../components/ui/carousel-squeeze'
 
 export default function ProjectsPage() {
   const brandIdentity = getProjectsByCategory('brand-identity')
@@ -11,80 +12,42 @@ export default function ProjectsPage() {
   return (
     <PageLayout>
       <div className="max-w-7xl mx-auto">
-        {/* Editorial header */}
         <div className="mb-16">
-          <p className="text-xs text-white/50 uppercase tracking-widest mb-4">
-            Portfolio
-          </p>
+          <p className="text-xs text-white/50 uppercase tracking-widest mb-4">Portfolio</p>
           <h1 className="text-4xl sm:text-5xl md:text-7xl tracking-wide uppercase font-normal leading-[0.9]">
-            Selected
-            <br />
-            <span className="font-pixel font-normal text-[1.1em]">Work</span>
+            Selected<br /><span className="font-pixel font-normal text-[1.1em]">Work</span>
           </h1>
         </div>
 
-        {/* Brand Identity — Large editorial feature */}
         <section className="mb-24">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl tracking-wide uppercase font-normal">
-              Brand Identity
-            </h2>
-            <Link
-              to="/projects/brand-identity"
-              className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest"
-            >
-              View All →
-            </Link>
+            <h2 className="text-2xl tracking-wide uppercase font-normal">Brand Identity</h2>
+            <Link to="/projects/brand-identity" className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest">View All →</Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Featured project - large */}
-            <Link
-              to={`/projects/brand-identity/${brandIdentity[0]?.slug}`}
-              className="group block md:row-span-2"
-            >
-              <div className="aspect-[4/3] md:aspect-[3/2] lg:aspect-[16/9] overflow-hidden bg-[#0a0a0a]">
-                <img
-                  src={brandIdentity[0]?.thumbnail}
-                  alt={brandIdentity[0]?.title}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                </div>
-                </Link>
-                </div>
+          <div className="-mx-5 sm:-mx-6 md:-mx-10 lg:-mx-14">
+            <SqueezeCarousel
+              slides={[
+                { id: 'buyology', slug: 'buyology', image: '/assets/projects/buyology/buyology-01.jpg', title: 'Buyology', aspectRatio: '2501 / 834', objectFit: 'cover' },
+                { id: 'euphoria-experiences-brand', slug: 'euphoria-experiences-brand', image: '/assets/brand/euphoria/cover.png', title: 'Euphoria' },
+              ]}
+              gap={16} slatWidth={10} radius={8} controls={true}
+              categorySlug="brand-identity"
+            />
+          </div>
         </section>
 
-        {/* Presentations — Horizontal carousel style */}
         <section className="mb-24">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl tracking-wide uppercase font-normal">
-              Presentations
-            </h2>
-            <Link
-              to="/projects/presentation"
-              className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest"
-            >
-              View All →
-            </Link>
+            <h2 className="text-2xl tracking-wide uppercase font-normal">Presentations</h2>
+            <Link to="/projects/presentation" className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest">View All →</Link>
           </div>
           <div className="flex gap-4 overflow-x-auto pb-4">
-            {presentations.map((project, index) => (
-              <Link
-                key={project.id}
-                to={`/projects/presentation/${project.slug}`}
-                className="group block flex-shrink-0 w-[70%] sm:w-[50%] md:w-[35%]"
-              >
+            {presentations.map((p, i) => (
+              <Link key={p.id} to={`/projects/presentation/${p.slug}`} className="group block flex-shrink-0 w-[70%] sm:w-[50%] md:w-[35%]">
                 <div className="aspect-video overflow-hidden bg-[#0a0a0a] relative">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
+                  <img src={p.thumbnail} alt={p.title} className="h-full w-full object-cover" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end px-4 pb-4">
-                    <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-1">
-                      {String(index + 1).padStart(2, '0')}
-                    </p>
+                    <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-1">{String(i + 1).padStart(2, '0')}</p>
                   </div>
                 </div>
               </Link>
@@ -92,72 +55,32 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        {/* Social Media — Grid with varied sizes */}
         <section className="mb-24">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl tracking-wide uppercase font-normal">
-              Social Media
-            </h2>
-            <Link
-              to="/projects/social-media"
-              className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest"
-            >
-              View All →
-            </Link>
+            <h2 className="text-2xl tracking-wide uppercase font-normal">Social Media</h2>
+            <Link to="/projects/social-media" className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest">View All →</Link>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {socialMedia.slice(0, 5).map((project) => (
-              <Link
-                key={project.id}
-                to={`/projects/social-media/${project.slug}`}
-                className="group block"
-              >
+            {socialMedia.slice(0, 5).map((p) => (
+              <Link key={p.id} to={`/projects/social-media/${p.slug}`} className="group block">
                 <div className="aspect-square overflow-hidden bg-[#0a0a0a]">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
+                  <img src={p.thumbnail} alt={p.title} className="h-full w-full object-cover" loading="lazy" />
                 </div>
               </Link>
             ))}
           </div>
         </section>
 
-        {/* Websites — Large feature with device frames */}
         <section className="mb-16">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl tracking-wide uppercase font-normal">
-              Websites
-            </h2>
-            <Link
-              to="/projects/websites"
-              className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest"
-            >
-              View All →
-            </Link>
+            <h2 className="text-2xl tracking-wide uppercase font-normal">Websites</h2>
+            <Link to="/projects/websites" className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest">View All →</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {websites.slice(0, 2).map((project) => (
-              <Link
-                key={project.id}
-                to={`/projects/websites/${project.slug}`}
-                className="group block"
-              >
+            {websites.slice(0, 2).map((p) => (
+              <Link key={p.id} to={`/projects/websites/${p.slug}`} className="group block">
                 <div className="aspect-video overflow-hidden bg-[#0a0a0a] rounded-lg relative">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  {/* Browser chrome overlay */}
-                  <div className="absolute top-0 left-0 right-0 h-6 bg-black/60 flex items-center px-2 gap-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-red-500/60" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-yellow-500/60" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500/60" />
-                  </div>
+                  <img src={p.thumbnail} alt={p.title} className="w-full h-full object-cover object-top" loading="lazy" />
                 </div>
               </Link>
             ))}

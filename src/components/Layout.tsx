@@ -16,37 +16,10 @@ const STAGGER_DELAYS = [100, 160, 220, 280]
 
 // Client names by category for hover menus
 const categoryClients: Record<string, { name: string; slug: string }[]> = {
-  'brand-identity': [
-    { name: 'Buyology', slug: 'buyology' },
-  ],
-  'presentation-design': [
-    { name: 'Blaize', slug: 'blaize' },
-    { name: 'Chashmawala', slug: 'chashmawala' },
-    { name: 'Flowserve', slug: 'flowserve' },
-    { name: 'Jalal', slug: 'jalal' },
-    { name: 'Shafa Al Shams', slug: 'shafa-al-shams' },
-    { name: 'Stage Nine', slug: 'stage-nine' },
-    { name: 'Trillium', slug: 'trillium' },
-    { name: 'White Graphics', slug: 'white-graphics-brochure' },
-  ],
-  'social-media': [
-    { name: 'Arata', slug: 'arata' },
-    { name: 'Dot & Key', slug: 'dot-and-key' },
-    { name: 'Euphoria', slug: 'euphoria-campaign' },
-    { name: 'Learnbay', slug: 'learnbay' },
-    { name: 'New Herbs', slug: 'new-herbs' },
-    { name: 'Nirmalaya', slug: 'nirmalaya' },
-    { name: 'Organic B', slug: 'organic-b' },
-    { name: 'Rustic Art', slug: 'rustic-art' },
-    { name: 'Satthwa', slug: 'satthwa' },
-    { name: 'Ustraa', slug: 'ustraa' },
-  ],
-  websites: [
-    { name: 'Euphoria Experiences', slug: 'euphoria-website' },
-    { name: 'GRC', slug: 'grc' },
-    { name: 'Marsa Atelier', slug: 'marsa-atelier' },
-    { name: 'Najd Sands', slug: 'najd-sands' },
-  ],
+  'brand-identity': [],
+  'presentation-design': [],
+  'social-media': [],
+  websites: [],
 }
 
 export function Navbar() {
