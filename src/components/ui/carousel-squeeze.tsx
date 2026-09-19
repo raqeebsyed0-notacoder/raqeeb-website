@@ -19,6 +19,7 @@ interface SqueezeCarouselProps {
   controls?: boolean
   label?: string
   className?: string
+  categorySlug?: string
 }
 
 export default function SqueezeCarousel({
@@ -30,6 +31,7 @@ export default function SqueezeCarousel({
   controls = true,
   label,
   className = '',
+  categorySlug,
 }: SqueezeCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
@@ -81,23 +83,46 @@ export default function SqueezeCarousel({
         }}
       >
         {/* Background image */}
-        <div className="absolute inset-0">
-          <img
-            src={currentSlide.image}
-            alt={currentSlide.title}
-            className="w-full h-full transition-all duration-700"
-            style={{
-              objectFit: currentSlide.objectFit || 'cover',
-              background: currentSlide.objectFit === 'contain' ? '#0a0a0a' : undefined,
-              transform: isAnimating
-                ? direction === 'right'
-                  ? 'scale(1.05) translateX(2%)'
-                  : 'scale(1.05) translateX(-2%)'
-                : 'scale(1) translateX(0)',
-              opacity: isAnimating ? 0.7 : 1,
-            }}
-          />
-        </div>
+        {categorySlug && currentSlide.slug ? (
+          <Link
+            to={`/projects/${categorySlug}/${currentSlide.slug}`}
+            className="absolute inset-0 z-10"
+          >
+            <img
+              src={currentSlide.image}
+              alt={currentSlide.title}
+              className="w-full h-full transition-all duration-700"
+              style={{
+                objectFit: currentSlide.objectFit || 'cover',
+                background: currentSlide.objectFit === 'contain' ? '#0a0a0a' : undefined,
+                transform: isAnimating
+                  ? direction === 'right'
+                    ? 'scale(1.05) translateX(2%)'
+                    : 'scale(1.05) translateX(-2%)'
+                  : 'scale(1) translateX(0)',
+                opacity: isAnimating ? 0.7 : 1,
+              }}
+            />
+          </Link>
+        ) : (
+          <div className="absolute inset-0">
+            <img
+              src={currentSlide.image}
+              alt={currentSlide.title}
+              className="w-full h-full transition-all duration-700"
+              style={{
+                objectFit: currentSlide.objectFit || 'cover',
+                background: currentSlide.objectFit === 'contain' ? '#0a0a0a' : undefined,
+                transform: isAnimating
+                  ? direction === 'right'
+                    ? 'scale(1.05) translateX(2%)'
+                    : 'scale(1.05) translateX(-2%)'
+                  : 'scale(1) translateX(0)',
+                opacity: isAnimating ? 0.7 : 1,
+              }}
+            />
+          </div>
+        )}
 
         {/* Slat overlay effect */}
         <div className="absolute inset-0 flex pointer-events-none">
