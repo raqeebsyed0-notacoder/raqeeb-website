@@ -1,7 +1,9 @@
 import { useState, useRef, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 
 export interface SqueezeSlide {
   id: string
+  slug?: string
   image: string
   title: string
   subtitle?: string
