@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import PageLayout from '../components/PageLayout'
 import { getProject, getNextProject, getPreviousProject, getCategoryBySlug } from '../data/portfolio'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
 import { PDFDeckViewer } from '../components/pdf-deck-viewer'
 
 export default function ProjectDetailPage() {
@@ -44,6 +44,47 @@ export default function ProjectDetailPage() {
             <p className="text-base text-white/70 mt-4 max-w-2xl">{project.description}</p>
           )}
         </div>
+
+        {/* Live site preview — front page visible, click opens full site */}
+        {project.liveUrl && project.liveFront && (
+          <div className="mb-12">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block rounded-xl overflow-hidden bg-neutral-950 border border-neutral-800 hover:border-white/30 transition-colors"
+            >
+              <div className="overflow-hidden">
+                <img
+                  src={project.liveFront}
+                  alt={`${project.title} live front page — click to open full site`}
+                  className="w-full h-auto object-cover object-top aspect-[16/10] group-hover:scale-[1.01] transition-transform duration-500"
+                />
+              </div>
+              <div className="flex items-center justify-between px-5 py-4">
+                <span className="text-sm text-white/60">Live front page — click to open the full website</span>
+                <span className="flex items-center gap-2 text-sm text-white group-hover:text-red-400 transition-colors">
+                  Visit live site <ExternalLink className="w-4 h-4" />
+                </span>
+              </div>
+            </a>
+            {project.liveUrls && project.liveUrls.length > 0 && (
+              <div className="flex flex-wrap gap-3 mt-4">
+                {project.liveUrls.map((v) => (
+                  <a
+                    key={v.url}
+                    href={v.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-white/70 hover:text-white border border-white/20 hover:border-white/40 rounded-lg bg-neutral-900 hover:bg-neutral-800 transition"
+                  >
+                    {v.label} <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Media rendering */}
         {isPdf ? (

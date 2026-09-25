@@ -33,10 +33,10 @@ const socialSlides = [
 ]
 
 const websiteSlides = [
-  { id: 'euphoria-web', slug: 'euphoria-website', image: '/assets/websites/euphoria-experiences-hero@1400w.jpg', title: 'Euphoria Web', subtitle: 'Dark-mode UI design', aspectRatio: '1400 / 788', objectFit: 'cover' },
-  { id: 'grc', slug: 'grc', image: '/assets/websites/grc-v3@1400w.jpg', title: 'GRC Evolution', subtitle: 'Website iterations', aspectRatio: '1400 / 9000', objectFit: 'cover' },
-  { id: 'marsa-atelier', slug: 'marsa-atelier', image: '/assets/websites/marsa-atelier-hero@1400w.jpg', title: 'Marsa Atelier', subtitle: 'Storefront UI concept', aspectRatio: '1400 / 788', objectFit: 'cover' },
-  { id: 'najd-sands', slug: 'najd-sands', image: '/assets/websites/najd-sands-hero@1400w.jpg', title: 'Najd Sands', subtitle: 'Hospitality website', aspectRatio: '1400 / 788', objectFit: 'cover' },
+  { id: 'euphoria-web', slug: 'euphoria-website', image: '/assets/websites/live/euphoria.jpg', title: 'Euphoria Web', subtitle: 'Live site — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
+  { id: 'grc', slug: 'grc', image: '/assets/websites/live/grc-v1.jpg', title: 'GRC Evolution', subtitle: 'Live sites v1–v3 — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
+  { id: 'marsa-atelier', slug: 'marsa-atelier', image: '/assets/websites/marsa-atelier-hero@1400w.jpg', title: 'Marsa Atelier', subtitle: 'Live site — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
+  { id: 'najd-sands', slug: 'najd-sands', image: '/assets/websites/live/najd.jpg', title: 'Najd Sands', subtitle: 'Live site — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
 ]
 
 export default function CategoryPage() {

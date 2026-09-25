@@ -14,6 +14,9 @@ export interface Project {
   brandColors?: string[];
   brandFonts?: string[];
   pdfRatio?: string; // e.g. "960/540" for PDFDeckViewer aspect ratio
+  liveUrl?: string; // full live site URL (opens in new tab)
+  liveFront?: string; // front-page capture shown as the link card
+  liveUrls?: { label: string; url: string }[]; // multiple live versions (e.g. GRC v1-v3)
 }
 
 export interface Category {
@@ -652,7 +655,9 @@ export const projects: Project[] = [
     year: null,
     client: 'Euphoria Experiences',
     description: 'Agency website design at desktop and large resolutions.',
-    thumbnail: '/assets/websites/euphoria-experiences@1400w.jpg',
+    thumbnail: '/assets/websites/live/euphoria.jpg',
+    liveUrl: 'https://euphoriaexperiences.com/',
+    liveFront: '/assets/websites/live/euphoria.jpg',
     media: [
       '/assets/websites/euphoria-experiences@1400w.jpg',
       '/assets/websites/euphoria-experiences@1920w.jpg',
@@ -672,7 +677,14 @@ export const projects: Project[] = [
     year: null,
     client: 'GRC',
     description: 'Website design iterations exploring visual evolution for GRC.',
-    thumbnail: '/assets/websites/grc-v1@1400w.jpg',
+    thumbnail: '/assets/websites/live/grc-v1.jpg',
+    liveUrl: 'https://euphoria-vision.com/static/preview/grc-v3/index.html',
+    liveFront: '/assets/websites/live/grc-v1.jpg',
+    liveUrls: [
+      { label: 'GRC v1', url: 'https://euphoria-vision.com/static/preview/grc-v1/index.html' },
+      { label: 'GRC v2', url: 'https://euphoria-vision.com/static/preview/grc-v2/index.html' },
+      { label: 'GRC v3', url: 'https://euphoria-vision.com/static/preview/grc-v3/index.html' },
+    ],
     media: [
       '/assets/websites/grc-v1@1400w.jpg',
       '/assets/websites/grc-v1@1920w.jpg',
@@ -703,7 +715,9 @@ export const projects: Project[] = [
     year: null,
     client: 'Marsa Atelier',
     description: 'Architecture and interior design website concept for Marsa Atelier.',
-    thumbnail: '/assets/websites/marsa-atelier@1400w.jpg',
+    thumbnail: '/assets/websites/marsa-atelier-hero@1400w.jpg',
+    liveUrl: 'https://euphoria-vision.com/static/preview/marsa-atelier-2026-06-04/index.html',
+    liveFront: '/assets/websites/marsa-atelier-hero@1400w.jpg',
     media: [
       '/assets/websites/marsa-atelier@1400w.jpg',
       '/assets/websites/marsa-atelier@1920w.jpg',
@@ -728,7 +742,9 @@ export const projects: Project[] = [
     year: null,
     client: 'Najd Sands',
     description: 'Luxury desert resort website concept for Najd Sands, AlUla.',
-    thumbnail: '/assets/websites/najd-sands@1400w.jpg',
+    thumbnail: '/assets/websites/live/najd.jpg',
+    liveUrl: 'https://euphoria-vision.com/static/preview/najd-sands-2026-06-04/index.html',
+    liveFront: '/assets/websites/live/najd.jpg',
     media: [
       '/assets/websites/najd-sands@1400w.jpg',
       '/assets/websites/najd-sands@1920w.jpg',
