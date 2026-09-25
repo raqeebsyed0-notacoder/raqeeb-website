@@ -31,3 +31,5 @@ patch-portfolio.py
 remove-white-graphics.py
 render-*.mjs
 render-*.png
+
+dist-preview

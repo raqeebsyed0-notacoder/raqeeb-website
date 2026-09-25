@@ -93,13 +93,13 @@ export default function ProjectDetailPage() {
             ratio={project.pdfRatio || '16/9'}
           />
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
             {project.media.map((src, i) => (
-              <div key={i} className="rounded-xl overflow-hidden bg-neutral-950 border border-neutral-800">
+              <div key={i} className="mb-6 break-inside-avoid rounded-xl overflow-hidden bg-neutral-950 border border-neutral-800">
                 <img
                   src={src}
                   alt={`${project.title} ${i + 1}`}
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto block"
                 />
               </div>
             ))}

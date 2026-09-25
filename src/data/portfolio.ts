@@ -116,7 +116,7 @@ export const projects: Project[] = [
     title: 'Blaize Technical Proposal',
     slug: 'blaize',
     category: 'presentation',
-    sourceFolder: 'E:\\\\Portfolio\\\\Presentations',
+    sourceFolder: 'E:\\Portfolio\\Presentations',
     year: null,
     client: 'Blaize',
     description: 'Technical proposal document design.',
@@ -659,8 +659,7 @@ export const projects: Project[] = [
     liveUrl: 'https://euphoriaexperiences.com/',
     liveFront: 'assets/websites/live/euphoria.jpg',
     media: [
-      'assets/websites/euphoria-experiences@1400w.jpg',
-      'assets/websites/euphoria-experiences@1920w.jpg',
+      'assets/websites/live/euphoria.jpg',
     ],
     mediaTypes: ['image'],
     originalFiles: [
@@ -686,12 +685,9 @@ export const projects: Project[] = [
       { label: 'GRC v3', url: 'https://euphoria-vision.com/static/preview/grc-v3/index.html' },
     ],
     media: [
-      'assets/websites/grc-v1@1400w.jpg',
-      'assets/websites/grc-v1@1920w.jpg',
-      'assets/websites/grc-v2@1400w.jpg',
-      'assets/websites/grc-v2@1920w.jpg',
-      'assets/websites/grc-v3@1400w.jpg',
-      'assets/websites/grc-v3@1920w.jpg',
+      'assets/websites/live/grc-v1.jpg',
+      'assets/websites/live/grc-v2.jpg',
+      'assets/websites/live/grc-v3.jpg',
       'assets/websites/grc-evolution-sheet@1400w.jpg',
     ],
     mediaTypes: ['image'],
@@ -719,10 +715,9 @@ export const projects: Project[] = [
     liveUrl: 'https://euphoria-vision.com/static/preview/marsa-atelier-2026-06-04/index.html',
     liveFront: 'assets/websites/marsa-atelier-hero@1400w.jpg',
     media: [
-      'assets/websites/marsa-atelier@1400w.jpg',
-      'assets/websites/marsa-atelier@1920w.jpg',
       'assets/websites/marsa-atelier-hero@1400w.jpg',
       'assets/websites/marsa-atelier-hero@1920w.jpg',
+      'assets/websites/marsa-atelier@1400w.jpg',
     ],
     mediaTypes: ['image'],
     originalFiles: [
@@ -746,10 +741,9 @@ export const projects: Project[] = [
     liveUrl: 'https://euphoria-vision.com/static/preview/najd-sands-2026-06-04/index.html',
     liveFront: 'assets/websites/live/najd.jpg',
     media: [
-      'assets/websites/najd-sands@1400w.jpg',
-      'assets/websites/najd-sands@1920w.jpg',
       'assets/websites/najd-sands-hero@1400w.jpg',
       'assets/websites/najd-sands-hero@1920w.jpg',
+      'assets/websites/najd-sands@1400w.jpg',
     ],
     mediaTypes: ['image'],
     originalFiles: [
