@@ -159,7 +159,7 @@ export default function ResumePage() {
         {/* Download CTA */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <a
-            href="/Raqeeb_Hussain_Resume.pdf"
+            href="Raqeeb_Hussain_Resume.pdf"
             download
             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm tracking-wide uppercase hover:bg-white/90 transition-colors"
           >
