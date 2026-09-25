@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-8">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden mb-6 border border-white/10">
+              <div className="w-56 sm:w-64 aspect-[3/4] rounded-xl overflow-hidden mb-6 border border-white/10">
                 <img
                   src="assets/profile.jpg"
                   alt="Raqeeb Hussain"
