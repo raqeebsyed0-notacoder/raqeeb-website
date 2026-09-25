@@ -22,29 +22,14 @@ export default function HomePage() {
         <Navbar />
 
         {/* Meta Grid */}
-        <div className="mt-4 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4 lg:gap-8">
-          {/* Column 1 — Name / Positioning */}
-          <div className="flex flex-col">
-            <span className="text-2xl font-semibold tracking-wide">RAQEEB</span>
-            <span className="font-pixel text-xl tracking-wide">HUSSAIN</span>
-            <p className="mt-3 font-pixel text-xs leading-relaxed text-white/80">
-              Visual designer creating
-              <br />
-              clear, polished work across
-              <br />
-              brands, presentations,
-              <br />
-              campaigns and digital.
-            </p>
-          </div>
-
-          {/* Column 2 — Discipline */}
+        <div className="mt-4 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3 lg:gap-8">
+          {/* Column 1 — Discipline */}
           <div className="flex flex-col">
             <span className="text-2xl font-semibold tracking-wide">GRAPHIC &</span>
             <span className="font-pixel text-xl tracking-wide">VISUAL DESIGN</span>
           </div>
 
-          {/* Column 3 — What I Do */}
+          {/* Column 2 — What I Do */}
           <div className="flex flex-col">
             <span className="font-pixel text-sm uppercase tracking-wide text-white/60">What I Do</span>
             <p className="mt-2 text-sm leading-relaxed text-white/80">
@@ -52,7 +37,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Column 4 — Services */}
+          {/* Column 3 — Services */}
           <div className="flex flex-col">
             <span className="font-pixel text-sm uppercase tracking-wide text-white/60">My Expertise</span>
             <ul className="mt-2 space-y-1 text-sm text-white/80">
