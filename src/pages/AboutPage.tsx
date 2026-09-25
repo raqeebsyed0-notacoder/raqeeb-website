@@ -39,8 +39,12 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-8">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center mb-6 border border-white/10">
-                <span className="text-4xl sm:text-5xl font-pixel text-white/40">RH</span>
+              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden mb-6 border border-white/10">
+                <img
+                  src="assets/profile.jpg"
+                  alt="Raqeeb Hussain"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h1 className="text-3xl sm:text-4xl tracking-wide uppercase font-normal leading-[0.9] mb-3">
                 Raqeeb
