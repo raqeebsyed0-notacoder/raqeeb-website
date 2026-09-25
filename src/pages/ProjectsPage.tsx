@@ -27,8 +27,8 @@ export default function ProjectsPage() {
           <div className="mb-16">
             <SqueezeCarousel
               slides={[
-                { id: 'buyology', slug: 'buyology', image: '/assets/projects/buyology/buyology-banner.png', title: 'Buyology', subtitle: 'Visual identity system', aspectRatio: '2501 / 834', objectFit: 'cover' },
-                { id: 'euphoria-experiences-brand', slug: 'euphoria-experiences-brand', image: '/assets/brand/euphoria/euphoria-banner.png', title: 'Euphoria', subtitle: 'Brand mark & identity', aspectRatio: '2501 / 834', objectFit: 'cover' },
+                { id: 'buyology', slug: 'buyology', image: 'assets/projects/buyology/buyology-banner.png', title: 'Buyology', subtitle: 'Visual identity system', aspectRatio: '2501 / 834', objectFit: 'cover' },
+                { id: 'euphoria-experiences-brand', slug: 'euphoria-experiences-brand', image: 'assets/brand/euphoria/euphoria-banner.png', title: 'Euphoria', subtitle: 'Brand mark & identity', aspectRatio: '2501 / 834', objectFit: 'cover' },
               ]}
               gap={16} slatWidth={10} radius={8} controls={true}
               label="Brand Identity Gallery"
