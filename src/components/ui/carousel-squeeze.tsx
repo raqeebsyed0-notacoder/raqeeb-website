@@ -209,7 +209,7 @@ export default function SqueezeCarousel({
                 key={index}
                 onClick={() => goTo(index, index > activeIndex ? 'right' : 'left')}
                 className={`h-1 rounded-full transition-all duration-300 ${
-                  index === activeIndex ? 'w-8 bg-white' : 'w-2 bg-white/30 hover:bg-white/50'
+                  index === activeIndex ? 'w-8 bg-white' : 'w-2 bg-white/50 hover:bg-white/50'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
                 aria-current={index === activeIndex ? true : undefined}
