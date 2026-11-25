@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "OrIO Operations Console",
+    "output": "orio-operations.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "console-to-database",
+        "label": "Console to per-client database",
+        "focus": ["console", "backend", "sqlite"],
+        "note": "The desktop plugin.js UI reaches the FastAPI backend, which serves per-client SQLite state."
+      }
+    ],
+    "legend": { "mode": "auto" }
+  },
+  "components": [
+    { "id": "console", "type": "frontend", "label": "OrIO operations console", "sublabel": "desktop plugin.js UI", "pos": [60, 350], "size": [220, 160], "tag": "ui team" },
+    { "id": "backend", "type": "backend", "label": "FastAPI backend", "sublabel": "mounted under Hermes dashboard", "pos": [360, 350], "size": [240, 160], "tag": "platform" },
+    { "id": "sqlite", "type": "database", "label": "Per-client SQLite", "sublabel": "one store per client", "pos": [720, 350], "size": [220, 160], "tag": "data team" },
+    { "id": "agent", "type": "backend", "label": "OrIO agent", "sublabel": "own runtime", "pos": [360, 650], "size": [240, 120], "tag": "OrIO" },
+    { "id": "skills", "type": "external", "label": "OrIO skills", "sublabel": "own skill set", "pos": [720, 650], "size": [220, 120], "tag": "OrIO" },
+    { "id": "email", "type": "external", "label": "Email delivery", "sublabel": "channel stub", "pos": [1120, 250], "size": [200, 110], "tag": "delivery" },
+    { "id": "onedrive", "type": "external", "label": "OneDrive delivery", "sublabel": "channel stub", "pos": [1120, 470], "size": [200, 110], "tag": "delivery" },
+    { "id": "telegram", "type": "external", "label": "Telegram delivery", "sublabel": "channel stub", "pos": [1120, 690], "size": [200, 110], "tag": "delivery" }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "OrIO team", "wraps": ["agent", "skills"], "pad": 18 }
+  ],
+  "connections": [
+    { "from": "console", "to": "backend", "label": "command", "variant": "emphasis" },
+    { "from": "backend", "to": "sqlite", "label": "SQL", "variant": "emphasis", "labelAt": [700, 420] },
+    { "from": "backend", "to": "agent", "label": "executes", "variant": "dashed", "labelAt": [480, 560] },
+    { "from": "agent", "to": "skills", "label": "invokes", "variant": "dashed" },
+    { "from": "backend", "to": "email", "label": "deliver", "variant": "dashed", "fromSide": "right", "toSide": "left", "via": [[620, 430], [620, 305]] },
+    { "from": "backend", "to": "onedrive", "label": "deliver", "variant": "dashed", "fromSide": "right", "toSide": "left", "via": [[640, 430], [640, 525]], "labelAt": [880, 530] },
+    { "from": "backend", "to": "telegram", "label": "deliver", "variant": "dashed", "fromSide": "right", "toSide": "bottom", "via": [[660, 430], [660, 560], [1040, 560], [1040, 820], [1220, 820]], "labelAt": [1040, 690] }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "In scope", "items": ["OrIO operations console on desktop", "FastAPI backend mounted under the Hermes dashboard", "Per-client SQLite storage", "OrIO agent and its own skills"] },
+    { "dot": "rose", "title": "Blocked delivery", "items": ["Email delivery stub", "OneDrive delivery stub", "Telegram delivery stub", "All three delivery channels blocked"] }
+  ]
+}
