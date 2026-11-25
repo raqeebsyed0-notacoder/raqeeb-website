@@ -28,6 +28,21 @@ export interface Category {
   sourceFolder: string
 }
 
+export interface AiProject {
+  id: string;
+  title: string;
+  slug: string;
+  summary: string;
+  role: string;
+  status: string;
+  stack: string[];
+  architecture: string; // path to the architecture figure
+  screenshots: string[];
+  agent: string;
+  skills: string[];
+  demos: { label: string; url: string }[]; // labelled demo / video slots
+}
+
 export const categories: Category[] = [
   {
     id: 'brand-identity',
@@ -60,6 +75,14 @@ export const categories: Category[] = [
     shortTitle: 'Web',
     description: 'Digital experience design, website concepts and UI systems for brands and services.',
     sourceFolder: 'E:\\Portfolio\\Websites',
+  },
+  {
+    id: 'ai',
+    slug: 'ai',
+    title: 'AI & Automation',
+    shortTitle: 'AI',
+    description: 'Autonomous agents, skill libraries and automation systems built on the Hermes runtime.',
+    sourceFolder: 'E:\\Portfolio\\AI & Automation',
   },
 ]
 
@@ -756,6 +779,157 @@ export const projects: Project[] = [
   },
 ];
 
+export const aiProjects: AiProject[] = [
+  {
+    id: 'agent-fleet',
+    title: 'Agent Fleet',
+    slug: 'agent-fleet',
+    summary: 'A coordinated fleet of specialist Hermes profiles — CEO, CTO and department heads — orchestrated through one Paperclip board.',
+    role: 'Systems architecture & fleet orchestration',
+    status: 'Live',
+    stack: ['Hermes Agent', 'Paperclip', 'Cron', 'MCP'],
+    architecture: 'assets/ai/agent-fleet/architecture.svg',
+    screenshots: [
+      'assets/ai/agent-fleet/01.png',
+      'assets/ai/agent-fleet/02.png',
+    ],
+    agent: 'sovereign',
+    skills: ['fleet-model-allocation', 'dispatch-discipline', 'cron-dispatch-triage'],
+    demos: [
+      { label: 'Fleet overview', url: 'assets/ai/agent-fleet/demo-fleet.mp4' },
+    ],
+  },
+  {
+    id: 'skills-library',
+    title: 'Skills Library',
+    slug: 'skills-library',
+    summary: 'A versioned library of reusable SKILL.md procedures that gives every agent the same proven workflow for recurring work.',
+    role: 'Skill authoring & maintenance',
+    status: 'Live',
+    stack: ['SKILL.md', 'Markdown', 'Git', 'Hermes Agent'],
+    architecture: 'assets/ai/skills-library/architecture.svg',
+    screenshots: [
+      'assets/ai/skills-library/01.png',
+      'assets/ai/skills-library/02.png',
+    ],
+    agent: 'steward',
+    skills: ['skill-maintainer', 'omh-skill-health', 'omh-skill-scout'],
+    demos: [
+      { label: 'Library walkthrough', url: 'assets/ai/skills-library/demo-library.mp4' },
+    ],
+  },
+  {
+    id: 'orio-operations',
+    title: 'Orio Operations',
+    slug: 'orio-operations',
+    summary: 'An operations console that turns client requests into tracked work with owners, deadlines and evidence.',
+    role: 'Operations design & build',
+    status: 'Live',
+    stack: ['Paperclip', 'Hermes Agent', 'MCP', 'TypeScript'],
+    architecture: 'assets/ai/orio-operations/architecture.svg',
+    screenshots: [
+      'assets/ai/orio-operations/01.png',
+    ],
+    agent: 'marshal',
+    skills: ['euphoria-operating-rules', 'omh-ops-review'],
+    demos: [
+      { label: 'Operations board', url: 'assets/ai/orio-operations/demo-ops.mp4' },
+    ],
+  },
+  {
+    id: 'leadjin-portal',
+    title: 'LeadJin Portal',
+    slug: 'leadjin-portal',
+    summary: 'A verified lead-discovery portal that sources KSA prospects and routes qualified records into the CRM.',
+    role: 'Data pipeline & portal build',
+    status: 'Live',
+    stack: ['Google Places', 'Twenty CRM', 'TypeScript', 'Hermes Agent'],
+    architecture: 'assets/ai/leadjin-portal/architecture.svg',
+    screenshots: [
+      'assets/ai/leadjin-portal/01.png',
+      'assets/ai/leadjin-portal/02.png',
+    ],
+    agent: 'mason',
+    skills: ['verified-lead-discovery', 'euphoria-places-lead-discovery', 'twenty-crm'],
+    demos: [
+      { label: 'Pipeline demo', url: 'assets/ai/leadjin-portal/demo-pipeline.mp4' },
+    ],
+  },
+  {
+    id: 'approval-inbox',
+    title: 'Approval Inbox',
+    slug: 'approval-inbox',
+    summary: 'A single Founder-facing queue for approval-gated decisions — one verdict and one decision per item.',
+    role: 'Approval workflow design',
+    status: 'Live',
+    stack: ['Paperclip', 'Hermes Agent', 'Gmail MCP'],
+    architecture: 'assets/ai/approval-inbox/architecture.svg',
+    screenshots: [
+      'assets/ai/approval-inbox/01.png',
+    ],
+    agent: 'steward',
+    skills: ['euphoria-approval-queue', 'proposal-send'],
+    demos: [
+      { label: 'Inbox walkthrough', url: 'assets/ai/approval-inbox/demo-inbox.mp4' },
+    ],
+  },
+  {
+    id: 'paperclip-plugin',
+    title: 'Paperclip Plugin',
+    slug: 'paperclip-plugin',
+    summary: 'A Hermes plugin that exposes the Paperclip board to agents — issues, updates and live status — over MCP.',
+    role: 'Plugin engineering',
+    status: 'Live',
+    stack: ['Hermes Agent', 'MCP', 'TypeScript', 'Paperclip API'],
+    architecture: 'assets/ai/paperclip-plugin/architecture.svg',
+    screenshots: [
+      'assets/ai/paperclip-plugin/01.png',
+    ],
+    agent: 'mason',
+    skills: ['paperclip-sop', 'hermes-plugin-development'],
+    demos: [
+      { label: 'Plugin demo', url: 'assets/ai/paperclip-plugin/demo-plugin.mp4' },
+    ],
+  },
+  {
+    id: 'hermes-engine',
+    title: 'Hermes Engine',
+    slug: 'hermes-engine',
+    summary: 'The agent runtime itself — routing, skills, memory and tool orchestration shared across the whole fleet.',
+    role: 'Runtime configuration & orchestration',
+    status: 'Live',
+    stack: ['Hermes Agent', 'Python', 'YAML', 'Plugins'],
+    architecture: 'assets/ai/hermes-engine/architecture.svg',
+    screenshots: [
+      'assets/ai/hermes-engine/01.png',
+      'assets/ai/hermes-engine/02.png',
+    ],
+    agent: 'steward',
+    skills: ['hermes-agent', 'omh-routing', 'plugin-discipline'],
+    demos: [
+      { label: 'Runtime overview', url: 'assets/ai/hermes-engine/demo-runtime.mp4' },
+    ],
+  },
+  {
+    id: 'automations',
+    title: 'Automations',
+    slug: 'automations',
+    summary: 'Scheduled agents that watch the board, digests and fleet posture — each job owned by the profile that runs it.',
+    role: 'Automation design & monitoring',
+    status: 'Live',
+    stack: ['Hermes Agent', 'Cron', 'Paperclip', 'MCP'],
+    architecture: 'assets/ai/automations/architecture.svg',
+    screenshots: [
+      'assets/ai/automations/01.png',
+    ],
+    agent: 'lantern',
+    skills: ['cron-dispatch-triage', 'scheduled-cronjob-review', 'topic-digest-cron'],
+    demos: [
+      { label: 'Automation sweep', url: 'assets/ai/automations/demo-sweep.mp4' },
+    ],
+  },
+];
+
 export function getProjectsByCategory(categorySlug: string): Project[] {
   // Resolve slug to category id (e.g. 'presentation-design' → 'presentation')
   const category = getCategoryBySlug(categorySlug)
@@ -792,5 +966,13 @@ export function getPreviousProject(project: Project): Project | null {
   const idx = categoryProjects.findIndex((p) => p.id === project.id)
   if (idx <= 0) return null
   return categoryProjects[idx - 1]
+}
+
+export function getAiProjects(): AiProject[] {
+  return aiProjects;
+}
+
+export function getAiProject(slug: string): AiProject | undefined {
+  return aiProjects.find((p) => p.slug === slug);
 }
 
