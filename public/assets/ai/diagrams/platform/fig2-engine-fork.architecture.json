@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Hermes Engine — Controlled Fork",
+    "output": "fig2-engine-fork.html",
+    "animation": "none",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "upstream",
+      "type": "external",
+      "label": "Upstream Hermes",
+      "sublabel": "open-source base",
+      "pos": [40, 300],
+      "size": [150, 56]
+    },
+    {
+      "id": "fork",
+      "type": "cloud",
+      "label": "Controlled fork",
+      "sublabel": "Euphoria-patched",
+      "pos": [250, 300],
+      "size": [150, 56]
+    },
+    {
+      "id": "patches",
+      "type": "backend",
+      "label": "Local engine patches",
+      "sublabel": "Rule 0 gate + Step 0",
+      "pos": [460, 260],
+      "size": [150, 56]
+    },
+    {
+      "id": "rule0",
+      "type": "security",
+      "label": "Rule 0 routing gate",
+      "sublabel": "per-skill gate",
+      "pos": [660, 210],
+      "size": [150, 56]
+    },
+    {
+      "id": "step0",
+      "type": "security",
+      "label": "Per-skill Step 0",
+      "sublabel": "governance gate",
+      "pos": [660, 370],
+      "size": [150, 56]
+    },
+    {
+      "id": "gateway",
+      "type": "frontend",
+      "label": "Gateway",
+      "sublabel": "shipped",
+      "pos": [900, 210],
+      "size": [150, 56]
+    },
+    {
+      "id": "desktop",
+      "type": "frontend",
+      "label": "Desktop",
+      "sublabel": "shipped",
+      "pos": [900, 370],
+      "size": [150, 56]
+    },
+    {
+      "id": "eup58",
+      "type": "cloud",
+      "label": "EUP-58 API",
+      "sublabel": "orchestrator",
+      "pos": [1130, 260],
+      "size": [150, 56]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "security-group",
+      "label": "Controlled fork region",
+      "wraps": ["fork", "patches", "rule0", "step0"]
+    },
+    {
+      "kind": "region",
+      "label": "Shipped channels",
+      "wraps": ["gateway", "desktop", "eup58"]
+    }
+  ],
+  "connections": [
+    { "id": "up-fork", "from": "upstream", "to": "fork", "label": "upstream base", "labelAt": [220, 370] },
+    { "id": "fork-patches", "from": "fork", "to": "patches", "label": "local patches", "labelAt": [440, 370] },
+    { "id": "patches-rule0", "from": "patches", "to": "rule0", "label": "Rule 0" },
+    { "id": "patches-step0", "from": "patches", "to": "step0", "label": "Step 0" },
+    { "id": "rule0-gateway", "from": "rule0", "to": "gateway", "label": "gate traffic" },
+    { "id": "step0-desktop", "from": "step0", "to": "desktop", "label": "Step 0" },
+    { "id": "gw-eup58", "from": "gateway", "to": "eup58", "label": "REST" },
+    { "id": "dt-eup58", "from": "desktop", "to": "eup58", "label": "REST" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Controlled fork",
+      "items": [
+        "upstream base with Euphoria patches",
+        "Rule 0 routing gate and per-skill Step 0 are local engine patches"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Shipments",
+      "items": [
+        "gateway ships Rule 0 to traffic",
+        "Desktop ships per-skill Step 0 at build",
+        "EUP-58 API carries session state"
+      ]
+    }
+  ]
+}

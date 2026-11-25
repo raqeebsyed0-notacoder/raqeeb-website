@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Paperclip Governance",
+    "output": "fig3-paperclip.html",
+    "animation": "none",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "session",
+      "type": "external",
+      "label": "Developer session",
+      "sublabel": "agent requesting work",
+      "pos": [40, 240],
+      "size": [130, 56]
+    },
+    {
+      "id": "context",
+      "type": "messagebus",
+      "label": "Session context",
+      "sublabel": "session state",
+      "pos": [240, 380],
+      "size": [150, 56]
+    },
+    {
+      "id": "plugin",
+      "type": "backend",
+      "label": "Governance plugin",
+      "sublabel": "Paperclip Hermes plugin",
+      "pos": [240, 240],
+      "size": [150, 56]
+    },
+    {
+      "id": "adapter",
+      "type": "backend",
+      "label": "Hermes REST adapter",
+      "sublabel": "calls Paperclip API",
+      "pos": [450, 200],
+      "size": [150, 56]
+    },
+    {
+      "id": "api",
+      "type": "cloud",
+      "label": "Paperclip REST API",
+      "sublabel": "governance service",
+      "pos": [670, 200],
+      "size": [150, 56]
+    },
+    {
+      "id": "board",
+      "type": "database",
+      "label": "Company board",
+      "sublabel": "issue + role records",
+      "pos": [670, 360],
+      "size": [150, 56]
+    },
+    {
+      "id": "records",
+      "type": "database",
+      "label": "Issue records",
+      "sublabel": "per-company ledger",
+      "pos": [450, 380],
+      "size": [150, 56]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Governance plane",
+      "wraps": ["plugin", "adapter", "api", "board", "records"]
+    },
+    {
+      "kind": "region",
+      "label": "Session plane",
+      "wraps": ["session", "context"]
+    }
+  ],
+  "connections": [
+    { "id": "sess-plugin", "from": "session", "to": "plugin", "label": "auth" },
+    { "id": "plugin-adapter", "from": "plugin", "to": "adapter", "label": "guardrail calls", "labelAt": [420, 310], "via": [[435, 268], [435, 228]] },
+    { "id": "adapter-api", "from": "adapter", "to": "api", "label": "REST" },
+    { "id": "api-board", "from": "api", "to": "board", "label": "read + write", "labelAt": [745, 270] },
+    { "id": "api-records", "from": "api", "to": "records", "label": "issue records" },
+    { "id": "ctx-plugin", "from": "context", "to": "plugin", "label": "flows in" }
+  ],
+  "cards": [
+    {
+      "dot": "violet",
+      "title": "Governance",
+      "items": [
+        "plugin enforces governance policy",
+        "adapter translates into Paperclip REST calls"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Records",
+      "items": [
+        "company board holds role and issue records",
+        "issue records are the auditable ledger"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "Euphoria Skill Packaging \u2192 Discovery \u2192 Auto-load \u2192 Match",
+    "output": "fig1-skills-path.html",
+    "viewBox": [
+      940,
+      780
+    ],
+    "animation": "none",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "skill-lifecycle",
+        "label": "Skill lifecycle",
+        "focus": [
+          "release",
+          "index",
+          "loader",
+          "match",
+          "dispatch",
+          "context"
+        ]
+      }
+    ]
+  },
+  "stages": [
+    {
+      "label": "Package"
+    },
+    {
+      "label": "Discover"
+    },
+    {
+      "label": "Auto-load"
+    },
+    {
+      "label": "Match"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "release",
+      "type": "external",
+      "label": "Skill release",
+      "sublabel": "gzipped tar + manifest",
+      "stage": 0,
+      "row": 0,
+      "width": 100,
+      "height": 44
+    },
+    {
+      "id": "index",
+      "type": "backend",
+      "label": "Catalog index",
+      "sublabel": "name, hash, requirements",
+      "stage": 1,
+      "row": 0,
+      "width": 104,
+      "height": 44
+    },
+    {
+      "id": "loader",
+      "type": "backend",
+      "label": "Session loader",
+      "sublabel": "auto-loads into session context",
+      "stage": 1,
+      "row": 2,
+      "width": 124,
+      "height": 44
+    },
+    {
+      "id": "task",
+      "type": "frontend",
+      "label": "Task",
+      "sublabel": "user prompt",
+      "stage": 2,
+      "row": 0,
+      "width": 66,
+      "height": 44
+    },
+    {
+      "id": "match",
+      "type": "backend",
+      "label": "Matcher",
+      "sublabel": "semantic skill match",
+      "stage": 2,
+      "row": 2,
+      "width": 96,
+      "height": 44
+    },
+    {
+      "id": "dispatch",
+      "type": "backend",
+      "label": "Dispatch",
+      "sublabel": "handler + args",
+      "stage": 3,
+      "row": 0,
+      "width": 66,
+      "height": 44
+    },
+    {
+      "id": "context",
+      "type": "messagebus",
+      "label": "Session context",
+      "sublabel": "injected skill",
+      "stage": 3,
+      "row": 2,
+      "width": 120,
+      "height": 44
+    }
+  ],
+  "flows": [
+    {
+      "from": "release",
+      "to": "index",
+      "label": "publishes"
+    },
+    {
+      "from": "index",
+      "to": "loader",
+      "label": "catalog",
+      "labelAt": [
+        350,
+        280
+      ]
+    },
+    {
+      "from": "index",
+      "to": "match",
+      "label": "catalog",
+      "labelAt": [
+        455,
+        300
+      ]
+    },
+    {
+      "from": "task",
+      "to": "match",
+      "label": "prompt",
+      "labelAt": [
+        530,
+        186
+      ]
+    },
+    {
+      "from": "match",
+      "to": "dispatch",
+      "label": "matched"
+    },
+    {
+      "from": "dispatch",
+      "to": "context",
+      "label": "invokes",
+      "labelAt": [
+        745,
+        186
+      ]
+    },
+    {
+      "from": "loader",
+      "to": "context",
+      "label": "auto-load",
+      "labelAt": [
+        530,
+        470
+      ],
+      "route": "bottom-channel",
+      "channelY": 470
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Packaging",
+      "items": [
+        "gzipped tar + manifest",
+        "hash pinned in catalog index"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Auto-load",
+      "items": [
+        "loader resolves from catalog",
+        "skill merged into session context"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Match",
+      "items": [
+        "semantic match to task",
+        "dispatch routes to handler"
+      ]
+    }
+  ]
+}
