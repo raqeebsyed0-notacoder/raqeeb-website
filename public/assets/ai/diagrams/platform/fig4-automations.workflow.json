@@ -1,0 +1,127 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "AI & Automation Runbooks on Schedule",
+    "locale": "en",
+    "subtitle": "Automations card, social bridge, X daily report on schedule",
+    "output": "html",
+    "quality_profile": "showcase",
+    "visual_preset": "classic"
+  },
+  "lanes": [
+    {
+      "id": "automations",
+      "label": "Automations card",
+      "variant": "normal"
+    },
+    {
+      "id": "social",
+      "label": "Social bridge",
+      "variant": "normal"
+    },
+    {
+      "id": "x",
+      "label": "X daily report",
+      "variant": "normal"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "card",
+      "label": "Automations card",
+      "sublabel": "job config + schedule",
+      "col": 0,
+      "lane": "automations",
+      "type": "backend",
+      "width": 110
+    },
+    {
+      "id": "social-bridge",
+      "label": "Social bridge",
+      "sublabel": "threads \u2192 posts",
+      "col": 1,
+      "lane": "social",
+      "type": "messagebus"
+    },
+    {
+      "id": "x-report",
+      "label": "X daily report",
+      "sublabel": "scheduled post",
+      "col": 2,
+      "lane": "x",
+      "type": "backend"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "sublabel": "posts",
+      "col": 4,
+      "lane": "x",
+      "type": "external"
+    },
+    {
+      "id": "ledger",
+      "label": "Surfaces",
+      "sublabel": "posted-at ledger",
+      "col": 4,
+      "lane": "automations",
+      "type": "database"
+    },
+    {
+      "id": "scheduler",
+      "label": "Scheduler",
+      "sublabel": "on schedule",
+      "col": 2,
+      "lane": "automations",
+      "type": "backend"
+    },
+    {
+      "id": "twitter",
+      "label": "X",
+      "sublabel": "posts",
+      "col": 3,
+      "lane": "x",
+      "type": "external"
+    }
+  ],
+  "edges": [
+    {
+      "id": "social-twitter",
+      "from": "social-bridge",
+      "to": "twitter",
+      "label": "posts to",
+      "route": "auto"
+    },
+    {
+      "id": "x-twitter",
+      "from": "x-report",
+      "to": "twitter",
+      "label": "posts to",
+      "route": "auto"
+    },
+    {
+      "id": "linkedin-ledger",
+      "from": "linkedin",
+      "to": "ledger",
+      "label": "logs at",
+      "fromSide": "right",
+      "toSide": "bottom",
+      "via": [
+        [
+          750,
+          367
+        ],
+        [
+          750,
+          160
+        ],
+        [
+          611.4,
+          160
+        ]
+      ],
+      "route": "auto"
+    }
+  ]
+}

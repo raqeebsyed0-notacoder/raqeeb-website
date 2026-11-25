@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "OrIO market-intelligence pipeline",
+    "output": "orio-market-intel.html",
+    "locale": "en",
+    "subtitle": "Morning report PDF ingested to SQLite; competitor tool-size by company; observations in the console; delivery blocked locally",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "pipeline",
+        "label": "Ingestion to console",
+        "focus": ["pdf", "sqlite", "matrix", "console"],
+        "note": "Ingested locally; delivery blocked, no outbound channel."
+      }
+    ]
+  },
+  "stages": [
+    { "label": "Ingestion" },
+    { "label": "Analysis" },
+    { "label": "Console" },
+    { "label": "Delivery" }
+  ],
+  "nodes": [
+    { "id": "pdf", "type": "external", "label": "Morning report PDF", "sublabel": "daily digest", "stage": 0, "row": 0, "width": 150, "height": 110, "tag": "source" },
+    { "id": "sqlite", "type": "database", "label": "Per-client SQLite", "sublabel": "ingested facts", "stage": 1, "row": 0, "width": 150, "height": 110, "tag": "store" },
+    { "id": "matrix", "type": "backend", "label": "Market-intel matrix", "sublabel": "competitor tool-size by company", "stage": 1, "row": 2, "width": 150, "height": 110, "tag": "analysis" },
+    { "id": "console", "type": "frontend", "label": "OrIO operations console", "sublabel": "observations shown", "stage": 2, "row": 0, "width": 200, "height": 140, "tag": "ui" },
+    { "id": "delivery", "type": "external", "label": "Delivery", "sublabel": "blocked locally", "stage": 3, "row": 2, "width": 150, "height": 120, "tag": "stub" }
+  ],
+  "flows": [
+    { "from": "pdf", "to": "sqlite", "label": "ingested", "classification": "daily", "variant": "emphasis", "route": "straight" },
+    { "from": "sqlite", "to": "matrix", "label": "tool-size facts", "classification": "derived", "variant": "emphasis", "route": "straight", "labelAt": [315, 252] },
+    { "from": "matrix", "to": "console", "label": "observations", "classification": "derived", "variant": "emphasis", "route": "straight", "via": [[410, 411], [410, 198]], "labelAt": [410, 282] },
+    { "from": "console", "to": "delivery", "label": "publish", "classification": "blocked", "variant": "dashed", "route": "straight", "via": [[638, 198], [638, 416]], "labelAt": [637.5, 282] }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Ingestion", "items": ["Morning report PDF ingests to SQLite", "Facts keyed per client"] },
+    { "dot": "violet", "title": "Analysis", "items": ["Market-intel matrix of competitor tool-size by company", "Observations surfaced in the operations console"] },
+    { "dot": "rose", "title": "Delivery", "items": ["Delivery blocked locally", "No outbound channel"] }
+  ]
+}

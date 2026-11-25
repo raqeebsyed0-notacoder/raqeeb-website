@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Fleet Request Journey",
+    "subtitle": "Founder issues the request; evidence returns through the chain",
+    "quality_profile": "showcase",
+    "viewBox": [1050, 960],
+    "views": [
+      { "id": "request", "label": "Request down", "focus": ["founder", "gateway", "registry", "seats", "leaves"], "note": "Founder POSTs; the gateway, registry, seats and leaves own the work." },
+      { "id": "evidence", "label": "Evidence up", "focus": ["leaves", "seats", "registry", "gateway", "founder", "ceo"], "note": "Results, acks and the final confirmation return up the chain." }
+    ]
+  },
+  "participants": [
+    { "id": "founder", "type": "external", "label": "Founder", "sublabel": "account owner" },
+    { "id": "ceo", "type": "backend", "label": "CEO sovereign", "sublabel": "policy owner" },
+    { "id": "platformHead", "type": "backend", "label": "Platform Head", "sublabel": "qualifies" },
+    { "id": "qualityHead", "type": "backend", "label": "Quality Head", "sublabel": "approves" },
+    { "id": "infraHead", "type": "backend", "label": "Infra Head", "sublabel": "assigns" },
+    { "id": "gateway", "type": "cloud", "label": "Gateway", "sublabel": "ingress" },
+    { "id": "registry", "type": "messagebus", "label": "Paperclip", "sublabel": "seat dir" },
+    { "id": "seats", "type": "backend", "label": "Agent seats", "sublabel": "9 + default" },
+    { "id": "leaves", "type": "frontend", "label": "Leaf workers", "sublabel": "execute" }
+  ],
+  "segments": [
+    { "label": "request", "from": 160, "to": 460 },
+    { "label": "evidence", "from": 460, "to": 700 }
+  ],
+  "messages": [
+    { "id": "m1", "from": "founder", "to": "gateway", "y": 180, "label": "POST /work", "variant": "emphasis" },
+    { "id": "m2", "from": "gateway", "to": "ceo", "y": 220, "label": "route", "variant": "default" },
+    { "id": "m3", "from": "ceo", "to": "platformHead", "y": 260, "label": "gate", "variant": "default" },
+    { "id": "m4", "from": "platformHead", "to": "qualityHead", "y": 300, "label": "qualify", "variant": "default" },
+    { "id": "m5", "from": "qualityHead", "to": "infraHead", "y": 340, "label": "approve", "variant": "default" },
+    { "id": "m6", "from": "infraHead", "to": "registry", "y": 380, "label": "assign", "variant": "default" },
+    { "id": "m7", "from": "registry", "to": "seats", "y": 420, "label": "reserve", "variant": "emphasis" },
+    { "id": "m8", "from": "seats", "to": "leaves", "y": 458, "label": "execute", "variant": "emphasis" },
+    { "id": "m9", "from": "leaves", "to": "seats", "y": 500, "label": "results", "variant": "return" },
+    { "id": "m10", "from": "seats", "to": "registry", "y": 540, "label": "ack", "variant": "return" },
+    { "id": "m11", "from": "registry", "to": "gateway", "y": 580, "label": "200 result", "variant": "return" },
+    { "id": "m12", "from": "gateway", "to": "founder", "y": 620, "label": "200 + report", "variant": "return" },
+    { "id": "m13", "from": "gateway", "to": "ceo", "y": 660, "label": "report", "variant": "return" },
+    { "id": "m14", "from": "ceo", "to": "founder", "y": 698, "label": "confirmed", "variant": "return" }
+  ],
+  "activations": [
+    { "participant": "gateway", "from": 160, "to": 220, "type": "cloud" },
+    { "participant": "registry", "from": 200, "to": 260, "type": "messagebus" },
+    { "participant": "ceo", "from": 240, "to": 260, "type": "backend" },
+    { "participant": "platformHead", "from": 280, "to": 300, "type": "backend" },
+    { "participant": "qualityHead", "from": 320, "to": 340, "type": "backend" },
+    { "participant": "infraHead", "from": 360, "to": 430, "type": "backend" },
+    { "participant": "seats", "from": 440, "to": 600, "type": "backend" },
+    { "participant": "leaves", "from": 440, "to": 500, "type": "frontend" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Request", "items": ["Founder POSTs /work", "Gateway routes it", "Policy gate", "Reserve seats", "Leaves execute"] },
+    { "dot": "emerald", "title": "Evidence", "items": ["Results back", "Ack to registry", "200 + report", "Confirmed by CEO"] },
+    { "dot": "violet", "title": "Wiring", "items": ["Gateway ingress", "Paperclip registry", "Seat directory"] }
+  ]
+}

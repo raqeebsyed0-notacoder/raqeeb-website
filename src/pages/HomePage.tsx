@@ -1,4 +1,4 @@
-import { Navbar, Footer } from '../components/Layout'
+import { Navbar } from '../components/Layout'
 
 export default function HomePage() {
   return (
@@ -44,6 +44,7 @@ export default function HomePage() {
               <li>Brand Identity</li>
               <li>Presentation Design</li>
               <li>Social Media Creative</li>
+              <li>AI & Automation</li>
               <li>Website & Digital Design</li>
             </ul>
           </div>

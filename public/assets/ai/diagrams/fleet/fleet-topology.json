@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Euphoria Agent Fleet",
+    "subtitle": "Founder to CEO sovereign, through Hermes gateway and Paperclip registry to nine seats plus the default",
+    "quality_profile": "showcase",
+    "views": [
+      { "id": "governing", "label": "Governing chain", "focus": ["founder", "ceo", "dept1", "dept2", "dept3"], "note": "Policy flows from the Founder down the executive line." },
+      { "id": "fleet", "label": "Fleet backbone", "focus": ["gateway", "registry", "seats"], "note": "The gateway routes, the registry maps, the seats run." }
+    ],
+    "legend": { "mode": "auto" }
+  },
+  "layout": {
+    "mode": "grid",
+    "cols": 5,
+    "origin": [40, 80],
+    "gapX": 30,
+    "gapY": 60,
+    "cellW": 180,
+    "cellH": 60
+  },
+  "components": [
+    { "id": "founder", "type": "external", "label": "Founder", "sublabel": "account owner", "pos": [40, 80], "size": [120, 60] },
+    { "id": "ceo", "type": "backend", "label": "CEO sovereign", "sublabel": "domain lead", "pos": [460, 200], "size": [120, 60] },
+    { "id": "dept1", "type": "backend", "label": "Head of Platform", "sublabel": "platform team", "pos": [40, 320], "size": [120, 60] },
+    { "id": "dept2", "type": "backend", "label": "Head of Quality", "sublabel": "quality team", "pos": [250, 320], "size": [120, 60] },
+    { "id": "dept3", "type": "backend", "label": "Head of Infra", "sublabel": "infrastructure team", "pos": [460, 320], "size": [120, 60] },
+    { "id": "leaves1", "type": "frontend", "label": "Leaves · a11y", "sublabel": "accessibility", "pos": [40, 440], "size": [120, 60] },
+    { "id": "leaves2", "type": "frontend", "label": "Leaves · content", "sublabel": "content", "pos": [250, 440], "size": [120, 60] },
+    { "id": "leaves3", "type": "frontend", "label": "Leaves · docs", "sublabel": "documentation", "pos": [460, 440], "size": [120, 60] },
+    { "id": "gateway", "type": "cloud", "label": "Hermes gateway", "sublabel": "ingress / routing", "pos": [880, 80], "size": [120, 60] },
+    { "id": "registry", "type": "messagebus", "label": "Paperclip registry", "sublabel": "seat directory", "pos": [670, 200], "size": [120, 60] },
+    { "id": "seats", "type": "backend", "label": "Agent seats", "sublabel": "9 + default", "pos": [880, 320], "size": [120, 60] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Executive mandate", "wraps": ["ceo", "dept1", "dept2", "dept3"], "pad": 30 },
+    { "kind": "region", "label": "Delivery fleet", "wraps": ["leaves1", "leaves2", "leaves3"], "pad": 30 }
+  ],
+  "connections": [
+    { "id": "founder-approves", "from": "founder", "to": "ceo", "label": "approves", "labelAt": [310, 110] },
+    { "id": "ceo-directs-platform", "from": "ceo", "to": "dept1", "label": "directs", "labelAt": [310, 290] },
+    { "id": "ceo-directs-quality", "from": "ceo", "to": "dept2", "label": "directs", "labelAt": [390, 290] },
+    { "id": "ceo-directs-infra", "from": "ceo", "to": "dept3", "label": "directs", "labelAt": [520, 290] },
+    { "id": "platform-hosts", "from": "dept1", "to": "leaves1", "label": "hosts", "labelAt": [100, 410] },
+    { "id": "quality-hosts", "from": "dept2", "to": "leaves2", "label": "hosts", "labelAt": [260, 410] },
+    { "id": "infra-hosts", "from": "dept3", "to": "leaves3", "label": "hosts", "labelAt": [420, 410] },
+    { "id": "ceo-ingresses", "from": "ceo", "to": "gateway", "label": "ingresses", "labelAt": [730, 290] },
+    { "id": "gateway-authorizes", "from": "gateway", "to": "registry", "label": "authorizes", "labelAt": [805, 170] },
+    { "id": "registry-maps", "from": "registry", "to": "seats", "label": "maps", "labelAt": [835, 250] }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Governing", "items": ["Founder sets policy", "CEO sovereign owns the chain", "Heads qualify the work"] },
+    { "dot": "emerald", "title": "Fleet", "items": ["Agent seats: nine plus default", "Paperclip registry maps seats", "Gateway routes every request"] },
+    { "dot": "violet", "title": "Delivery", "items": ["Heads host leaf teams", "Leaves execute work", "Evidence returns up"] }
+  ]
+}

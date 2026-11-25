@@ -1,14 +1,15 @@
 import { useParams, Link } from 'react-router-dom'
 import PageLayout from '../components/PageLayout'
-import { getProjectsByCategory, getCategory } from '../data/portfolio'
+import { getAiProjects, getCategory } from '../data/portfolio'
+import type { SqueezeSlide } from '../components/ui/carousel-squeeze'
 import SqueezeCarousel from '../components/ui/carousel-squeeze'
 
-const brandSlides = [
+const brandSlides: SqueezeSlide[] = [
   { id: 'buyology', slug: 'buyology', image: 'assets/projects/buyology/buyology-banner.png', title: 'Buyology', subtitle: 'Visual identity system', aspectRatio: '2501 / 834', objectFit: 'cover' },
   { id: 'euphoria-brand', slug: 'euphoria-experiences-brand', image: 'assets/brand/euphoria/euphoria-banner.png', title: 'Euphoria', subtitle: 'Brand mark & identity', aspectRatio: '2501 / 834', objectFit: 'cover' },
 ]
 
-const presentationSlides = [
+const presentationSlides: SqueezeSlide[] = [
   { id: 'blaize', slug: 'blaize', image: 'assets/presentation/blaize/blaize-01.jpg', title: 'Blaize', subtitle: 'AI hardware pitch deck', aspectRatio: '2000 / 1125', objectFit: 'cover' },
   { id: 'chashmawala', slug: 'chashmawala', image: 'assets/presentation/chashmawala/chashmawala-01.jpg', title: 'Dr. Chashmawala', subtitle: 'Brand proposal', aspectRatio: '2000 / 1125', objectFit: 'cover' },
   { id: 'flowserve', slug: 'flowserve', image: 'assets/presentation/flowserve/flowserve-01.jpg', title: 'Flowserve', subtitle: 'Widescreen keynote', aspectRatio: '2481 / 1754', objectFit: 'cover' },
@@ -19,7 +20,7 @@ const presentationSlides = [
   { id: 'white-graphics-brochure', slug: 'white-graphics-brochure', image: 'assets/presentation/white-graphics-brochure/white-graphics-brochure-01.jpg', title: 'White Graphics', subtitle: 'Corporate brochure', aspectRatio: '1813 / 1241', objectFit: 'cover' },
 ]
 
-const socialSlides = [
+const socialSlides: SqueezeSlide[] = [
   { id: 'arata', slug: 'arata', image: 'assets/social/arata/arata-1.png', title: 'Arata', subtitle: 'Visual campaign system', aspectRatio: '1080 / 1080', objectFit: 'cover' },
   { id: 'dot-and-key', slug: 'dot-and-key', image: 'assets/social/dot-and-key/1.png', title: 'Dot & Key', subtitle: 'Visual drop campaign', aspectRatio: '1080 / 1080', objectFit: 'cover' },
   { id: 'euphoria-campaign', slug: 'euphoria-campaign', image: 'assets/social/euphoria/1.webp', title: 'Euphoria', subtitle: 'Campaign creative', aspectRatio: '1408 / 1760', objectFit: 'cover' },
@@ -32,7 +33,7 @@ const socialSlides = [
   { id: 'ustraa', slug: 'ustraa', image: 'assets/social/ustraa/1.png', title: 'Ustraa', subtitle: 'Campaign creative', aspectRatio: '1080 / 1080', objectFit: 'cover' },
 ]
 
-const websiteSlides = [
+const websiteSlides: SqueezeSlide[] = [
   { id: 'euphoria-web', slug: 'euphoria-website', image: 'assets/websites/live/euphoria.jpg', title: 'Euphoria Web', subtitle: 'Live site — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
   { id: 'grc', slug: 'grc', image: 'assets/websites/live/grc-v1.jpg', title: 'GRC Evolution', subtitle: 'Live sites v1–v3 — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
   { id: 'marsa-atelier', slug: 'marsa-atelier', image: 'assets/websites/marsa-atelier-hero@1400w.jpg', title: 'Marsa Atelier', subtitle: 'Live site — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
@@ -42,7 +43,6 @@ const websiteSlides = [
 export default function CategoryPage() {
   const { category } = useParams<{ category: string }>()
   const cat = getCategory(category || '')
-  const projects = getProjectsByCategory(category || '')
 
   if (!cat) {
     return (
@@ -53,17 +53,29 @@ export default function CategoryPage() {
     )
   }
 
+  const aiSlides: SqueezeSlide[] = getAiProjects().map((p) => ({
+    id: p.id,
+    slug: p.slug,
+    image: p.screenshots[0],
+    title: p.title,
+    subtitle: p.summary,
+    aspectRatio: '2000 / 1125',
+    objectFit: 'cover',
+  }))
+
   const slides =
     category === 'brand-identity' ? brandSlides :
     category === 'presentation-design' ? presentationSlides :
     category === 'social-media' ? socialSlides :
-    category === 'websites' ? websiteSlides : []
+    category === 'websites' ? websiteSlides :
+    category === 'ai' ? aiSlides : []
 
   const label =
     category === 'brand-identity' ? 'Brand Identity Gallery' :
     category === 'presentation-design' ? 'Presentation Design Gallery' :
     category === 'social-media' ? 'Social Media Design Gallery' :
-    category === 'websites' ? 'Web & UI Design Gallery' : undefined
+    category === 'websites' ? 'Web & UI Design Gallery' :
+    category === 'ai' ? 'AI & Automation Gallery' : undefined
 
   return (
     <PageLayout>

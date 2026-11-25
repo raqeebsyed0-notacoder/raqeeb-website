@@ -143,7 +143,7 @@ export function Footer() {
         <a href="mailto:raqeebsyed0@gmail.com" className="text-red-500 transition-colors hover:text-red-400">Let's talk</a>
       </p>
       <p className="text-xs text-white/70 sm:text-right">
-        Brand Identity &bull; Presentations &bull; Social Media &bull; Websites
+        Brand Identity &bull; Presentations &bull; Social Media &bull; Websites &bull; AI & Automation
       </p>
     </footer>
   )
