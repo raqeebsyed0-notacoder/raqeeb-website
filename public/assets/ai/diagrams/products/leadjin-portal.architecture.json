@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "LeadJin regional intelligence platform",
+    "output": "leadjin-portal.html",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "front-end-path",
+        "label": "Front end path",
+        "focus": [
+          "customers",
+          "react",
+          "browser-ext",
+          "mobile",
+          "express"
+        ],
+        "note": "One request from the customer through the UI shells to the API."
+      },
+      {
+        "id": "registry-leg",
+        "label": "KSA registry leg",
+        "focus": [
+          "express",
+          "sqlite",
+          "registry"
+        ],
+        "note": "Company lookup across the KSA registry inside the region."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "customers",
+      "type": "external",
+      "label": "Customers",
+      "sublabel": "SaaS buyers",
+      "pos": [
+        40,
+        320
+      ],
+      "size": [
+        110,
+        56
+      ]
+    },
+    {
+      "id": "react",
+      "type": "frontend",
+      "label": "React 19 + Vite",
+      "sublabel": "UI shell",
+      "pos": [
+        220,
+        320
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "browser-ext",
+      "type": "frontend",
+      "label": "Browser extension",
+      "sublabel": "Chrome / Edge",
+      "pos": [
+        220,
+        160
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "mobile",
+      "type": "frontend",
+      "label": "Mobile shell",
+      "sublabel": "PWA",
+      "pos": [
+        220,
+        480
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "express",
+      "type": "backend",
+      "label": "Express API",
+      "sublabel": "Node :4000",
+      "pos": [
+        440,
+        320
+      ],
+      "size": [
+        130,
+        56
+      ]
+    },
+    {
+      "id": "sqlite",
+      "type": "database",
+      "label": "SQLite store",
+      "sublabel": "local :file",
+      "pos": [
+        440,
+        480
+      ],
+      "size": [
+        130,
+        56
+      ]
+    },
+    {
+      "id": "registry",
+      "type": "external",
+      "label": "KSA company registry",
+      "sublabel": "FAIA \u00b7 INS",
+      "pos": [
+        760,
+        320
+      ],
+      "size": [
+        210,
+        56
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "LeadJin Gulf region",
+      "wraps": [
+        "customers",
+        "react",
+        "browser-ext",
+        "mobile",
+        "express",
+        "sqlite",
+        "registry"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "customers-to-react",
+      "from": "customers",
+      "to": "react",
+      "label": "HTTPS",
+      "variant": "emphasis"
+    },
+    {
+      "id": "react-to-browser-ext",
+      "from": "react",
+      "to": "browser-ext",
+      "label": "shell",
+      "variant": "dashed",
+      "labelAt": [
+        295,
+        260
+      ]
+    },
+    {
+      "id": "react-to-mobile",
+      "from": "react",
+      "to": "mobile",
+      "label": "shell",
+      "variant": "dashed",
+      "labelAt": [
+        295,
+        430
+      ]
+    },
+    {
+      "id": "react-to-express",
+      "from": "react",
+      "to": "express",
+      "label": "REST",
+      "variant": "emphasis"
+    },
+    {
+      "id": "express-to-sqlite",
+      "from": "express",
+      "to": "sqlite",
+      "label": "SQL",
+      "variant": "emphasis",
+      "labelAt": [505, 395]
+    },
+    {
+      "id": "express-to-registry",
+      "from": "express",
+      "to": "registry",
+      "label": "registry STW",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Front end",
+      "items": [
+        "React 19 + Vite SPA shell",
+        "Browser extension",
+        "Mobile shell (PWA)"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Back end",
+      "items": [
+        "Express API on Node :4000",
+        "SQLite local store"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Registry leg",
+      "items": [
+        "KSA company registry (FAIA)",
+        "STW lookup from Express"
+      ]
+    }
+  ]
+}

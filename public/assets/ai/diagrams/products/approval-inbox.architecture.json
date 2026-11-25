@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Hermes approval inbox",
+    "output": "approval-inbox.html",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "default-agent-routing",
+        "label": "Default agent routing",
+        "focus": ["desktop", "agent", "engine", "ledger"],
+        "note": "Approvals route through the default agent; the decision lands in the ledger."
+      },
+      {
+        "id": "workspace-flow",
+        "label": "Workspace flow",
+        "focus": ["desktop", "artifacts", "engine", "session"],
+        "note": "The inbox renders artifacts; the reply is injected into the live session."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "desktop",
+      "type": "frontend",
+      "label": "Desktop inbox UI",
+      "sublabel": "shows artifacts",
+      "pos": [60, 150],
+      "size": [220, 100]
+    },
+    {
+      "id": "artifacts",
+      "type": "database",
+      "label": "Artifact store",
+      "sublabel": "inbox items",
+      "pos": [60, 440],
+      "size": [220, 70]
+    },
+    {
+      "id": "agent",
+      "type": "backend",
+      "label": "Default agent",
+      "sublabel": "routes approvals only",
+      "pos": [360, 150],
+      "size": [170, 80],
+      "tag": "single ingress"
+    },
+    {
+      "id": "engine",
+      "type": "backend",
+      "label": "Decision engine",
+      "sublabel": "writes decision",
+      "pos": [360, 320],
+      "size": [170, 80]
+    },
+    {
+      "id": "ledger",
+      "type": "database",
+      "label": "Approval ledger",
+      "sublabel": "decision record",
+      "pos": [600, 320],
+      "size": [170, 70]
+    },
+    {
+      "id": "session",
+      "type": "external",
+      "label": "Live session",
+      "sublabel": "reply injected",
+      "pos": [600, 460],
+      "size": [170, 70]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Approval inbox plugin",
+      "wraps": ["desktop", "artifacts", "agent", "engine", "ledger", "session"]
+    }
+  ],
+  "connections": [
+    {
+      "id": "artifacts-to-desktop",
+      "from": "artifacts",
+      "to": "desktop",
+      "label": "render",
+      "variant": "dashed"
+    },
+    {
+      "id": "desktop-to-agent",
+      "from": "desktop",
+      "to": "agent",
+      "label": "route",
+      "variant": "default"
+    },
+    {
+      "id": "agent-to-engine",
+      "from": "agent",
+      "to": "engine",
+      "label": "approve",
+      "variant": "default",
+      "labelAt": [445, 250]
+    },
+    {
+      "id": "engine-to-ledger",
+      "from": "engine",
+      "to": "ledger",
+      "label": "write",
+      "variant": "default"
+    },
+    {
+      "id": "engine-to-session",
+      "from": "engine",
+      "to": "session",
+      "label": "inject",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Inbox UI",
+      "items": ["Desktop-only", "Artifact cards", "Approval routes"]
+    },
+    {
+      "dot": "emerald",
+      "title": "Default agent",
+      "items": ["Approvals only", "Single ingress", "No writes"]
+    },
+    {
+      "dot": "violet",
+      "title": "Workspace",
+      "items": ["Decision to ledger", "Reply into live session"]
+    }
+  ]
+}
