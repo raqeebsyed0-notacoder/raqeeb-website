@@ -28,6 +28,19 @@ export interface Category {
   sourceFolder: string
 }
 
+export interface SkillInfo {
+  name: string;
+  description: string;
+  status: 'installed' | 'roadmap' | 'project';
+  category?: string;
+}
+
+export interface AiProjectLink {
+  label: string;
+  url: string;
+  type: 'diagram' | 'portal' | 'external' | 'repo';
+}
+
 export interface AiProject {
   id: string;
   title: string;
@@ -40,6 +53,8 @@ export interface AiProject {
   screenshots: string[];
   agent: string;
   skills: string[];
+  skillDetails?: SkillInfo[];
+  links?: AiProjectLink[];
   demos: { label: string; url: string }[]; // labelled demo / video slots
 }
 
@@ -784,116 +799,279 @@ export const aiProjects: AiProject[] = [
     id: 'agent-fleet',
     title: 'Agent Fleet',
     slug: 'agent-fleet',
-    summary: 'Nine seat profiles plus a default lane, their models and routing chain, orchestrated through one board.',
+    summary: 'Multi-agent operating system coordinating 9 autonomous seat profiles (sovereign, marshal, mason, prism, crucible, lantern, herald, steward, mother) and an orchestration lane. Governed through a centralized Paperclip issue board with gateway event routing, model churn loop protection, and automated health monitoring.',
     role: 'Systems architecture & fleet orchestration',
     status: 'Live',
     stack: ['Hermes Agent', 'Paperclip', 'Cron', 'MCP'],
     architecture: 'assets/ai/diagrams/fleet/fleet-topology.png',
-    screenshots: ['assets/ai/diagrams/fleet/fleet-request-chain.png'],
-    agent: 'sovereign',
+    screenshots: [
+      'assets/ai/diagrams/fleet/fleet-request-chain.png',
+      'assets/ai/shots/paperclip-ui-3102.png',
+    ],
+    agent: 'sovereign (CEO & governance owner)',
     skills: ['fleet-model-allocation', 'dispatch-discipline', 'cron-dispatch-triage'],
-    demos: [{ label: 'Fleet overview', url: '' }],
+    skillDetails: [
+      {
+        name: 'fleet-model-allocation',
+        status: 'installed',
+        description: 'Apply a Founder-approved model blueprint fleet-wide across all agent profiles in config.yaml.',
+      },
+      {
+        name: 'dispatch-discipline',
+        status: 'installed',
+        description: 'Pre-dispatch verification checklist: verify slugs, exact key paths, bounded scope, and live readbacks.',
+      },
+      {
+        name: 'cron-dispatch-triage',
+        status: 'installed',
+        description: 'Triage failed or ownerless cron jobs with live-API re-derivation and explicit verdicts.',
+      },
+    ],
+    links: [
+      { label: 'Interactive Fleet Topology (Archify)', url: 'assets/ai/diagrams/fleet/fleet-topology.html', type: 'diagram' },
+      { label: 'Fleet Request Journey Sequence (Archify)', url: 'assets/ai/diagrams/fleet/fleet-request-chain.html', type: 'diagram' },
+      { label: 'Paperclip Work Control Board', url: 'http://localhost:3102', type: 'portal' },
+    ],
+    demos: [{ label: 'Fleet Overview Walkthrough', url: '' }],
   },
   {
     id: 'skills-library',
     title: 'Skills Library',
     slug: 'skills-library',
-    summary: 'A versioned library of reusable procedures that gives every agent the same proven workflow for recurring work.',
-    role: 'Skill authoring & maintenance',
+    summary: 'Standardized procedural memory framework replacing lossy session context with verifiable, versioned SKILL.md packages. Built on a triple-provenance model (upstream adaptation, per-profile projection, and internal operational capture) governed by automated curator hygiene.',
+    role: 'Skill authoring & governance',
     status: 'Live',
-    stack: ['SKILL.md', 'Markdown', 'Git', 'Hermes Agent'],
+    stack: ['SKILL.md', 'YAML Frontmatter', 'Git', 'Hermes Agent'],
     architecture: 'assets/ai/diagrams/platform/fig1-skills-path.png',
-    screenshots: [],
-    agent: 'steward',
+    screenshots: ['assets/ai/diagrams/platform/fig1-skills-path.png'],
+    agent: 'steward (Fleet maintainer & skills custodian)',
     skills: ['skill-maintainer', 'omh-skill-health', 'omh-skill-scout'],
-    demos: [{ label: 'Library walkthrough', url: '' }],
+    skillDetails: [
+      {
+        name: 'skill-maintainer',
+        status: 'installed',
+        description: 'Track upstream drift, sync, and publish adapted skill libraries across seats (meta-skill).',
+      },
+      {
+        name: 'omh-skill-health',
+        status: 'roadmap',
+        description: 'OMH plugin capability scoring and skill portfolio health auditing (Roadmap).',
+      },
+      {
+        name: 'omh-skill-scout',
+        status: 'roadmap',
+        description: 'Skill reuse discovery and redundancy prevention before authoring new skills (Roadmap).',
+      },
+    ],
+    links: [
+      { label: 'Interactive Skills Path Dataflow (Archify)', url: 'assets/ai/diagrams/platform/fig1-skills-path.html', type: 'diagram' },
+    ],
+    demos: [{ label: 'Skill Authoring & Projection Walkthrough', url: '' }],
   },
   {
     id: 'orio-operations',
     title: 'OrIO Operations',
     slug: 'orio-operations',
-    summary: 'Operations console built for the Innovex pilot (Ajeez Sebastian): rig, well and job-cycle lifecycle, reconciliation and MDD, plus a market-intelligence track.',
+    summary: 'Operational intelligence console engineered for the Innovex pilot (Ajeez Sebastian), tracking rig, well, and job-cycle lifecycles in real time. Features automated reconciliation, Material Data Delivery (MDD) verification, and an active market-intelligence feed.',
     role: 'Console design & build',
     status: 'Pilot live',
     stack: ['Hermes Desktop', 'FastAPI', 'SQLite', 'Plugin SDK'],
     architecture: 'assets/ai/diagrams/orio/orio-operations.png',
     screenshots: ['assets/ai/diagrams/orio/orio-market-intel.png'],
-    agent: 'ajeez-orio',
+    agent: 'ajeez-orio (Domain specialist)',
     skills: ['orio-operations-core', 'orio-market-intelligence', 'orio-validation', 'orio-morning-report'],
+    skillDetails: [
+      {
+        name: 'orio-operations-core',
+        status: 'project',
+        description: 'Core domain operations and rig lifecycle telemetry (ORIO pilot package).',
+      },
+      {
+        name: 'orio-market-intelligence',
+        status: 'project',
+        description: 'Automated tracking and extraction of regional market intelligence signals (ORIO pilot).',
+      },
+      {
+        name: 'orio-validation',
+        status: 'project',
+        description: 'Well telemetry and MDD reconciliation verification gates (ORIO pilot).',
+      },
+      {
+        name: 'orio-morning-report',
+        status: 'project',
+        description: 'Daily operational digest generation for field operators (ORIO pilot).',
+      },
+    ],
+    links: [
+      { label: 'Interactive Operations Architecture (Archify)', url: 'assets/ai/diagrams/orio/orio-operations.html', type: 'diagram' },
+      { label: 'Market Intelligence Dataflow (Archify)', url: 'assets/ai/diagrams/orio/orio-market-intel.html', type: 'diagram' },
+    ],
     demos: [
-      { label: 'Operations demo', url: '' },
-      { label: 'Market intelligence demo', url: '' },
+      { label: 'Operations Pilot Walkthrough', url: 'assets/ai/videos/orio-operations-pilot-demo.mp4' },
+      { label: 'Market Intelligence Feature Demo', url: 'assets/ai/videos/orio-market-intelligence-demo.mp4' },
     ],
   },
   {
     id: 'leadjin-portal',
     title: 'LeadJin Portal',
     slug: 'leadjin-portal',
-    summary: 'Regional intelligence platform for the Saudi market: front end, API and a KSA company registry leg.',
+    summary: 'B2B regional intelligence platform for Saudi Arabia, combining automated discovery pipelines with official commercial registry validation. Feeds verified company profiles, decision-maker contacts, and place data directly into Twenty CRM over GraphQL.',
     role: 'Data pipeline & portal build',
     status: 'Pilot',
-    stack: ['React 19', 'Vite', 'Express', 'SQLite'],
+    stack: ['React 19', 'Vite', 'Express', 'SQLite', 'Twenty CRM'],
     architecture: 'assets/ai/diagrams/products/leadjin-portal.png',
     screenshots: ['assets/ai/shots/leadjin-3001.png'],
-    agent: 'mason',
+    agent: 'mason (Fullstack lead)',
     skills: ['verified-lead-discovery', 'euphoria-places-lead-discovery', 'twenty-crm'],
-    demos: [{ label: 'Pipeline demo', url: '' }],
+    skillDetails: [
+      {
+        name: 'verified-lead-discovery',
+        status: 'installed',
+        description: 'Keyless KSA verified-lead discovery pipeline with per-gate evidence URLs.',
+      },
+      {
+        name: 'euphoria-places-lead-discovery',
+        status: 'installed',
+        description: 'Gated prospecting flow via Google Places for Saudi business entities.',
+      },
+      {
+        name: 'twenty-crm',
+        status: 'installed',
+        description: 'Twenty CRM GraphQL integration managing stages from NEW to CUSTOMER.',
+      },
+    ],
+    links: [
+      { label: 'Interactive Portal Architecture (Archify)', url: 'assets/ai/diagrams/products/leadjin-portal.html', type: 'diagram' },
+      { label: 'LeadJin Local Portal UI', url: 'http://localhost:3001', type: 'portal' },
+    ],
+    demos: [{ label: 'Pipeline & Discovery Demo', url: '' }],
   },
   {
     id: 'approval-inbox',
     title: 'Approval Inbox',
     slug: 'approval-inbox',
-    summary: 'One inbox in the Desktop for every approval-gated decision, routed through the default agent only.',
+    summary: 'Unified decision gateway inside Hermes Desktop that routes all high-impact actions through the default orchestrator for Founder ruling. Integrates cryptographic hash gating and SiYuan state storage to prevent unverified executions.',
     role: 'Approval workflow design',
     status: 'Live',
-    stack: ['Hermes Desktop', 'Plugin SDK', 'Hermes Agent'],
+    stack: ['Hermes Desktop', 'Plugin SDK', 'Hermes Agent', 'SiYuan'],
     architecture: 'assets/ai/diagrams/products/approval-inbox.png',
-    screenshots: [],
-    agent: 'steward',
+    screenshots: ['assets/ai/diagrams/products/approval-inbox.png'],
+    agent: 'steward (Governance custodian)',
     skills: ['euphoria-approval-queue', 'proposal-send'],
-    demos: [{ label: 'Inbox walkthrough', url: '' }],
+    skillDetails: [
+      {
+        name: 'euphoria-approval-queue',
+        status: 'installed',
+        description: 'Founder approval workflow through SiYuan EUPHORIA APPROVALS store.',
+      },
+      {
+        name: 'proposal-send',
+        status: 'installed',
+        description: 'Verified proposal dispatch with snapshot auditing and OTP safeguards.',
+      },
+    ],
+    links: [
+      { label: 'Interactive Architecture Diagram (Archify)', url: 'assets/ai/diagrams/products/approval-inbox.html', type: 'diagram' },
+    ],
+    demos: [{ label: 'Approval Queue & Decision Flow', url: '' }],
   },
   {
     id: 'paperclip-plugin',
     title: 'Paperclip Plugin',
     slug: 'paperclip-plugin',
-    summary: 'A Hermes plugin that exposes the Paperclip board to agents: issues, updates and live status.',
+    summary: 'Native desktop and agent integration layer connecting Hermes runtimes to Paperclip company boards. Enables autonomous issue checkout, heartbeat reporting, attachment uploads, and recovery-action disposition without breaking context.',
     role: 'Plugin engineering',
     status: 'Live',
     stack: ['Hermes Agent', 'Plugin SDK', 'TypeScript', 'Paperclip API'],
     architecture: 'assets/ai/diagrams/platform/fig3-paperclip.png',
     screenshots: ['assets/ai/shots/paperclip-ui-3102.png'],
-    agent: 'mason',
+    agent: 'mason (Integration engineer)',
     skills: ['paperclip-sop', 'hermes-plugin-development'],
-    demos: [{ label: 'Plugin demo', url: '' }],
+    skillDetails: [
+      {
+        name: 'paperclip-sop',
+        status: 'installed',
+        description: 'Paperclip governance SOP: issues, attachments, runs, and recovery actions.',
+      },
+      {
+        name: 'hermes-plugin-development',
+        status: 'installed',
+        description: 'Plugin SDK lifecycle: hot-reload, contract registration, and persistence.',
+      },
+    ],
+    links: [
+      { label: 'Interactive Plugin Architecture (Archify)', url: 'assets/ai/diagrams/platform/fig3-paperclip.html', type: 'diagram' },
+      { label: 'Paperclip Work Control Board', url: 'http://localhost:3102', type: 'portal' },
+    ],
+    demos: [{ label: 'Plugin Execution & Checkout Demo', url: '' }],
   },
   {
     id: 'hermes-engine',
     title: 'Hermes Engine',
     slug: 'hermes-engine',
-    summary: 'The controlled Hermes fork carrying the Rule 0 routing gate and per-skill Step 0 across gateway and Desktop.',
+    summary: 'Customized Hermes runtime distribution embedding enterprise governance: Rule 0 routing gates, Step 0 pre-flight skill validation, and isolated per-profile configuration islands. Ensures deterministic multi-agent execution across local and cloud backends.',
     role: 'Runtime configuration & orchestration',
     status: 'Live',
     stack: ['Hermes Agent', 'Python', 'YAML', 'Plugins'],
     architecture: 'assets/ai/diagrams/platform/fig2-engine-fork.png',
-    screenshots: [],
-    agent: 'steward',
-    skills: ['hermes-agent', 'omh-routing', 'plugin-discipline'],
-    demos: [{ label: 'Runtime overview', url: '' }],
+    screenshots: ['assets/ai/diagrams/platform/fig2-engine-fork.png'],
+    agent: 'steward (Core runtime maintainer)',
+    skills: ['hermes-agent', 'plugin-discipline', 'omh-routing'],
+    skillDetails: [
+      {
+        name: 'hermes-agent',
+        status: 'installed',
+        description: 'Core runtime management: profiles, model providers, and bot orchestration.',
+      },
+      {
+        name: 'plugin-discipline',
+        status: 'installed',
+        description: 'Plugin lifecycle auditing: enforcing standing workflows per installed extension.',
+      },
+      {
+        name: 'omh-routing',
+        status: 'roadmap',
+        description: 'Mixture-of-agents task delegation and OMH meta-router (Roadmap).',
+      },
+    ],
+    links: [
+      { label: 'Interactive Engine Architecture (Archify)', url: 'assets/ai/diagrams/platform/fig2-engine-fork.html', type: 'diagram' },
+    ],
+    demos: [{ label: 'Runtime Lifecycle & Rule 0 Demo', url: '' }],
   },
   {
     id: 'automations',
     title: 'Automations',
     slug: 'automations',
-    summary: 'Scheduled jobs owned by the profile that runs them, including the social bridge and the X daily report.',
+    summary: 'Scheduled background intelligence infrastructure running 38+ autonomous cron workflows across the fleet. Powers continuous news dedup digests, social media publishing bridges, and live API drift monitoring with zero human intervention.',
     role: 'Automation design & monitoring',
     status: 'Live',
     stack: ['Hermes Agent', 'Cron', 'Paperclip', 'MCP'],
     architecture: 'assets/ai/diagrams/platform/fig4-automations.png',
-    screenshots: [],
-    agent: 'lantern',
+    screenshots: ['assets/ai/diagrams/platform/fig4-automations.png'],
+    agent: 'lantern (Operations & automation lead)',
     skills: ['cron-dispatch-triage', 'scheduled-cronjob-review', 'topic-digest-cron'],
-    demos: [{ label: 'Automation sweep', url: '' }],
+    skillDetails: [
+      {
+        name: 'cron-dispatch-triage',
+        status: 'installed',
+        description: 'Failure detection and auto-recovery for root cron registry jobs.',
+      },
+      {
+        name: 'scheduled-cronjob-review',
+        status: 'installed',
+        description: 'Scheduled watch verification against live external APIs.',
+      },
+      {
+        name: 'topic-digest-cron',
+        status: 'installed',
+        description: 'Automated deduplicated news digest pipelines with routing.',
+      },
+    ],
+    links: [
+      { label: 'Interactive Automation Workflow (Archify)', url: 'assets/ai/diagrams/platform/fig4-automations.html', type: 'diagram' },
+    ],
+    demos: [{ label: 'Automated Sweep & Dedup Pipeline', url: '' }],
   },
 ];
 

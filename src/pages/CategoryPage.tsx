@@ -56,11 +56,11 @@ export default function CategoryPage() {
   const aiSlides: SqueezeSlide[] = getAiProjects().map((p) => ({
     id: p.id,
     slug: p.slug,
-    image: p.screenshots[0],
+    image: p.screenshots[0] || p.architecture,
     title: p.title,
-    subtitle: p.summary,
+    subtitle: p.role,
     aspectRatio: '2000 / 1125',
-    objectFit: 'cover',
+    objectFit: 'contain',
   }))
 
   const slides =

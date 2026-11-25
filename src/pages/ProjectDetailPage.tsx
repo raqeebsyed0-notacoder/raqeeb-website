@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import PageLayout from '../components/PageLayout'
-import { getProject, getNextProject, getPreviousProject, getCategoryBySlug, getAiProject } from '../data/portfolio'
+import { getProject, getNextProject, getPreviousProject, getCategoryBySlug, getCategoryById, getAiProject } from '../data/portfolio'
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
 import { PDFDeckViewer } from '../components/pdf-deck-viewer'
 import AiProjectDetail from '../components/ai-project-detail'
@@ -34,8 +34,8 @@ export default function ProjectDetailPage() {
     )
   }
 
-  const categorySlug = category || project.category
-  const categoryInfo = getCategoryBySlug(categorySlug)
+  const categoryInfo = getCategoryBySlug(category || '') || getCategoryById(project.category)
+  const categorySlug = categoryInfo?.slug || category || project.category
   const categoryTitle = categoryInfo?.title || project.category.replace(/-/g, ' ')
 
   const isPdf = project.mediaTypes.includes('pdf')

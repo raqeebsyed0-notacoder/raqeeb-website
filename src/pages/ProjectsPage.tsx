@@ -40,11 +40,11 @@ export default function ProjectsPage() {
         <section className="mb-24">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl tracking-wide uppercase font-normal">Presentations</h2>
-            <Link to="/projects/presentation" className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest">View All →</Link>
+            <Link to="/projects/presentation-design" className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest">View All →</Link>
           </div>
           <div className="flex gap-4 overflow-x-auto pb-4">
             {presentations.map((p, i) => (
-              <Link key={p.id} to={`/projects/presentation/${p.slug}`} className="group block flex-shrink-0 w-[70%] sm:w-[50%] md:w-[35%]">
+              <Link key={p.id} to={`/projects/presentation-design/${p.slug}`} className="group block flex-shrink-0 w-[70%] sm:w-[50%] md:w-[35%]">
                 <div className="aspect-video overflow-hidden bg-[#0a0a0a] relative">
                   <img src={p.thumbnail} alt={p.title} className="h-full w-full object-cover" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end px-4 pb-4">
@@ -95,70 +95,73 @@ export default function ProjectsPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {aiProjects.map((p) => (
-              <div
+              <Link
                 key={p.id}
-                className="group flex flex-col overflow-hidden rounded-lg border border-white/10 bg-[#0a0a0a]"
+                to={`/projects/ai/${p.slug}`}
+                className="group flex flex-col overflow-hidden rounded-lg border border-white/10 bg-[#0a0a0a] hover:border-white/30 transition-all hover:bg-neutral-950"
               >
-                <div className="aspect-video overflow-hidden">
+                <div className="aspect-video overflow-hidden bg-neutral-900 relative">
                   <img
                     src={p.architecture}
-                    alt=""
-                    className="h-full w-full object-cover"
+                    alt={p.title}
+                    className="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                     loading="lazy"
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <div className="flex items-center justify-between gap-3">
-                    <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-                    <span className="text-[10px] uppercase tracking-widest text-white/50">{p.status}</span>
+                    <h3 className="text-lg font-semibold text-white group-hover:text-red-400 transition-colors">{p.title}</h3>
+                    <span className="text-[10px] uppercase tracking-widest text-white/50 border border-white/10 rounded px-2 py-0.5">{p.status}</span>
                   </div>
                   <p className="mt-1 text-sm text-white/70">{p.role}</p>
-                  <p className="mt-2 text-sm text-white/60">{p.summary}</p>
+                  <p className="mt-2 text-sm text-white/60 line-clamp-2">{p.summary}</p>
                   <div className="mt-3 flex flex-wrap items-center gap-2">
                     {p.skills.slice(0, 3).map((skill) => (
                       <span
                         key={skill}
-                        className="rounded-full px-2 py-0.5 text-[10px] uppercase tracking-widest text-white/40"
+                        className="rounded-full px-2 py-0.5 text-[10px] uppercase tracking-widest text-white/40 border border-white/5 bg-white/5"
                       >
                         {skill}
                       </span>
                     ))}
                   </div>
-                  <div className="mt-3 flex items-center justify-between gap-3 border-t border-white/5 pt-3">
+                  <div className="mt-4 flex items-center justify-between gap-3 border-t border-white/5 pt-3">
                     <div className="flex -space-x-2">
                       {p.screenshots.slice(0, 2).map((s) => (
                         <img
                           key={s}
                           src={s}
                           alt=""
-                          className="h-10 w-10 rounded border border-[#0a0a0a] object-cover"
+                          className="h-8 w-8 rounded border border-[#0a0a0a] object-cover"
                           loading="lazy"
                         />
                       ))}
                     </div>
-                    <a
-                      href={p.demos[0]?.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-white/60 transition-colors hover:text-white"
-                    >
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polygon points="5 3 19 12 5 21 5 3" />
-                      </svg>
-                      {p.demos[0]?.label}
-                    </a>
+                    {p.demos[0]?.url ? (
+                      <span className="flex items-center gap-1.5 text-xs text-red-400 font-medium">
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3" />
+                        </svg>
+                        {p.demos[0]?.label}
+                      </span>
+                    ) : (
+                      <span className="flex items-center gap-1.5 text-xs text-white/40">
+                        <span className="h-1.5 w-1.5 rounded-full bg-white/20" />
+                        Demo coming soon
+                      </span>
+                    )}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
