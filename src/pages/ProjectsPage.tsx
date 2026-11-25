@@ -1,9 +1,11 @@
+import { useRef } from 'react'
 import PageLayout from '../components/PageLayout'
 import { getProjectsByCategory, getAiProjects } from '../data/portfolio'
 import { Link } from 'react-router-dom'
 import SqueezeCarousel from '../components/ui/carousel-squeeze'
 
 export default function ProjectsPage() {
+  const presentationsRef = useRef<HTMLDivElement>(null)
   const presentations = getProjectsByCategory('presentation')
   const socialMedia = getProjectsByCategory('social-media')
   const websites = getProjectsByCategory('websites')
@@ -42,7 +44,25 @@ export default function ProjectsPage() {
             <h2 className="text-2xl tracking-wide uppercase font-normal">Presentations</h2>
             <Link to="/projects/presentation-design" className="text-xs text-white/50 hover:text-white transition-colors uppercase tracking-widest">View All →</Link>
           </div>
-          <div className="flex gap-4 overflow-x-auto pb-4">
+          <div
+            ref={presentationsRef}
+            className="flex gap-4 overflow-x-auto pb-4"
+            role="region"
+            aria-label="Presentations"
+            tabIndex={0}
+            onKeyDown={(event) => {
+              if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+                const scrollable = presentationsRef.current
+                if (!scrollable) return
+                const scrollAmount = scrollable.getBoundingClientRect().width * 0.75
+                scrollable.scrollBy({
+                  left: event.key === 'ArrowLeft' ? -scrollAmount : scrollAmount,
+                  behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+                })
+                event.preventDefault()
+              }
+            }}
+          >
             {presentations.map((p, i) => (
               <Link key={p.id} to={`/projects/presentation-design/${p.slug}`} className="group block flex-shrink-0 w-[70%] sm:w-[50%] md:w-[35%]">
                 <div className="aspect-video overflow-hidden bg-[#0a0a0a] relative">

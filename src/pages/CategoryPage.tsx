@@ -34,10 +34,10 @@ const socialSlides: SqueezeSlide[] = [
 ]
 
 const websiteSlides: SqueezeSlide[] = [
-  { id: 'euphoria-web', slug: 'euphoria-website', image: 'assets/websites/live/euphoria.jpg', title: 'Euphoria Web', subtitle: 'Live site — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
-  { id: 'grc', slug: 'grc', image: 'assets/websites/live/grc-v1.jpg', title: 'GRC Evolution', subtitle: 'Live sites v1–v3 — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
-  { id: 'marsa-atelier', slug: 'marsa-atelier', image: 'assets/websites/marsa-atelier-hero@1400w.jpg', title: 'Marsa Atelier', subtitle: 'Live site — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
-  { id: 'najd-sands', slug: 'najd-sands', image: 'assets/websites/live/najd.jpg', title: 'Najd Sands', subtitle: 'Live site — click to visit', aspectRatio: '1400 / 788', objectFit: 'cover' },
+  { id: 'euphoria-website', slug: 'euphoria-website', image: 'assets/websites/live/euphoria.jpg', title: 'Euphoria Web', subtitle: 'Live brand site', aspectRatio: '1400 / 788', objectFit: 'cover' },
+  { id: 'grc', slug: 'grc', image: 'assets/websites/live/grc-v1.jpg', title: 'GRC Evolution', subtitle: 'Live site v1–v3', aspectRatio: '1400 / 788', objectFit: 'cover' },
+  { id: 'marsa-atelier', slug: 'marsa-atelier', image: 'assets/websites/marsa-atelier-hero@1400w.jpg', title: 'Marsa Atelier', subtitle: 'Live architecture site', aspectRatio: '1400 / 788', objectFit: 'cover' },
+  { id: 'najd-sands', slug: 'najd-sands', image: 'assets/websites/live/najd.jpg', title: 'Najd Sands', subtitle: 'Live resort site', aspectRatio: '1400 / 788', objectFit: 'cover' },
 ]
 
 export default function CategoryPage() {
@@ -47,21 +47,37 @@ export default function CategoryPage() {
   if (!cat) {
     return (
       <PageLayout>
-        <p className="text-white/60">Category not found.</p>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase font-normal leading-[0.9] mb-4">
+          Category not found
+        </h1>
         <Link to="/projects" className="text-red-500 hover:text-red-400 mt-4 inline-block">← Back to projects</Link>
       </PageLayout>
     )
   }
 
-  const aiSlides: SqueezeSlide[] = getAiProjects().map((p) => ({
-    id: p.id,
-    slug: p.slug,
-    image: p.screenshots[0] || p.architecture,
-    title: p.title,
-    subtitle: p.role,
-    aspectRatio: '2000 / 1125',
-    objectFit: 'contain',
-  }))
+  const aiAspectRatios: Record<string, string> = {
+    'agent-fleet': '3200 / 3528',
+    'skills-library': '3200 / 3004',
+    'orio-operations': '3200 / 3014',
+    'leadjin-portal': '1280 / 6621',
+    'approval-inbox': '3200 / 2884',
+    'paperclip-plugin': '1280 / 1203',
+    'hermes-engine': '3200 / 2000',
+    'automations': '3200 / 2316',
+  }
+
+  const aiSlides: SqueezeSlide[] = getAiProjects().map((p) => {
+    const image = p.screenshots[0] || p.architecture
+    return {
+      id: p.id,
+      slug: p.slug,
+      image,
+      title: p.title,
+      subtitle: p.role,
+      aspectRatio: aiAspectRatios[p.id] || '3200 / 2000',
+      objectFit: 'contain',
+    }
+  })
 
   const slides =
     category === 'brand-identity' ? brandSlides :

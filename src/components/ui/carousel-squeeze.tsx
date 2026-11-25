@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
+import type { ReactNode } from 'react'
 
 export interface SqueezeSlide {
   id: string
@@ -8,7 +9,7 @@ export interface SqueezeSlide {
   title: string
   subtitle?: string
   objectFit?: "cover" | "contain"
-  overlay?: React.ReactNode
+  overlay?: ReactNode
   aspectRatio?: string
 }
 
@@ -40,15 +41,25 @@ export default function SqueezeCarousel({
   const [direction, setDirection] = useState<'left' | 'right'>('right')
   const containerRef = useRef<HTMLDivElement>(null)
 
+  // Skip the transform/slat animation when the user prefers reduced motion so
+  // the page stays stable and the live region is not distracted.
+  const reduceMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const animating = isAnimating && !reduceMotion
+
   const goTo = useCallback((index: number, dir: 'left' | 'right') => {
-    if (isAnimating || index === activeIndex) return
+    if (index === activeIndex || isAnimating) return
+    if (reduceMotion) {
+      setActiveIndex(index)
+      setIsAnimating(false)
+      return
+    }
     setDirection(dir)
     setIsAnimating(true)
     setTimeout(() => {
       setActiveIndex(index)
       setTimeout(() => setIsAnimating(false), 500)
     }, 250)
-  }, [activeIndex, isAnimating])
+  }, [activeIndex, isAnimating, reduceMotion])
 
   const handleNext = () => {
     const nextIndex = activeIndex === slides.length - 1 ? 0 : activeIndex + 1
@@ -83,7 +94,15 @@ export default function SqueezeCarousel({
           aspectRatio: currentSlide.aspectRatio,
           borderRadius: `${radius}px`,
         }}
+        role="region"
+        aria-roledescription="carousel"
+        aria-label={label}
       >
+        {/* Live region: announce the active slide to screen readers */}
+        <div className="sr-only" role="status" aria-live="polite">
+          {slides[activeIndex]?.title}
+        </div>
+
         {/* Background image */}
         {categorySlug && currentSlide.slug ? (
           <Link
@@ -97,12 +116,12 @@ export default function SqueezeCarousel({
               style={{
                 objectFit: currentSlide.objectFit || 'cover',
                 background: currentSlide.objectFit === 'contain' ? '#0a0a0a' : undefined,
-                transform: isAnimating
+                transform: animating
                   ? direction === 'right'
                     ? 'scale(1.05) translateX(2%)'
                     : 'scale(1.05) translateX(-2%)'
                   : 'scale(1) translateX(0)',
-                opacity: isAnimating ? 0.7 : 1,
+                opacity: animating ? 0.7 : 1,
               }}
             />
           </Link>
@@ -115,12 +134,12 @@ export default function SqueezeCarousel({
               style={{
                 objectFit: currentSlide.objectFit || 'cover',
                 background: currentSlide.objectFit === 'contain' ? '#0a0a0a' : undefined,
-                transform: isAnimating
+                transform: animating
                   ? direction === 'right'
                     ? 'scale(1.05) translateX(2%)'
                     : 'scale(1.05) translateX(-2%)'
                   : 'scale(1) translateX(0)',
-                opacity: isAnimating ? 0.7 : 1,
+                opacity: animating ? 0.7 : 1,
               }}
             />
           </div>
@@ -137,14 +156,14 @@ export default function SqueezeCarousel({
                 style={{
                   width: `${slatWidth}px`,
                   marginRight: `${slatGap}px`,
-                  transitionDelay: isAnimating ? `${delay}ms` : '0ms',
-                  transform: isAnimating
+                  transitionDelay: animating ? `${delay}ms` : '0ms',
+                  transform: animating
                     ? direction === 'right'
                       ? 'scaleX(0.3) translateX(-100%)'
                       : 'scaleX(0.3) translateX(100%)'
                     : 'scaleX(1) translateX(0)',
-                  opacity: isAnimating ? 0 : 1,
-                  background: isAnimating
+                  opacity: animating ? 0 : 1,
+                  background: animating
                     ? `linear-gradient(${direction === 'right' ? '90deg' : '270deg'}, rgba(0,0,0,0.95), rgba(0,0,0,0.7))`
                     : 'transparent',
                   borderRadius: `${radius / 2}px`,
@@ -193,6 +212,7 @@ export default function SqueezeCarousel({
                   index === activeIndex ? 'w-8 bg-white' : 'w-2 bg-white/30 hover:bg-white/50'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
+                aria-current={index === activeIndex ? true : undefined}
               />
             ))}
           </div>
