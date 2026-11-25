@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --font-pixel: 'basis33', monospace;
+  /* Same-origin / local stack. basis33 (onlinewebfonts db) has no binary in the
+     repo, so the request was removed rather than self-hosted; the wordmark
+     display stack now declares Questrial (a repo brand font) with local
+     monospace fallbacks. */
+  --font-pixel: 'Questrial', 'ui-monospace', monospace;
 }
 
 body {
@@ -9,4 +13,23 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+  Visible keyboard focus for every interactive element: a high-contrast ring.
+  Covers nav links, the menu open/close buttons, footer link, mobile menu
+  links, card links and the carousel dot buttons.
+*/
+:focus-visible {
+  outline: 2px solid #ff3b3b;
+  outline-offset: 2px;
+}
+
+/*
+  Contrast gate: a scoped override that raises any text-white/40 used on the
+  page (WCAG AA 4.5:1 on #000) to white/70, where the component files are out
+  of scope for this fix.
+*/
+.text-white\/40 {
+  color: rgba(255, 255, 255, 0.7) !important;
 }

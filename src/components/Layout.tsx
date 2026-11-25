@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { categories } from '../data/portfolio'
@@ -26,6 +26,23 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null)
   const location = useLocation()
+  const menuTriggerRef = useRef<HTMLButtonElement>(null)
+
+  // Escape closes the mobile menu; focus returns to the toggle when it closes.
+  useEffect(() => {
+    if (!menuOpen) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [menuOpen])
+
+  const openMenu = () => setMenuOpen(true)
+  const closeMenu = () => {
+    setMenuOpen(false)
+    menuTriggerRef.current?.focus()
+  }
 
   return (
     <>
@@ -89,9 +106,12 @@ export function Navbar() {
         </ul>
 
         <button
+          ref={menuTriggerRef}
           className="p-2 transition-opacity hover:opacity-70 md:hidden"
-          onClick={() => setMenuOpen(true)}
+          onClick={openMenu}
           aria-label="Open menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           <Menu size={24} />
         </button>
@@ -99,9 +119,17 @@ export function Navbar() {
 
       {/* Mobile Fullscreen Menu */}
       <div
+        id="mobile-menu"
         className={`fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
+        inert={!menuOpen}
+        hidden={!menuOpen}
+        role="dialog"
+        aria-modal="true"
+        aria-expanded={menuOpen}
+        aria-controls="mobile-menu"
+        onKeyDown={(event) => event.key === 'Escape' && closeMenu()}
       >
         <div className="flex items-center justify-between px-6 py-6">
           <Link to="/" onClick={() => setMenuOpen(false)} className="text-base font-semibold tracking-wide">
@@ -109,7 +137,7 @@ export function Navbar() {
           </Link>
           <button
             className="p-2 transition-opacity hover:opacity-70"
-            onClick={() => setMenuOpen(false)}
+            onClick={closeMenu}
             aria-label="Close menu"
           >
             <X size={24} />
@@ -123,7 +151,7 @@ export function Navbar() {
                 to={link.path}
                 className="text-2xl tracking-widest transition-opacity hover:opacity-70"
                 style={{ transitionDelay: `${STAGGER_DELAYS[i]}ms` }}
-                onClick={() => setMenuOpen(false)}
+                onClick={closeMenu}
               >
                 {link.label}
               </Link>
