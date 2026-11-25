@@ -1,11 +1,26 @@
 import { useParams, Link } from 'react-router-dom'
 import PageLayout from '../components/PageLayout'
-import { getProject, getNextProject, getPreviousProject, getCategoryBySlug } from '../data/portfolio'
+import { getProject, getNextProject, getPreviousProject, getCategoryBySlug, getAiProject } from '../data/portfolio'
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
 import { PDFDeckViewer } from '../components/pdf-deck-viewer'
+import AiProjectDetail from '../components/ai-project-detail'
 
 export default function ProjectDetailPage() {
   const { category, slug } = useParams<{ category: string; slug: string }>()
+
+  if (category === 'ai') {
+    const aiProject = getAiProject(slug || '')
+    if (!aiProject) {
+      return (
+        <PageLayout>
+          <p className="text-white/60">Project not found.</p>
+          <Link to="/projects/ai" className="text-red-500 hover:text-red-400 mt-4 inline-block">← Back to projects</Link>
+        </PageLayout>
+      )
+    }
+    return <AiProjectDetail project={aiProject} categorySlug={category} />
+  }
+
   const project = getProject(category || '', slug || '')
   const next = project ? getNextProject(project) : null
   const prev = project ? getPreviousProject(project) : null
