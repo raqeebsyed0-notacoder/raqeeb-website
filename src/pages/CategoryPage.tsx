@@ -44,7 +44,7 @@ export default function CategoryPage() {
   const { category } = useParams<{ category: string }>()
   const cat = getCategory(category || '')
 
-  if (!cat) {
+  if (!cat && category !== 'all') {
     return (
       <PageLayout>
         <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase font-normal leading-[0.9] mb-4">
@@ -71,19 +71,29 @@ export default function CategoryPage() {
     }
   })
 
+  const allSlides: SqueezeSlide[] = [
+    ...brandSlides,
+    ...presentationSlides,
+    ...socialSlides,
+    ...websiteSlides,
+    ...aiSlides,
+  ]
+
   const slides =
     category === 'brand-identity' ? brandSlides :
     category === 'presentation-design' ? presentationSlides :
     category === 'social-media' ? socialSlides :
     category === 'websites' ? websiteSlides :
-    category === 'ai' ? aiSlides : []
+    category === 'ai' ? aiSlides :
+    category === 'all' ? allSlides : []
 
   const label =
     category === 'brand-identity' ? 'Brand Identity Gallery' :
     category === 'presentation-design' ? 'Presentation Design Gallery' :
     category === 'social-media' ? 'Social Media Design Gallery' :
     category === 'websites' ? 'Web & UI Design Gallery' :
-    category === 'ai' ? 'AI & Automation Gallery' : undefined
+    category === 'ai' ? 'AI & Automation Gallery' :
+    category === 'all' ? 'All Projects' : undefined
 
   return (
     <PageLayout>
@@ -93,7 +103,7 @@ export default function CategoryPage() {
         </Link>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase font-normal leading-[0.9] mb-4">
-          {cat.title}
+          {category === 'all' ? 'All Projects' : cat.title}
         </h1>
         <p className="text-lg text-white/60 mb-12 max-w-2xl">{cat.description}</p>
 

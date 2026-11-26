@@ -66,7 +66,7 @@ export default function ProjectsPage() {
             {presentations.map((p, i) => (
               <Link key={p.id} to={`/projects/presentation-design/${p.slug}`} className="group block flex-shrink-0 w-[70%] sm:w-[50%] md:w-[35%]">
                 <div className="aspect-video overflow-hidden bg-[#0a0a0a] relative">
-                  <img src={p.thumbnail} alt={p.title} className="h-full w-full object-cover" loading="lazy" />
+                  <img src={p.thumbnail} alt={`${p.title} — ${p.category.replace(/-/g, ' ')} project cover`} className="h-full w-full object-cover" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end px-4 pb-4">
                     <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-1">{String(i + 1).padStart(2, '0')}</p>
                   </div>
@@ -85,7 +85,7 @@ export default function ProjectsPage() {
             {socialMedia.slice(0, 5).map((p) => (
               <Link key={p.id} to={`/projects/social-media/${p.slug}`} className="group block">
                 <div className="aspect-square overflow-hidden bg-[#0a0a0a]">
-                  <img src={p.thumbnail} alt={p.title} className="h-full w-full object-cover" loading="lazy" />
+                  <img src={p.thumbnail} alt={`${p.title} — ${p.category.replace(/-/g, ' ')} project cover`} className="h-full w-full object-cover" loading="lazy" />
                 </div>
               </Link>
             ))}
@@ -123,7 +123,7 @@ export default function ProjectsPage() {
                 <div className="aspect-video overflow-hidden bg-neutral-900 relative">
                   <img
                     src={p.architecture}
-                    alt={p.title}
+                    alt={`${p.title} — AI & automation architecture diagram`}
                     className="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                     loading="lazy"
                   />

@@ -87,7 +87,7 @@ export default function ResumePage() {
                 Profile
               </h3>
               <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
-                Visual designer creating clear, polished work across brands, presentations, campaigns and digital experiences. Combines structured design thinking with AI-assisted creative production to deliver high-quality visual communication for corporate and brand clients.
+                Visual designer creating clear, polished work across brands, presentations, campaigns and digital experiences — backed by 8 AI & automation systems: Agent Fleet, Skills Library, OrIO Operations, LeadJin Portal, Approval Inbox, Paperclip Plugin, Hermes Engine and Automations (38+ scheduled background workflows).
               </p>
             </section>
 
@@ -122,6 +122,14 @@ export default function ResumePage() {
                   'Visual Storytelling',
                   'AI Image Development',
                   'Campaign Creative',
+                  'Agent Fleet',
+                  'Skills Library',
+                  'OrIO Operations',
+                  'LeadJin Portal',
+                  'Approval Inbox',
+                  'Paperclip Plugin',
+                  'Hermes Engine',
+                  'Automations',
                 ].map((skill) => (
                   <p key={skill} className="text-xs text-white/70 py-1">
                     {skill}
