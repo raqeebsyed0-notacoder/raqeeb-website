@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, ExternalLink, Layers, BookOpen, CheckCircle2, Cl
 import PageLayout from './PageLayout'
 import { HTMLEmbedViewer } from './html-embed-viewer'
 import { getAiProjects, getCategoryBySlug, type AiProject } from '../data/portfolio'
+import { seatSouls, skillContent } from '../data/agentContent'
 
 /** The single standard pending state used for every demo slot without footage. */
 const PENDING_DEMO_MESSAGE = 'Demo video coming soon — awaiting founder production footage'
@@ -24,27 +25,20 @@ function assetAlt(projectTitle: string, assetPath: string): string {
   return `${name || 'Project'} ${kind} for ${projectTitle}`
 }
 
-/** Real source lookup: the skill library's SKILL.md path for a skill name. */
-function skillSource(name: string): string {
-  return `.skills/${name}/SKILL.md`
-}
+/** Verbatim SOUL.md text exported by the content build, keyed by seat id. */
+const soulBySeat = new Map(seatSouls.map((s) => [s.id, s]))
 
-/** Real source lookup: the seat library's SOUL.md path for an agent seat. */
-function seatSource(seat: string): string {
-  return `.profiles/${seat}/SOUL.md`
-}
-
-/** Seats whose SOUL.md file exists in the seat library. */
-const KNOWN_SOUL_SEATS = new Set(['sovereign', 'steward', 'mason', 'lantern'])
+/** Verbatim SKILL.md text exported by the content build, keyed by skill name. */
+const skillByName = new Map(skillContent.map((s) => [s.name, s]))
 
 /** Seat code extracted from the agent field (e.g. "sovereign (CEO & governance owner)" -> "sovereign"). */
 function extractSeat(agent: string): string {
   return agent.split(' (').shift() ?? ''
 }
 
-/** Returns true when the seat has a SOUL.md to reveal; otherwise the existing plain text is kept. */
+/** Returns true when the seat has real SOUL text to reveal; otherwise the existing plain text is kept. */
 function seatHasSoul(agent: string): boolean {
-  return KNOWN_SOUL_SEATS.has(extractSeat(agent))
+  return Boolean(soulBySeat.get(extractSeat(agent))?.content?.trim())
 }
 
 interface AiProjectDetailProps {
@@ -89,6 +83,7 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
         }
         .group:hover > .hp-panel,
         .group:focus-within > .hp-panel {
+          display: block;
           opacity: 1;
           pointer-events: auto;
           transform: translateX(0);
@@ -228,7 +223,7 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
 
         {/* Special Deep-Dive for Skills Library */}
         {project.slug === 'skills-library' && (
-          <section className="mb-12 rounded-xl border border-neutral-800 bg-neutral-950/80 p-6 sm:p-8">
+          <section className="mb-6 rounded-xl border border-neutral-800 bg-neutral-950/80 p-6 sm:p-8">
             <div className="flex items-center gap-3 mb-6">
               <BookOpen className="w-5 h-5 text-red-400" />
               <h2 className="text-lg font-semibold uppercase tracking-wide text-white">Skill Authoring & Governance Framework</h2>
@@ -267,9 +262,6 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
                     </span>
                   </div>
                   <p className="text-xs text-white/70 leading-relaxed">{skill.description}</p>
-                  <p className="text-xs text-amber-400/80 leading-relaxed">
-                    <span className="font-mono">Roadmap · SKILL.md pending</span>
-                  </p>
                 </div>
               ))}
             </div>
@@ -288,32 +280,32 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
               <p className="text-xs text-white/50 leading-relaxed">
                 Autonomous profile assigned to execute and govern this domain with bounded tool access and dedicated memory isolation.
               </p>
-              {/* A6: SOUL.md reveal — real source lookup */}
-              {seatHasSoul(project.agent) && (
-                <div
-                  className="hidden hp-panel absolute right-0 top-0 z-[50] w-80 sm:w-96 max-h-[320px] overflow-y-auto rounded-lg border border-white/10 bg-neutral-950 p-4 shadow-2xl"
-                  role="dialog"
-                  aria-label={`SOUL.md for ${extractSeat(project.agent)}`}
-                  style={{
-                    backgroundColor: 'var(--hp-bg)',
-                    borderColor: 'var(--hp-border)',
-                    color: 'var(--hp-text)',
-                    maxHeight: 'var(--hp-max-h)',
-                    zIndex: 'var(--hp-z)',
-                  }}
-                >
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="text-sm font-mono font-semibold text-white">{extractSeat(project.agent)}</span>
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-white/40">SOUL.md</span>
+              {/* A6: SOUL.md reveal — verbatim text from agentContent */}
+              {seatHasSoul(project.agent) && (() => {
+                const soul = soulBySeat.get(extractSeat(project.agent))
+                return (
+                  <div
+                    className="hidden hp-panel absolute right-0 top-0 z-[50] w-80 sm:w-96 max-h-[320px] overflow-y-auto rounded-lg border border-white/10 bg-neutral-950 p-4 shadow-2xl"
+                    role="dialog"
+                    aria-label={`SOUL.md for ${extractSeat(project.agent)}`}
+                    style={{
+                      backgroundColor: 'var(--hp-bg)',
+                      borderColor: 'var(--hp-border)',
+                      color: 'var(--hp-text)',
+                      maxHeight: 'var(--hp-max-h)',
+                      zIndex: 'var(--hp-z)',
+                    }}
+                  >
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <span className="text-sm font-mono font-semibold text-white">{soul?.name ?? extractSeat(project.agent)}</span>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-white/40">SOUL.md</span>
+                    </div>
+                    <pre className="whitespace-pre-wrap break-words font-mono text-xs leading-relaxed text-white/80">
+                      {soul?.content}
+                    </pre>
                   </div>
-                  <p className="text-xs text-white/80 leading-relaxed">
-                    <code className="text-white/60">{seatSource(extractSeat(project.agent))}</code>
-                  </p>
-                  <p className="text-xs text-white/60 leading-relaxed">
-                    Real source: the file lives at the path above. Hover another seat card to compare.
-                  </p>
-                </div>
-              )}
+                )
+              })()}
             </div>
           </div>
           <div>
@@ -344,32 +336,32 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
                       )}
                     </div>
                     <p className="text-xs text-white/70 leading-relaxed">{skill.description}</p>
-                    {/* A5: SKILL.md reveal — real source lookup */}
-                    {skill.status !== 'roadmap' && (
-                      <div
-                        className="hidden hp-panel absolute right-0 top-0 z-[50] w-80 sm:w-96 max-h-[320px] overflow-y-auto rounded-lg border border-white/10 bg-neutral-950 p-4 shadow-2xl"
-                        role="dialog"
-                        aria-label={`SKILL.md for ${skill.name}`}
-                        style={{
-                          backgroundColor: 'var(--hp-bg)',
-                          borderColor: 'var(--hp-border)',
-                          color: 'var(--hp-text)',
-                          maxHeight: 'var(--hp-max-h)',
-                          zIndex: 'var(--hp-z)',
-                        }}
-                      >
-                        <div className="flex items-center justify-between gap-2 mb-2">
-                          <span className="text-sm font-mono font-semibold text-white">{skill.name}</span>
-                          <span className="text-[10px] font-mono uppercase tracking-widest text-white/40">SKILL.md</span>
+                    {/* A5: SKILL.md reveal — verbatim text from agentContent */}
+                    {skillByName.get(skill.name)?.content?.trim() ? (() => {
+                      const source = skillByName.get(skill.name)
+                      return (
+                        <div
+                          className="hidden hp-panel absolute right-0 top-0 z-[50] w-80 sm:w-96 max-h-[320px] overflow-y-auto rounded-lg border border-white/10 bg-neutral-950 p-4 shadow-2xl"
+                          role="dialog"
+                          aria-label={`SKILL.md for ${skill.name}`}
+                          style={{
+                            backgroundColor: 'var(--hp-bg)',
+                            borderColor: 'var(--hp-border)',
+                            color: 'var(--hp-text)',
+                            maxHeight: 'var(--hp-max-h)',
+                            zIndex: 'var(--hp-z)',
+                          }}
+                        >
+                          <div className="flex items-center justify-between gap-2 mb-2">
+                            <span className="text-sm font-mono font-semibold text-white">{skill.name}</span>
+                            <span className="text-[10px] font-mono uppercase tracking-widest text-white/40">SKILL.md</span>
+                          </div>
+                          <pre className="whitespace-pre-wrap break-words font-mono text-xs leading-relaxed text-white/80">
+                            {source?.content}
+                          </pre>
                         </div>
-                        <p className="text-xs text-white/80 leading-relaxed">
-                          <code className="text-white/60">{skillSource(skill.name)}</code>
-                        </p>
-                        <p className="text-xs text-white/60 leading-relaxed">
-                          Real source: the file lives at the path above. Hover another card to compare.
-                        </p>
-                      </div>
-                    )}
+                      )
+                    })() : null}
                   </div>
                 ))
               ) : (
