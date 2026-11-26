@@ -57,16 +57,30 @@ export default function CategoryPage() {
 
 
 
+  // Clean diagram-only cutouts: use each figure's native aspect ratio so the
+  // diagram fills its frame instead of shrinking into a wide letterbox.
   const aiSlides: SqueezeSlide[] = getAiProjects().map((p) => {
     const image = p.architecture
+    const m = image.match(/\/([\w-]+)\.png$/)
+    const ratios: Record<string, string> = {
+      'fleet-topology': '3458 / 1992',
+      'fig1-skills-path': '3517 / 2910',
+      'orio-operations': '3489 / 2264',
+      'leadjin-portal': '3457 / 2115',
+      'approval-inbox': '3425 / 2588',
+      'fig3-paperclip': '3553 / 2102',
+      'fig2-engine-fork': '3409 / 1345',
+      'fig4-automations': '3524 / 2327',
+    }
+    const ratio = (m && ratios[m[1]]) || '3.5 / 1'
     return {
       id: p.id,
       slug: p.slug,
       image,
       title: p.title,
       subtitle: p.role,
-      aspectRatio: '3.5 / 1',
-      className: 'aspect-[3.5/1]',
+      aspectRatio: ratio,
+      className: '',
       objectFit: 'contain',
     }
   })
