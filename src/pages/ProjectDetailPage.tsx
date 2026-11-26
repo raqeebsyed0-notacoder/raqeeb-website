@@ -72,12 +72,12 @@ export default function ProjectDetailPage() {
               <div className="overflow-hidden">
                 <img
                   src={project.liveFront}
-                  alt={`${project.title} live front page — click to open full site`}
+                  alt={`${project.title} live front page. Click to open full site`}
                   className="w-full h-auto object-cover object-top aspect-[16/10] group-hover:scale-[1.01] transition-transform duration-500"
                 />
               </div>
               <div className="flex items-center justify-between px-5 py-4">
-                <span className="text-sm text-white/60">Live front page — click to open the full website</span>
+                <span className="text-sm text-white/60">Live front page. Click to open the full website</span>
                 <span className="flex items-center gap-2 text-sm text-white group-hover:text-red-400 transition-colors">
                   Visit live site <ExternalLink className="w-4 h-4" />
                 </span>

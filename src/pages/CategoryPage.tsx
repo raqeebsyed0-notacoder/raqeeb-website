@@ -35,7 +35,7 @@ const socialSlides: SqueezeSlide[] = [
 
 const websiteSlides: SqueezeSlide[] = [
   { id: 'euphoria-website', slug: 'euphoria-website', image: 'assets/websites/live/euphoria.jpg', title: 'Euphoria Web', subtitle: 'Live brand site', aspectRatio: '1400 / 788', objectFit: 'cover' },
-  { id: 'grc', slug: 'grc', image: 'assets/websites/live/grc-v1.jpg', title: 'GRC Evolution', subtitle: 'Live site v1–v3', aspectRatio: '1400 / 788', objectFit: 'cover' },
+  { id: 'grc', slug: 'grc', image: 'assets/websites/live/grc-v1.jpg', title: 'GRC Evolution', subtitle: 'Live site v1 to v3', aspectRatio: '1400 / 788', objectFit: 'cover' },
   { id: 'marsa-atelier', slug: 'marsa-atelier', image: 'assets/websites/marsa-atelier-hero@1400w.jpg', title: 'Marsa Atelier', subtitle: 'Live architecture site', aspectRatio: '1400 / 788', objectFit: 'cover' },
   { id: 'najd-sands', slug: 'najd-sands', image: 'assets/websites/live/najd.jpg', title: 'Najd Sands', subtitle: 'Live resort site', aspectRatio: '1400 / 788', objectFit: 'cover' },
 ]

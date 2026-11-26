@@ -977,7 +977,7 @@ export const aiProjects: AiProject[] = [
     company: 'NOT-IN-SOURCE',
     owner: 'steward (Governance custodian)',
     why_created: 'To route every high-impact action through Founder ruling with cryptographic hash gating and SiYuan state storage.',
-    day_to_day_value: 'Every high-impact action needs Founder ruling before execution; hash-gated, SiYuan-stored — unverified executions are prevented.',
+    day_to_day_value: 'Every high-impact action needs Founder ruling before execution; hash-gated, SiYuan-stored. Unverified executions are prevented.',
     skills: ['euphoria-approval-queue', 'proposal-send'],
     skillDetails: [
       {
@@ -1010,7 +1010,7 @@ export const aiProjects: AiProject[] = [
     company: 'NOT-IN-SOURCE',
     owner: 'mason (Integration engineer)',
     why_created: 'To connect Hermes runtimes to Paperclip company boards for autonomous issue checkout, heartbeat reporting, attachment uploads, and recovery disposition.',
-    day_to_day_value: 'Agents operate Paperclip company boards autonomously — checkout, heartbeat, upload, recover — without breaking context.',
+    day_to_day_value: 'Agents operate Paperclip company boards autonomously. Checkout, heartbeat, upload and recover happen without breaking context.',
     skills: ['paperclip-sop', 'hermes-plugin-development'],
     skillDetails: [
       {
@@ -1081,7 +1081,7 @@ export const aiProjects: AiProject[] = [
     company: 'NOT-IN-SOURCE',
     owner: 'lantern (Operations & automation lead)',
     why_created: 'To run 38+ autonomous cron workflows with zero human intervention.',
-    day_to_day_value: 'Continuous news dedup digests, social publishing bridges, live API drift monitoring — zero human intervention.',
+    day_to_day_value: 'Continuous news dedup digests, social publishing bridges, live API drift monitoring. Zero human intervention.',
     skills: ['cron-dispatch-triage', 'scheduled-cronjob-review', 'topic-digest-cron'],
     skillDetails: [
       {

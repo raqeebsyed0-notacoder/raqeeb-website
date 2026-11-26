@@ -14,7 +14,7 @@ const steps = [
   {
     number: '03',
     title: 'DESIGN',
-    description: 'Crafting visual solutions — identities, presentations, campaigns, digital experiences — with precision and restraint.',
+    description: 'Crafting visual solutions with precision and restraint: identities, presentations, campaigns and digital experiences.',
   },
   {
     number: '04',
@@ -24,12 +24,12 @@ const steps = [
   {
     number: '05',
     title: 'DELIVER',
-    description: 'Handing off final assets, files, and guidelines — ready for print, development, or distribution.',
+    description: 'Handing off final assets, files and guidelines. Ready for print, development or distribution.',
   },
   {
     number: '06',
     title: 'AUTOMATE',
-    description: 'Background automation and oversight running across every project — 38+ scheduled cron workflows, an agent fleet coordinating 9 autonomous seat profiles, and approval routing that takes high-impact actions to the Founder.',
+    description: 'Background automation and oversight running across every project. Includes 38+ scheduled cron workflows, an agent fleet coordinating 9 autonomous seat profiles, and approval routing that takes high-impact actions to the Founder.',
   },
 ]
 
@@ -54,7 +54,7 @@ export default function ProcessPage() {
             <span className="font-pixel font-normal text-[1.1em]">Work</span>
           </h1>
           <p className="text-lg text-white/60 max-w-2xl">
-            A structured yet flexible approach to every project — from first conversation to final delivery.
+            A structured yet flexible approach to every project. From first conversation to final delivery.
           </p>
         </div>
 

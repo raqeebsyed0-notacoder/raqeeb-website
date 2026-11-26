@@ -56,7 +56,7 @@ export default function AboutPage() {
                 Graphic & Visual Designer
               </p>
               <p className="text-sm text-white/70 leading-relaxed mb-8">
-                Based in Dammam, Saudi Arabia. I translate complex briefs into clear, polished visual communication for brands, presentations, campaigns and digital experiences — backed by 8 AI & automation systems: Agent Fleet, Skills Library, OrIO Operations, LeadJin Portal, Approval Inbox, Paperclip Plugin, Hermes Engine and Automations (38+ scheduled background workflows).
+                Based in Dammam, Saudi Arabia. I translate complex briefs into clear, polished visual communication for brands, presentations, campaigns and digital experiences. Backed by 8 AI & automation systems: Agent Fleet, Skills Library, OrIO Operations, LeadJin Portal, Approval Inbox, Paperclip Plugin, Hermes Engine and Automations (38+ scheduled background workflows).
               </p>
               <div className="flex gap-3">
                 <Link

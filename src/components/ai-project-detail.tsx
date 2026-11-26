@@ -7,7 +7,7 @@ import { getAiProjects, getCategoryBySlug, type AiProject } from '../data/portfo
 import { seatSouls, skillContent } from '../data/agentContent'
 
 /** The single standard pending state used for every demo slot without footage. */
-const PENDING_DEMO_MESSAGE = 'Demo video coming soon — awaiting founder production footage'
+const PENDING_DEMO_MESSAGE = 'Demo video coming soon. Awaiting founder production footage'
 
 /** Poster frames ship beside each video as <video-basename>-poster.jpg. */
 function demoPoster(videoUrl: string): string {
