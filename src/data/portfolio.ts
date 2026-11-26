@@ -52,6 +52,10 @@ export interface AiProject {
   architecture: string; // path to the architecture figure
   screenshots: string[];
   agent: string;
+  company: string; // 'NOT-IN-SOURCE' where the approved spec is silent (content-spec.md L11)
+  owner: string;
+  why_created: string;
+  day_to_day_value: string;
   skills: string[];
   skillDetails?: SkillInfo[];
   links?: AiProjectLink[];
@@ -806,6 +810,10 @@ export const aiProjects: AiProject[] = [
     architecture: 'assets/ai/diagrams/fleet/fleet-topology.png',
     screenshots: [],
     agent: 'sovereign (CEO & governance owner)',
+    company: 'NOT-IN-SOURCE',
+    owner: 'sovereign (CEO & governance owner)',
+    why_created: 'To coordinate 9 autonomous seat profiles and an orchestration lane as one governed system rather than isolated agents.',
+    day_to_day_value: 'Fleet runs as one coordinated system: centralized Paperclip issue board, gateway event routing, model churn loop protection, automated health monitoring.',
     skills: ['fleet-model-allocation', 'dispatch-discipline', 'cron-dispatch-triage'],
     skillDetails: [
       {
@@ -841,6 +849,10 @@ export const aiProjects: AiProject[] = [
     architecture: 'assets/ai/diagrams/platform/fig1-skills-path.png',
     screenshots: [],
     agent: 'steward (Fleet maintainer & skills custodian)',
+    company: 'NOT-IN-SOURCE',
+    owner: 'steward (Fleet maintainer & skills custodian)',
+    why_created: 'To replace lossy session context with verifiable, versioned SKILL.md packages.',
+    day_to_day_value: 'Every agent reads the same verifiable SKILL.md; roadmap skills omh-skill-health and omh-skill-scout have no SKILL.md yet.',
     skills: ['skill-maintainer', 'omh-skill-health', 'omh-skill-scout'],
     skillDetails: [
       {
@@ -875,6 +887,10 @@ export const aiProjects: AiProject[] = [
     architecture: 'assets/ai/diagrams/orio/orio-operations.png',
     screenshots: [],
     agent: 'OrIO (Innovex pilot)',
+    company: 'Innovex',
+    owner: 'OrIO (Innovex pilot)',
+    why_created: 'Built as a real product for the Innovex 90-day AI operations pilot.',
+    day_to_day_value: 'Real-time tracking of rig, well and job-cycle lifecycles; automated reconciliation and MDD verification gates; daily operational digest for field operators; active regional market-intelligence feed.',
     skills: ['orio-operations-core', 'orio-market-intelligence', 'orio-validation', 'orio-morning-report'],
     skillDetails: [
       {
@@ -902,6 +918,8 @@ export const aiProjects: AiProject[] = [
       { label: 'Interactive Operations Architecture (Archify)', url: 'assets/ai/diagrams/orio/orio-operations.html', type: 'diagram' },
       { label: 'Market Intelligence Dataflow (Archify)', url: 'assets/ai/diagrams/orio/orio-market-intel.html', type: 'diagram' },
     ],
+    // Posters follow the demoPoster() convention: <video-basename>-poster.jpg.
+    // Both matching poster frames ship beside these two mp4s on disk.
     demos: [
       { label: 'Operations Pilot Walkthrough', url: 'assets/ai/videos/orio-operations-pilot-demo.mp4' },
       { label: 'Market Intelligence Feature Demo', url: 'assets/ai/videos/orio-market-intelligence-demo.mp4' },
@@ -918,6 +936,10 @@ export const aiProjects: AiProject[] = [
     architecture: 'assets/ai/diagrams/products/leadjin-portal.png',
     screenshots: [],
     agent: 'mason (Fullstack lead)',
+    company: 'NOT-IN-SOURCE',
+    owner: 'mason (Fullstack lead)',
+    why_created: 'To combine automated discovery pipelines with official commercial registry validation and feed verified data into Twenty CRM.',
+    day_to_day_value: 'Verified KSA lead discovery fed directly into Twenty CRM; no manual commercial registry lookups; currently a Pilot.',
     skills: ['verified-lead-discovery', 'euphoria-places-lead-discovery', 'twenty-crm'],
     skillDetails: [
       {
@@ -952,6 +974,10 @@ export const aiProjects: AiProject[] = [
     architecture: 'assets/ai/diagrams/products/approval-inbox.png',
     screenshots: [],
     agent: 'steward (Governance custodian)',
+    company: 'NOT-IN-SOURCE',
+    owner: 'steward (Governance custodian)',
+    why_created: 'To route every high-impact action through Founder ruling with cryptographic hash gating and SiYuan state storage.',
+    day_to_day_value: 'Every high-impact action needs Founder ruling before execution; hash-gated, SiYuan-stored — unverified executions are prevented.',
     skills: ['euphoria-approval-queue', 'proposal-send'],
     skillDetails: [
       {
@@ -981,6 +1007,10 @@ export const aiProjects: AiProject[] = [
     architecture: 'assets/ai/diagrams/platform/fig3-paperclip.png',
     screenshots: [],
     agent: 'mason (Integration engineer)',
+    company: 'NOT-IN-SOURCE',
+    owner: 'mason (Integration engineer)',
+    why_created: 'To connect Hermes runtimes to Paperclip company boards for autonomous issue checkout, heartbeat reporting, attachment uploads, and recovery disposition.',
+    day_to_day_value: 'Agents operate Paperclip company boards autonomously — checkout, heartbeat, upload, recover — without breaking context.',
     skills: ['paperclip-sop', 'hermes-plugin-development'],
     skillDetails: [
       {
@@ -1010,6 +1040,10 @@ export const aiProjects: AiProject[] = [
     architecture: 'assets/ai/diagrams/platform/fig2-engine-fork.png',
     screenshots: [],
     agent: 'steward (Core runtime maintainer)',
+    company: 'NOT-IN-SOURCE',
+    owner: 'steward (Core runtime maintainer)',
+    why_created: 'To customize the Hermes runtime with enterprise governance (Rule 0, Step 0) for deterministic multi-agent execution.',
+    day_to_day_value: 'Deterministic multi-agent execution across local and cloud backends; Rule 0 gates and Step 0 pre-flight validation enforced.',
     skills: ['hermes-agent', 'plugin-discipline', 'omh-routing'],
     skillDetails: [
       {
@@ -1044,6 +1078,10 @@ export const aiProjects: AiProject[] = [
     architecture: 'assets/ai/diagrams/platform/fig4-automations.png',
     screenshots: [],
     agent: 'lantern (Operations & automation lead)',
+    company: 'NOT-IN-SOURCE',
+    owner: 'lantern (Operations & automation lead)',
+    why_created: 'To run 38+ autonomous cron workflows with zero human intervention.',
+    day_to_day_value: 'Continuous news dedup digests, social publishing bridges, live API drift monitoring — zero human intervention.',
     skills: ['cron-dispatch-triage', 'scheduled-cronjob-review', 'topic-digest-cron'],
     skillDetails: [
       {
