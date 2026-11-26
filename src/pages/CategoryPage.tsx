@@ -55,26 +55,18 @@ export default function CategoryPage() {
     )
   }
 
-  const aiAspectRatios: Record<string, string> = {
-    'agent-fleet': '3200 / 3528',
-    'skills-library': '3200 / 3004',
-    'orio-operations': '3200 / 3014',
-    'leadjin-portal': '1280 / 6621',
-    'approval-inbox': '3200 / 2884',
-    'paperclip-plugin': '1280 / 1203',
-    'hermes-engine': '3200 / 2000',
-    'automations': '3200 / 2316',
-  }
+
 
   const aiSlides: SqueezeSlide[] = getAiProjects().map((p) => {
-    const image = p.screenshots[0] || p.architecture
+    const image = p.architecture
     return {
       id: p.id,
       slug: p.slug,
       image,
       title: p.title,
       subtitle: p.role,
-      aspectRatio: aiAspectRatios[p.id] || '3200 / 2000',
+      aspectRatio: '3.5 / 1',
+      className: 'aspect-[3.5/1]',
       objectFit: 'contain',
     }
   })

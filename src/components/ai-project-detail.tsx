@@ -24,6 +24,29 @@ function assetAlt(projectTitle: string, assetPath: string): string {
   return `${name || 'Project'} ${kind} for ${projectTitle}`
 }
 
+/** Real source lookup: the skill library's SKILL.md path for a skill name. */
+function skillSource(name: string): string {
+  return `.skills/${name}/SKILL.md`
+}
+
+/** Real source lookup: the seat library's SOUL.md path for an agent seat. */
+function seatSource(seat: string): string {
+  return `.profiles/${seat}/SOUL.md`
+}
+
+/** Seats whose SOUL.md file exists in the seat library. */
+const KNOWN_SOUL_SEATS = new Set(['sovereign', 'steward', 'mason', 'lantern'])
+
+/** Seat code extracted from the agent field (e.g. "sovereign (CEO & governance owner)" -> "sovereign"). */
+function extractSeat(agent: string): string {
+  return agent.split(' (').shift() ?? ''
+}
+
+/** Returns true when the seat has a SOUL.md to reveal; otherwise the existing plain text is kept. */
+function seatHasSoul(agent: string): boolean {
+  return KNOWN_SOUL_SEATS.has(extractSeat(agent))
+}
+
 interface AiProjectDetailProps {
   project: AiProject
   categorySlug: string
@@ -47,14 +70,38 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
 
   return (
     <PageLayout>
+      <style>{`
+        :root {
+          --hp-bg: #09090b;
+          --hp-border: rgba(255,255,255,0.10);
+          --hp-text: #fafafa;
+          --hp-muted: #9ca3af;
+          --hp-radius: 0.5rem;
+          --hp-max-h: 320px;
+          --hp-z: 50;
+          --hp-backdrop: rgba(0,0,0,0.5);
+        }
+        .hp-panel {
+          opacity: 0;
+          pointer-events: none;
+          transform: translateX(14px);
+          transition: opacity 160ms ease, transform 160ms ease;
+        }
+        .group:hover > .hp-panel,
+        .group:focus-within > .hp-panel {
+          opacity: 1;
+          pointer-events: auto;
+          transform: translateX(0);
+        }
+      `}</style>
       <div className="max-w-7xl mx-auto">
         <Link to={`/projects/${categorySlug}`} className="text-sm text-white/50 hover:text-white transition-colors mb-8 inline-block">
           ← Back to {categoryTitle}
         </Link>
 
         {/* Hero section */}
-        <div className="mb-12">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wide uppercase font-normal leading-[0.9] mb-6">
+        <div className="mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wide uppercase font-normal leading-[1.2] mb-6">
             {project.title}
           </h1>
           <div className="flex flex-wrap items-center gap-4">
@@ -69,12 +116,12 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
 
         {/* Live Systems & Interactive Archify Diagrams */}
         {project.links && project.links.length > 0 && (
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="text-xs uppercase tracking-wide text-white/40 mb-4">Live Systems & Interactive Architecture</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {project.links.map((link) => {
                 const isDiagram = link.type === 'diagram' && link.url.toLowerCase().endsWith('.html')
-                const cardClass = 'group flex flex-col justify-between text-left p-5 rounded-xl border border-neutral-800 bg-neutral-950 hover:border-white/30 transition-all hover:bg-neutral-900/50'
+                const cardClass = 'group flex flex-col justify-between text-left p-5 aspect-[3.5/1] w-full overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950 hover:border-white/30 transition-all hover:bg-neutral-900/50'
                 const card = (
                   <>
                     <div className="flex items-start justify-between gap-3 mb-4">
@@ -142,7 +189,7 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
         )}
 
         {/* Stack */}
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="text-xs uppercase tracking-wide text-white/40 mb-4">Stack</h2>
           <div className="flex flex-wrap gap-2">
             {project.stack.map((item) => (
@@ -155,7 +202,7 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
 
         {/* Architecture */}
         {project.architecture && (
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="text-xs uppercase tracking-wide text-white/40 mb-4">Architecture</h2>
             <figure className="rounded-xl overflow-hidden bg-neutral-950 border border-neutral-800">
               <img
@@ -176,20 +223,6 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
                 )}
               </figcaption>
             </figure>
-          </section>
-        )}
-
-        {/* Screenshots */}
-        {project.screenshots.length > 0 && (
-          <section className="mb-12">
-            <h2 className="text-xs uppercase tracking-wide text-white/40 mb-4">Screenshots & Workflows</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {project.screenshots.map((src, i) => (
-                <div key={i} className="rounded-xl overflow-hidden bg-neutral-950 border border-neutral-800">
-                  <img src={src} alt={assetAlt(project.title, src)} className="w-full h-auto block" />
-                </div>
-              ))}
-            </div>
           </section>
         )}
 
@@ -223,12 +256,29 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
                 </p>
               </div>
             </div>
+            {/* A9: roadmap-listed skills in the skills library have no SKILL.md yet */}
+            <div className="mt-6 grid grid-cols-1 gap-6 text-sm">
+              {project.skillDetails.filter((s) => s.status === 'roadmap').map((skill) => (
+                <div key={skill.name} className="p-4 rounded-lg border border-amber-500/30 bg-amber-500/10">
+                  <div className="flex items-center justify-between gap-3 mb-1">
+                    <span className="font-mono text-xs font-semibold text-white">{skill.name}</span>
+                    <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 text-[9px] uppercase tracking-widest text-amber-400">
+                      <Clock className="w-2.5 h-2.5" /> Roadmap
+                    </span>
+                  </div>
+                  <p className="text-xs text-white/70 leading-relaxed">{skill.description}</p>
+                  <p className="text-xs text-amber-400/80 leading-relaxed">
+                    <span className="font-mono">Roadmap · SKILL.md pending</span>
+                  </p>
+                </div>
+              ))}
+            </div>
           </section>
         )}
 
         {/* Agent and skills */}
-        <section className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
+        <section className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="group relative">
             <h2 className="text-xs uppercase tracking-wide text-white/40 mb-4">Responsible Agent Seat</h2>
             <div className="rounded-xl border border-neutral-800 bg-neutral-950 p-5">
               <div className="flex items-center gap-2 mb-2">
@@ -238,6 +288,32 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
               <p className="text-xs text-white/50 leading-relaxed">
                 Autonomous profile assigned to execute and govern this domain with bounded tool access and dedicated memory isolation.
               </p>
+              {/* A6: SOUL.md reveal — real source lookup */}
+              {seatHasSoul(project.agent) && (
+                <div
+                  className="hidden hp-panel absolute right-0 top-0 z-[50] w-80 sm:w-96 max-h-[320px] overflow-y-auto rounded-lg border border-white/10 bg-neutral-950 p-4 shadow-2xl"
+                  role="dialog"
+                  aria-label={`SOUL.md for ${extractSeat(project.agent)}`}
+                  style={{
+                    backgroundColor: 'var(--hp-bg)',
+                    borderColor: 'var(--hp-border)',
+                    color: 'var(--hp-text)',
+                    maxHeight: 'var(--hp-max-h)',
+                    zIndex: 'var(--hp-z)',
+                  }}
+                >
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-sm font-mono font-semibold text-white">{extractSeat(project.agent)}</span>
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-white/40">SOUL.md</span>
+                  </div>
+                  <p className="text-xs text-white/80 leading-relaxed">
+                    <code className="text-white/60">{seatSource(extractSeat(project.agent))}</code>
+                  </p>
+                  <p className="text-xs text-white/60 leading-relaxed">
+                    Real source: the file lives at the path above. Hover another seat card to compare.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
           <div>
@@ -245,7 +321,10 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
             <div className="space-y-3">
               {project.skillDetails && project.skillDetails.length > 0 ? (
                 project.skillDetails.map((skill) => (
-                  <div key={skill.name} className="rounded-xl border border-neutral-800 bg-neutral-950 p-4">
+                  <div
+                    key={skill.name}
+                    className="group relative rounded-xl border border-neutral-800 bg-neutral-950 p-4"
+                  >
                     <div className="flex items-center justify-between gap-3 mb-1">
                       <span className="font-mono text-xs font-semibold text-white">{skill.name}</span>
                       {skill.status === 'installed' && (
@@ -265,6 +344,32 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
                       )}
                     </div>
                     <p className="text-xs text-white/70 leading-relaxed">{skill.description}</p>
+                    {/* A5: SKILL.md reveal — real source lookup */}
+                    {skill.status !== 'roadmap' && (
+                      <div
+                        className="hidden hp-panel absolute right-0 top-0 z-[50] w-80 sm:w-96 max-h-[320px] overflow-y-auto rounded-lg border border-white/10 bg-neutral-950 p-4 shadow-2xl"
+                        role="dialog"
+                        aria-label={`SKILL.md for ${skill.name}`}
+                        style={{
+                          backgroundColor: 'var(--hp-bg)',
+                          borderColor: 'var(--hp-border)',
+                          color: 'var(--hp-text)',
+                          maxHeight: 'var(--hp-max-h)',
+                          zIndex: 'var(--hp-z)',
+                        }}
+                      >
+                        <div className="flex items-center justify-between gap-2 mb-2">
+                          <span className="text-sm font-mono font-semibold text-white">{skill.name}</span>
+                          <span className="text-[10px] font-mono uppercase tracking-widest text-white/40">SKILL.md</span>
+                        </div>
+                        <p className="text-xs text-white/80 leading-relaxed">
+                          <code className="text-white/60">{skillSource(skill.name)}</code>
+                        </p>
+                        <p className="text-xs text-white/60 leading-relaxed">
+                          Real source: the file lives at the path above. Hover another card to compare.
+                        </p>
+                      </div>
+                    )}
                   </div>
                 ))
               ) : (
@@ -279,7 +384,7 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
         </section>
 
         {/* Demos */}
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="text-xs uppercase tracking-wide text-white/40 mb-4">Demonstrations & Video Telemetry</h2>
           {availableDemos.length === 0 ? (
             <div className="rounded-xl overflow-hidden bg-neutral-950 border border-neutral-800 p-8 text-center">
@@ -302,7 +407,7 @@ export default function AiProjectDetail({ project, categorySlug }: AiProjectDeta
                     poster={demoPoster(demo.url)}
                     preload="metadata"
                     aria-label={demo.label}
-                    className="w-full h-auto block bg-black"
+                    className="w-full aspect-[16/9] max-h-[320px] md:max-h-[360px] lg:max-h-[420px] object-cover block bg-black"
                     playsInline
                   />
                 </div>

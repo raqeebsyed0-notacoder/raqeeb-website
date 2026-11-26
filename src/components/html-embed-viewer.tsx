@@ -26,7 +26,7 @@ export function HTMLEmbedViewer({ src, title }: { src: string; title: string }) 
 
   return (
     <div className="w-full max-w-6xl mx-auto flex flex-col gap-4">
-      <div className="relative w-full aspect-[4/3] bg-neutral-950 rounded-xl overflow-hidden border border-neutral-800 shadow-2xl">
+      <div className="relative w-full aspect-[3.5/1] bg-neutral-950 rounded-xl overflow-hidden border border-neutral-800 shadow-2xl">
         <iframe
           src={src}
           title={title}

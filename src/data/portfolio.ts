@@ -804,10 +804,7 @@ export const aiProjects: AiProject[] = [
     status: 'Live',
     stack: ['Hermes Agent', 'Paperclip', 'Cron', 'MCP'],
     architecture: 'assets/ai/diagrams/fleet/fleet-topology.png',
-    screenshots: [
-      'assets/ai/diagrams/fleet/fleet-request-chain.png',
-      'assets/ai/shots/paperclip-ui-3102.png',
-    ],
+    screenshots: [],
     agent: 'sovereign (CEO & governance owner)',
     skills: ['fleet-model-allocation', 'dispatch-discipline', 'cron-dispatch-triage'],
     skillDetails: [
@@ -842,7 +839,7 @@ export const aiProjects: AiProject[] = [
     status: 'Live',
     stack: ['SKILL.md', 'YAML Frontmatter', 'Git', 'Hermes Agent'],
     architecture: 'assets/ai/diagrams/platform/fig1-skills-path.png',
-    screenshots: ['assets/ai/diagrams/platform/fig1-skills-path.png'],
+    screenshots: [],
     agent: 'steward (Fleet maintainer & skills custodian)',
     skills: ['skill-maintainer', 'omh-skill-health', 'omh-skill-scout'],
     skillDetails: [
@@ -871,12 +868,12 @@ export const aiProjects: AiProject[] = [
     id: 'orio-operations',
     title: 'OrIO Operations',
     slug: 'orio-operations',
-    summary: 'Operational intelligence console engineered for the Innovex pilot (Ajeez Sebastian), tracking rig, well, and job-cycle lifecycles in real time. Features automated reconciliation, Material Data Delivery (MDD) verification, and an active market-intelligence feed.',
+    summary: 'Operational intelligence console engineered for the Innovex pilot, tracking rig, well, and job-cycle lifecycles in real time. Features automated reconciliation, Material Data Delivery (MDD) verification, and an active market-intelligence feed.',
     role: 'Console design & build',
     status: 'Pilot live',
     stack: ['Hermes Desktop', 'FastAPI', 'SQLite', 'Plugin SDK'],
     architecture: 'assets/ai/diagrams/orio/orio-operations.png',
-    screenshots: ['assets/ai/diagrams/orio/orio-market-intel.png'],
+    screenshots: [],
     agent: 'OrIO (Innovex pilot)',
     skills: ['orio-operations-core', 'orio-market-intelligence', 'orio-validation', 'orio-morning-report'],
     skillDetails: [
@@ -919,7 +916,7 @@ export const aiProjects: AiProject[] = [
     status: 'Pilot',
     stack: ['React 19', 'Vite', 'Express', 'SQLite', 'Twenty CRM'],
     architecture: 'assets/ai/diagrams/products/leadjin-portal.png',
-    screenshots: ['assets/ai/shots/leadjin-3001.png'],
+    screenshots: [],
     agent: 'mason (Fullstack lead)',
     skills: ['verified-lead-discovery', 'euphoria-places-lead-discovery', 'twenty-crm'],
     skillDetails: [
@@ -953,7 +950,7 @@ export const aiProjects: AiProject[] = [
     status: 'Live',
     stack: ['Hermes Desktop', 'Plugin SDK', 'Hermes Agent', 'SiYuan'],
     architecture: 'assets/ai/diagrams/products/approval-inbox.png',
-    screenshots: ['assets/ai/diagrams/products/approval-inbox.png'],
+    screenshots: [],
     agent: 'steward (Governance custodian)',
     skills: ['euphoria-approval-queue', 'proposal-send'],
     skillDetails: [
@@ -982,7 +979,7 @@ export const aiProjects: AiProject[] = [
     status: 'Live',
     stack: ['Hermes Agent', 'Plugin SDK', 'TypeScript', 'Paperclip API'],
     architecture: 'assets/ai/diagrams/platform/fig3-paperclip.png',
-    screenshots: ['assets/ai/shots/paperclip-ui-3102.png'],
+    screenshots: [],
     agent: 'mason (Integration engineer)',
     skills: ['paperclip-sop', 'hermes-plugin-development'],
     skillDetails: [
@@ -1011,7 +1008,7 @@ export const aiProjects: AiProject[] = [
     status: 'Live',
     stack: ['Hermes Agent', 'Python', 'YAML', 'Plugins'],
     architecture: 'assets/ai/diagrams/platform/fig2-engine-fork.png',
-    screenshots: ['assets/ai/diagrams/platform/fig2-engine-fork.png'],
+    screenshots: [],
     agent: 'steward (Core runtime maintainer)',
     skills: ['hermes-agent', 'plugin-discipline', 'omh-routing'],
     skillDetails: [
@@ -1045,7 +1042,7 @@ export const aiProjects: AiProject[] = [
     status: 'Live',
     stack: ['Hermes Agent', 'Cron', 'Paperclip', 'MCP'],
     architecture: 'assets/ai/diagrams/platform/fig4-automations.png',
-    screenshots: ['assets/ai/diagrams/platform/fig4-automations.png'],
+    screenshots: [],
     agent: 'lantern (Operations & automation lead)',
     skills: ['cron-dispatch-triage', 'scheduled-cronjob-review', 'topic-digest-cron'],
     skillDetails: [
