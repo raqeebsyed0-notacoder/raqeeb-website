@@ -10,13 +10,13 @@ export default function AboutPage() {
     { title: 'Presentation Design', desc: 'Executive decks, event presentations, proposals', icon: '◇' },
     { title: 'Social Media Creative', desc: 'Campaign systems, editorial posters, ad creatives', icon: '○' },
     { title: 'Website & Digital Design', desc: 'UI concepts, digital experiences, web systems', icon: '□' },
-    { title: 'AI & Automation', desc: 'Agent fleets, a skills library of versioned SKILL.md packages, operations and intelligence consoles, an approval gateway, a plugin layer, an enterprise runtime and 38+ scheduled background workflows', icon: '⚙' },
+    { title: 'AI & Automation', desc: 'Agents, plugins and automation workflows built with the open source Hermes runtime, including a KSA lead generation business module and 38+ scheduled background workflows', icon: '⚙' },
   ]
 
   const tools = [
     { category: 'Design', items: ['Figma', 'Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign'], level: 'Expert' },
     { category: 'Presentation', items: ['PowerPoint', 'Google Slides', 'Keynote'], level: 'Expert' },
-    { category: 'AI & Automation', items: ['Agent Fleet', 'Skills Library', 'OrIO Operations', 'LeadJin Portal', 'Approval Inbox', 'Paperclip Plugin', 'Hermes Engine', 'Automations'], level: 'Live' },
+    { category: 'AI & Automation', items: ['Agent Fleet', 'Skills Library', 'LeadJin KSA Lead Generation', 'Approval Inbox', 'Paperclip Plugin', 'Automations'], level: 'Live' },
     { category: 'Production', items: ['Print-Ready Artwork', 'Prepress', 'Bilingual Layout'], level: 'Expert' },
   ]
 
@@ -56,7 +56,7 @@ export default function AboutPage() {
                 Graphic & Visual Designer
               </p>
               <p className="text-sm text-white/70 leading-relaxed mb-8">
-                Based in Dammam, Saudi Arabia. I translate complex briefs into clear, polished visual communication for brands, presentations, campaigns and digital experiences. Backed by 8 AI & automation systems: Agent Fleet, Skills Library, OrIO Operations, LeadJin Portal, Approval Inbox, Paperclip Plugin, Hermes Engine and Automations (38+ scheduled background workflows).
+                Based in Dammam, Saudi Arabia. I translate complex briefs into clear, polished visual communication for brands, presentations, campaigns and digital experiences. I build agents, plugins and automation workflows with the open source Hermes runtime, including LeadJin, a business module for KSA lead generation.
               </p>
               <div className="flex gap-3">
                 <Link

@@ -29,7 +29,7 @@ const steps = [
   {
     number: '06',
     title: 'AUTOMATE',
-    description: 'Background automation and oversight running across every project. Includes 38+ scheduled cron workflows, an agent fleet coordinating 9 autonomous seat profiles, and approval routing that takes high-impact actions to the Founder.',
+    description: 'Background automation and oversight running across every project. Includes 38+ scheduled workflows, agents built with the open source Hermes runtime, and approval routing that takes high-impact actions to the Founder.',
   },
 ]
 
@@ -37,7 +37,7 @@ const capabilities = [
   { category: 'Brand', items: ['Logo Systems', 'Visual Identity', 'Brand Guidelines', 'Packaging'] },
   { category: 'Presentation', items: ['Executive Decks', 'Event Presentations', 'Proposals', 'Brochures'] },
   { category: 'Digital', items: ['Social Media Creative', 'Web Concepts', 'UI Systems'] },
-  { category: 'AI Systems', items: ['Agent Fleet', 'Skills Library', 'OrIO Operations', 'LeadJin Portal', 'Approval Inbox', 'Paperclip Plugin', 'Hermes Engine', 'Automations'] },
+  { category: 'AI Systems', items: ['Agent Fleet', 'Skills Library', 'LeadJin KSA Lead Generation', 'Approval Inbox', 'Paperclip Plugin', 'Automations'] },
 ]
 
 export default function ProcessPage() {

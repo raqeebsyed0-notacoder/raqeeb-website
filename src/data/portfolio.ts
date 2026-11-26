@@ -833,8 +833,8 @@ export const aiProjects: AiProject[] = [
       },
     ],
     links: [
-      { label: 'Interactive Fleet Topology (Archify)', url: 'assets/ai/diagrams/fleet/fleet-topology.html', type: 'diagram' },
-      { label: 'Fleet Request Journey Sequence (Archify)', url: 'assets/ai/diagrams/fleet/fleet-request-chain.html', type: 'diagram' },
+      { label: 'Interactive Fleet Topology', url: 'assets/ai/diagrams/fleet/fleet-topology.html', type: 'diagram' },
+      { label: 'Fleet Request Journey Sequence', url: 'assets/ai/diagrams/fleet/fleet-request-chain.html', type: 'diagram' },
     ],
     demos: [{ label: 'Fleet Overview Walkthrough', url: '' }],
   },
@@ -872,7 +872,7 @@ export const aiProjects: AiProject[] = [
       },
     ],
     links: [
-      { label: 'Interactive Skills Path Dataflow (Archify)', url: 'assets/ai/diagrams/platform/fig1-skills-path.html', type: 'diagram' },
+      { label: 'Interactive Skills Path Dataflow', url: 'assets/ai/diagrams/platform/fig1-skills-path.html', type: 'diagram' },
     ],
     demos: [{ label: 'Skill Authoring & Projection Walkthrough', url: '' }],
   },
@@ -880,16 +880,16 @@ export const aiProjects: AiProject[] = [
     id: 'orio-operations',
     title: 'OrIO Operations',
     slug: 'orio-operations',
-    summary: 'Operational intelligence console engineered for the Innovex pilot, tracking rig, well, and job-cycle lifecycles in real time. Features automated reconciliation, Material Data Delivery (MDD) verification, and an active market-intelligence feed.',
+    summary: 'Innovex OrIO operations console, tracking rig, well and job cycle lifecycles in real time. Features automated reconciliation, Material Data Delivery (MDD) verification, and an active market intelligence feed.',
     role: 'Console design & build',
     status: 'Pilot live',
     stack: ['Hermes Desktop', 'FastAPI', 'SQLite', 'Plugin SDK'],
     architecture: 'assets/ai/diagrams/orio/orio-operations.png',
     screenshots: [],
-    agent: 'OrIO (Innovex pilot)',
+    agent: 'Innovex OrIO',
     company: 'Innovex',
-    owner: 'OrIO (Innovex pilot)',
-    why_created: 'Built as a real product for the Innovex 90-day AI operations pilot.',
+    owner: 'Innovex OrIO',
+    why_created: 'Built as the Innovex operations product for its 90 day AI operations pilot.',
     day_to_day_value: 'Real-time tracking of rig, well and job-cycle lifecycles; automated reconciliation and MDD verification gates; daily operational digest for field operators; active regional market-intelligence feed.',
     skills: ['orio-operations-core', 'orio-market-intelligence', 'orio-validation', 'orio-morning-report'],
     skillDetails: [
@@ -915,8 +915,8 @@ export const aiProjects: AiProject[] = [
       },
     ],
     links: [
-      { label: 'Interactive Operations Architecture (Archify)', url: 'assets/ai/diagrams/orio/orio-operations.html', type: 'diagram' },
-      { label: 'Market Intelligence Dataflow (Archify)', url: 'assets/ai/diagrams/orio/orio-market-intel.html', type: 'diagram' },
+      { label: 'Interactive Operations Architecture', url: 'assets/ai/diagrams/orio/orio-operations.html', type: 'diagram' },
+      { label: 'Market Intelligence Dataflow', url: 'assets/ai/diagrams/orio/orio-market-intel.html', type: 'diagram' },
     ],
     // Posters follow the demoPoster() convention: <video-basename>-poster.jpg.
     // Both matching poster frames ship beside these two mp4s on disk.
@@ -927,10 +927,10 @@ export const aiProjects: AiProject[] = [
   },
   {
     id: 'leadjin-portal',
-    title: 'LeadJin Portal',
+    title: 'LeadJin',
     slug: 'leadjin-portal',
-    summary: 'B2B regional intelligence platform for Saudi Arabia, combining automated discovery pipelines with official commercial registry validation. Feeds verified company profiles, decision-maker contacts, and place data directly into Twenty CRM over GraphQL.',
-    role: 'Data pipeline & portal build',
+    summary: 'Business module for KSA lead generation. Combines automated discovery pipelines with official commercial registry validation and feeds verified company profiles, decision-maker contacts and place data into Twenty CRM over GraphQL.',
+    role: 'Business module build',
     status: 'Pilot',
     stack: ['React 19', 'Vite', 'Express', 'SQLite', 'Twenty CRM'],
     architecture: 'assets/ai/diagrams/products/leadjin-portal.png',
@@ -938,7 +938,7 @@ export const aiProjects: AiProject[] = [
     agent: 'mason (Fullstack lead)',
     company: 'NOT-IN-SOURCE',
     owner: 'mason (Fullstack lead)',
-    why_created: 'To combine automated discovery pipelines with official commercial registry validation and feed verified data into Twenty CRM.',
+    why_created: 'To generate verified KSA leads for Euphoria Experiences.',
     day_to_day_value: 'Verified KSA lead discovery fed directly into Twenty CRM; no manual commercial registry lookups; currently a Pilot.',
     skills: ['verified-lead-discovery', 'euphoria-places-lead-discovery', 'twenty-crm'],
     skillDetails: [
@@ -959,7 +959,7 @@ export const aiProjects: AiProject[] = [
       },
     ],
     links: [
-      { label: 'Interactive Portal Architecture (Archify)', url: 'assets/ai/diagrams/products/leadjin-portal.html', type: 'diagram' },
+      { label: 'Interactive LeadJin Architecture', url: 'assets/ai/diagrams/products/leadjin-portal.html', type: 'diagram' },
     ],
     demos: [{ label: 'Pipeline & Discovery Demo', url: '' }],
   },
@@ -992,7 +992,7 @@ export const aiProjects: AiProject[] = [
       },
     ],
     links: [
-      { label: 'Interactive Architecture Diagram (Archify)', url: 'assets/ai/diagrams/products/approval-inbox.html', type: 'diagram' },
+      { label: 'Interactive Architecture Diagram', url: 'assets/ai/diagrams/products/approval-inbox.html', type: 'diagram' },
     ],
     demos: [{ label: 'Approval Queue & Decision Flow', url: '' }],
   },
@@ -1025,15 +1025,15 @@ export const aiProjects: AiProject[] = [
       },
     ],
     links: [
-      { label: 'Interactive Plugin Architecture (Archify)', url: 'assets/ai/diagrams/platform/fig3-paperclip.html', type: 'diagram' },
+      { label: 'Interactive Plugin Architecture', url: 'assets/ai/diagrams/platform/fig3-paperclip.html', type: 'diagram' },
     ],
     demos: [{ label: 'Plugin Execution & Checkout Demo', url: '' }],
   },
   {
     id: 'hermes-engine',
-    title: 'Hermes Engine',
+    title: 'Hermes Runtime Integration',
     slug: 'hermes-engine',
-    summary: 'Customized Hermes runtime distribution embedding enterprise governance: Rule 0 routing gates, Step 0 pre-flight skill validation, and isolated per-profile configuration islands. Ensures deterministic multi-agent execution across local and cloud backends.',
+    summary: 'Open source Hermes runtime, configured and extended to build agents, plugins and automation workflows with governed routing and isolated per profile configuration.',
     role: 'Runtime configuration & orchestration',
     status: 'Live',
     stack: ['Hermes Agent', 'Python', 'YAML', 'Plugins'],
@@ -1042,7 +1042,7 @@ export const aiProjects: AiProject[] = [
     agent: 'steward (Core runtime maintainer)',
     company: 'NOT-IN-SOURCE',
     owner: 'steward (Core runtime maintainer)',
-    why_created: 'To customize the Hermes runtime with enterprise governance (Rule 0, Step 0) for deterministic multi-agent execution.',
+    why_created: 'To use the open source Hermes runtime as the base for building agents, plugins and automation workflows.',
     day_to_day_value: 'Deterministic multi-agent execution across local and cloud backends; Rule 0 gates and Step 0 pre-flight validation enforced.',
     skills: ['hermes-agent', 'plugin-discipline', 'omh-routing'],
     skillDetails: [
@@ -1063,7 +1063,7 @@ export const aiProjects: AiProject[] = [
       },
     ],
     links: [
-      { label: 'Interactive Engine Architecture (Archify)', url: 'assets/ai/diagrams/platform/fig2-engine-fork.html', type: 'diagram' },
+      { label: 'Interactive Runtime Architecture', url: 'assets/ai/diagrams/platform/fig2-engine-fork.html', type: 'diagram' },
     ],
     demos: [{ label: 'Runtime Lifecycle & Rule 0 Demo', url: '' }],
   },
@@ -1101,7 +1101,7 @@ export const aiProjects: AiProject[] = [
       },
     ],
     links: [
-      { label: 'Interactive Automation Workflow (Archify)', url: 'assets/ai/diagrams/platform/fig4-automations.html', type: 'diagram' },
+      { label: 'Interactive Automation Workflow', url: 'assets/ai/diagrams/platform/fig4-automations.html', type: 'diagram' },
     ],
     demos: [{ label: 'Automated Sweep & Dedup Pipeline', url: '' }],
   },
