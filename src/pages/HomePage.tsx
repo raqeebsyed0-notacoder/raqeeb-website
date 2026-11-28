@@ -1,4 +1,5 @@
 import { aiProjects } from '../data/ai-projects'
+import { Navbar } from '../components/Layout'
 
 // Third-party host asset (CloudFront CDN) — kept exactly as-is, do not replace with an image
 const featuredOrder = ['leadjin-portal', 'orio-operations', 'agent-fleet', 'approval-inbox']
@@ -24,8 +25,15 @@ export default function HomePage() {
         />
       </video>
 
+      {/* Legibility scrim over the third-party hero video, so the copy holds contrast on bright frames */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/25"
+      />
+
       {/* Content Overlay */}
       <div className="relative z-10 flex h-full flex-col px-5 sm:px-6 md:px-10 lg:px-14">
+        <Navbar />
         <div className="flex-1 pb-12">
           {/* Eyebrow */}
           <p className="text-xs uppercase tracking-[0.3em] text-white/60">

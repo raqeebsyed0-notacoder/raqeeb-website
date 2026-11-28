@@ -66,9 +66,9 @@ export const categories: Category[] = [
     sourceFolder: 'E:\\Portfolio\\AI & Automation',
   
     lede: 'Systems I designed, built and run. Each one starts from a business problem, not from a model: who does the work now, what it costs, and what a machine can honestly take over.',
-    note: 'Four of these are running today, three are pilots or paused. Each card states which.',
+    note: 'Five of these are running today, two are pilots and one is paused. Each card states which.',
     seoTitle: 'AI Systems Portfolio — Agent Fleets, Automation, Integration | Raqeeb Hussain',
-    seoDescription: 'Seven AI systems built and run by Raqeeb Hussain: agent fleet, skills library, LeadJin lead generation, OrIO operations console, approval inbox, plugin integration and automations.',
+    seoDescription: 'Eight AI systems built and run by Raqeeb Hussain: agent fleet, skills library, LeadJin lead generation, OrIO operations console, approval inbox, plugin integration, runtime integration and automations.',
   },
 ]
 
