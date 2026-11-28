@@ -1,39 +1,29 @@
-import { useState } from 'react'
 import PageLayout from '../components/PageLayout'
 import { Link } from 'react-router-dom'
 
+const narrative = [
+  'I started in visual communication: brand systems, presentation design, campaign creative. The work is the same discipline I use now. Take something complicated, find the structure inside it, and make the next decision obvious.',
+  'Client-facing work added the second half. Selling design across print, retail and hospitality meant learning what a business is actually trying to move: a deal, a hire, a shipment, a margin. A tool that ignores that is a demo.',
+  'In 2025 I started building with AI directly. Not prompting for copy, but running coding agents against real repositories: defining the requirement, writing the instruction, letting the agent build, then reading the failure and fixing it. That loop is the work.',
+  'Today I run a fleet of nine agent seats with their own roles, a library of reusable skills that makes their behaviour repeatable, a lead-generation module wired to a CRM, an operations console for a drilling services company, and an approval layer that puts a human in front of anything irreversible.',
+]
+
+const disciplines = [
+  { n: '01', title: 'AI IMPLEMENTATION', desc: 'Agent systems, workflow automation, integration and validation.' },
+  { n: '02', title: 'BUSINESS PROBLEM SOLVING', desc: 'Requirements, process mapping, and deciding what should not be automated.' },
+  { n: '03', title: 'BRAND IDENTITY SYSTEMS', desc: 'Logo, visual language, guidelines.' },
+  { n: '04', title: 'PRESENTATION AND COMMUNICATION DESIGN', desc: 'Executive decks, proposals, technical documents.' },
+  { n: '05', title: 'DIGITAL AND CAMPAIGN DESIGN', desc: 'Websites, social creative, editorial posters.' },
+]
+
+const principles = [
+  { n: '01', title: 'PROBLEM BEFORE TOOL', desc: 'If the process is wrong, automating it only makes the wrong answer faster.' },
+  { n: '02', title: 'ONE OWNER PER SYSTEM', desc: 'Every component has one responsible seat, so a failure has an address.' },
+  { n: '03', title: 'VERIFY BEFORE CLAIMING', desc: 'A system is done when the live output proves it, not when the build passes.' },
+  { n: '04', title: 'THE ARTEFACT IS THE ARGUMENT', desc: 'Show the working thing, not a description of it.' },
+]
+
 export default function AboutPage() {
-  const [activeTab, setActiveTab] = useState<'disciplines' | 'tools'>('disciplines')
-
-  const disciplines = [
-    { title: 'Brand Identity Systems', desc: 'Logo, visual language, packaging, guidelines', icon: '◆' },
-    { title: 'Presentation Design', desc: 'Executive decks, event presentations, proposals', icon: '◇' },
-    { title: 'Social Media Creative', desc: 'Campaign systems, editorial posters, ad creatives', icon: '○' },
-    { title: 'Website & Digital Design', desc: 'UI concepts, digital experiences, web systems', icon: '□' },
-    { title: 'AI & Automation', desc: 'Agents, plugins and automation workflows built with the open source Hermes runtime, including a KSA lead generation business module and 38+ scheduled background workflows', icon: '⚙' },
-  ]
-
-  const tools = [
-    { category: 'Design', items: ['Figma', 'Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign'], level: 'Expert' },
-    { category: 'Presentation', items: ['PowerPoint', 'Google Slides', 'Keynote'], level: 'Expert' },
-    { category: 'AI & Automation', items: ['Agent Fleet', 'Skills Library', 'LeadJin KSA Lead Generation', 'Approval Inbox', 'Paperclip Plugin', 'Automations'], level: 'Live' },
-    { category: 'Production', items: ['Print-Ready Artwork', 'Prepress', 'Bilingual Layout'], level: 'Expert' },
-  ]
-
-  const clients = [
-    'Buyology', 'Nasi', 'Euphoria Experiences', 'White Graphics', 'Blaize', 'Dr. Chashmawala',
-    'Flowserve', 'Jalal', 'Shafa Al Shams', 'Stage Nine', 'Trillium', 'Arata',
-    'Dot & Key', 'Learnbay', 'New Herbs', 'Nirmalaya', 'Organic B', 'Rustic Art',
-    'Satthwa', 'Ustraa', 'GRC', 'Marsa Atelier', 'Najd Sands'
-  ]
-
-  const principles = [
-    { title: 'Clarity First', desc: 'Strip away noise until the core message stands alone.' },
-    { title: 'Structure Before Style', desc: 'Information hierarchy drives every layout decision.' },
-    { title: 'Restraint Over Decoration', desc: 'Every element earns its place or gets removed.' },
-    { title: 'Context is King', desc: 'Design for the audience, the medium, and the moment.' },
-  ]
-
   return (
     <PageLayout>
       <div className="max-w-7xl mx-auto">
@@ -48,16 +38,12 @@ export default function AboutPage() {
                 />
               </div>
               <h1 className="text-3xl sm:text-4xl tracking-wide uppercase font-normal leading-[0.9] mb-3">
-                Raqeeb
-                <br />
-                <span className="font-pixel font-normal text-[1.1em]">Hussain</span>
+                RAQEEB HUSSAIN
               </h1>
-              <p className="text-sm text-white/60 mb-6">
-                Graphic & Visual Designer
+              <p className="text-sm text-white/60 mb-2">
+                AI Implementation Specialist · Design and Visual Communication foundation
               </p>
-              <p className="text-sm text-white/70 leading-relaxed mb-8">
-                Based in Dammam, Saudi Arabia. I translate complex briefs into clear, polished visual communication for brands, presentations, campaigns and digital experiences. I build agents, plugins and automation workflows with the open source Hermes runtime, including LeadJin, a business module for KSA lead generation.
-              </p>
+              <p className="text-xs text-white/50 mb-6">Based in Dammam, Saudi Arabia</p>
               <div className="flex gap-3">
                 <Link
                   to="/resume"
@@ -76,118 +62,52 @@ export default function AboutPage() {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="mb-16">
-              <div className="flex gap-4 mb-8">
-                <button
-                  onClick={() => setActiveTab('disciplines')}
-                  className={`text-xs uppercase tracking-widest pb-2 border-b-2 transition-colors ${
-                    activeTab === 'disciplines'
-                      ? 'border-white text-white'
-                      : 'border-transparent text-white/50 hover:text-white/70'
-                  }`}
-                >
-                  Disciplines
-                </button>
-                <button
-                  onClick={() => setActiveTab('tools')}
-                  className={`text-xs uppercase tracking-widest pb-2 border-b-2 transition-colors ${
-                    activeTab === 'tools'
-                      ? 'border-white text-white'
-                      : 'border-transparent text-white/50 hover:text-white/70'
-                  }`}
-                >
-                  Tools & Capabilities
-                </button>
-              </div>
-
-              {activeTab === 'disciplines' && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {disciplines.map((d, i) => (
-                    <div
-                      key={d.title}
-                      className="group border border-white/10 p-5 hover:border-white/20 transition-colors"
-                    >
-                      <div className="flex items-start gap-3">
-                        <span className="text-lg text-white/40 mt-0.5">{d.icon}</span>
-                        <div>
-                          <p className="text-xs text-white/40 mb-1">
-                            {String(i + 1).padStart(2, '0')}
-                          </p>
-                          <h3 className="text-sm tracking-wide uppercase font-normal mb-1">
-                            {d.title}
-                          </h3>
-                          <p className="text-xs text-white/60">
-                            {d.desc}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {activeTab === 'tools' && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {tools.map((group) => (
-                    <div key={group.category}>
-                      <div className="flex items-center justify-between mb-3">
-                        <p className="text-xs text-white/50 uppercase tracking-widest">
-                          {group.category}
-                        </p>
-                        <span className="text-[10px] text-white/30 uppercase tracking-wider">
-                          {group.level}
-                        </span>
-                      </div>
-                      <ul className="space-y-1">
-                        {group.items.map((item) => (
-                          <li key={item} className="text-sm text-white/70 flex items-center gap-2">
-                            <span className="w-1 h-1 rounded-full bg-white/30" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div className="mb-16">
-              <h2 className="text-xs text-white/50 uppercase tracking-widest mb-4">
-                Clients & Collaborations
+            <section className="mb-16">
+              <h2 className="text-xs text-white/50 uppercase tracking-widest mb-6">
+                About
               </h2>
-              <div className="flex flex-wrap gap-2">
-                {clients.map((client) => (
-                  <span
-                    key={client}
-                    className="px-3 py-1.5 text-xs text-white/60 border border-white/10 hover:border-white/20 hover:text-white/80 transition-colors"
-                  >
-                    {client}
-                  </span>
+              <div className="space-y-5">
+                {narrative.map((paragraph, i) => (
+                  <p key={i} className="text-base text-white/80 leading-relaxed">
+                    {paragraph}
+                  </p>
                 ))}
               </div>
-            </div>
+            </section>
 
-            <div>
-              <h2 className="text-xs text-white/50 uppercase tracking-widest mb-4">
-                Design Principles
+            <section className="mb-16">
+              <h2 className="text-xs text-white/50 uppercase tracking-widest mb-6">
+                Disciplines
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {principles.map((p, i) => (
-                  <div key={p.title} className="border-l border-white/10 pl-5 py-2">
-                    <p className="text-xs text-white/40 mb-1">
-                      {String(i + 1).padStart(2, '0')}
-                    </p>
-                    <h3 className="text-sm tracking-wide uppercase font-normal mb-1">
-                      {p.title}
+                {disciplines.map((d) => (
+                  <div key={d.n} className="border border-white/10 p-5">
+                    <p className="font-pixel text-xs text-white/40 mb-2">{d.n}</p>
+                    <h3 className="text-sm tracking-wide uppercase font-normal mb-2">
+                      {d.title}
                     </h3>
-                    <p className="text-xs text-white/60 leading-relaxed">
-                      {p.desc}
-                    </p>
+                    <p className="text-xs text-white/60 leading-relaxed">{d.desc}</p>
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
+
+            <section>
+              <h2 className="text-xs text-white/50 uppercase tracking-widest mb-6">
+                Working Principles
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {principles.map((p) => (
+                  <div key={p.n} className="border-l border-white/10 pl-5 py-2">
+                    <p className="font-pixel text-xs text-white/40 mb-2">{p.n}</p>
+                    <h3 className="text-sm tracking-wide uppercase font-normal mb-2">
+                      {p.title}
+                    </h3>
+                    <p className="text-xs text-white/60 leading-relaxed">{p.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
           </div>
         </div>
       </div>

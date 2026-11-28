@@ -4,22 +4,30 @@ import { Menu, X } from 'lucide-react'
 import { categories } from '../data/portfolio'
 
 const NAV_LINKS = [
+  { label: 'WORK', path: '/projects' },
+  { label: 'AI SYSTEMS', path: '/projects/ai' },
   { label: 'ABOUT', path: '/about' },
   { label: 'PROCESS', path: '/process' },
-  { label: 'PROJECTS', path: '/projects' },
   { label: 'RESUME', path: '/resume' },
 ]
 
-
-
-const STAGGER_DELAYS = [100, 160, 220, 280]
+const STAGGER_DELAYS = [100, 160, 220, 280, 340]
 
 // Client names by category for hover menus
 const categoryClients: Record<string, { name: string; slug: string }[]> = {
   'brand-identity': [],
   'presentation-design': [],
   'social-media': [],
-  websites: [],
+  'websites': [],
+}
+
+function isNavActive(base: string, pathname: string): boolean {
+  if (base === '/projects') {
+    // WORK owns the projects tree except the AI branch, which has its own nav entry
+    if (pathname.startsWith('/projects/ai')) return false
+    return pathname === '/projects' || pathname.startsWith('/projects/')
+  }
+  return pathname === base
 }
 
 export function Navbar() {
@@ -50,59 +58,64 @@ export function Navbar() {
         <Link to="/" className="text-base font-semibold tracking-wide">RAQEEB HUSSAIN</Link>
 
         <ul className="hidden gap-8 text-sm tracking-wide md:flex">
-          {NAV_LINKS.map((link) => (
-            <li
-              key={link.path}
-              className="relative"
-              onMouseEnter={() => link.path === '/projects' ? setHoveredCategory('projects') : setHoveredCategory(null)}
-              onMouseLeave={() => setHoveredCategory(null)}
-            >
-              <Link
-                to={link.path}
-                className={`transition-opacity hover:opacity-70 ${
-                  location.pathname === link.path || location.pathname.startsWith(link.path + '/')
-                    ? 'opacity-100'
-                    : 'opacity-70'
-                }`}
-              >
-                {link.label}
-              </Link>
+          {NAV_LINKS.map((link) => {
+            const active = isNavActive(link.path, location.pathname)
+            return (
+              <li key={link.path} className="relative">
+                {active ? (
+                  <span
+                    aria-current="page"
+                    className="inline-block transition-colors hover:opacity-70"
+                  >
+                    {link.label}
+                  </span>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className={`transition-opacity hover:opacity-70 ${
+                      location.pathname.startsWith(link.path + '/') ? 'opacity-100' : 'opacity-70'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )}
 
-              {/* Category hover dropdown for PROJECTS */}
-              {link.path === '/projects' && hoveredCategory === 'projects' && (
-                <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50"
-                  onMouseEnter={() => setHoveredCategory('projects')}
-                  onMouseLeave={() => setHoveredCategory(null)}
-                >
-                  <div className="bg-[#0a0a0a] border border-white/10 rounded-lg p-4 min-w-[200px] shadow-xl">
-                    {categories.map((cat) => (
-                      <div key={cat.slug} className="mb-3 last:mb-0">
-                        <Link
-                          to={`/projects/${cat.slug}`}
-                          className="text-xs uppercase tracking-widest text-white/50 hover:text-white transition-colors font-semibold"
-                        >
-                          {cat.title}
-                        </Link>
-                        <ul className="mt-1 space-y-0.5">
-                          {(categoryClients[cat.slug] || []).slice(0, 4).map((client) => (
-                            <li key={client.slug}>
-                              <Link
-                                to={`/projects/${cat.slug}/${client.slug}`}
-                                className="text-xs text-white/70 hover:text-white transition-colors"
-                              >
-                                {client.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                {/* Category hover dropdown for WORK */}
+                {link.path === '/projects' && hoveredCategory === 'projects' && (
+                  <div
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50"
+                    onMouseEnter={() => setHoveredCategory('projects')}
+                    onMouseLeave={() => setHoveredCategory(null)}
+                  >
+                    <div className="bg-[#0a0a0a] border border-white/10 rounded-lg p-4 min-w-[200px] shadow-xl">
+                      {categories.map((cat) => (
+                        <div key={cat.slug} className="mb-3 last:mb-0">
+                          <Link
+                            to={`/projects/${cat.slug}`}
+                            className="text-xs uppercase tracking-widest text-white/50 hover:text-white transition-colors font-semibold"
+                          >
+                            {cat.title}
+                          </Link>
+                          <ul className="mt-1 space-y-0.5">
+                            {(categoryClients[cat.slug] || []).slice(0, 4).map((client) => (
+                              <li key={client.slug}>
+                                <Link
+                                  to={`/projects/${cat.slug}/${client.slug}`}
+                                  className="text-xs text-white/70 hover:text-white transition-colors"
+                                >
+                                  {client.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </li>
-          ))}
+                )}
+              </li>
+            )
+          })}
         </ul>
 
         <button
@@ -145,16 +158,54 @@ export function Navbar() {
         </div>
 
         <ul className="flex flex-col items-center justify-center flex-1 gap-8">
-          {NAV_LINKS.map((link, i) => (
-            <li key={link.path}>
+          {NAV_LINKS.map((link, i) => {
+            const active = isNavActive(link.path, location.pathname)
+            return (
+              <li key={link.path}>
+                {active ? (
+                  <span
+                    aria-current="page"
+                    className="text-2xl tracking-widest transition-colors hover:opacity-70"
+                  >
+                    {link.label}
+                  </span>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className="text-2xl tracking-widest transition-opacity hover:opacity-70"
+                    style={{ transitionDelay: `${STAGGER_DELAYS[i] || 0}ms` }}
+                    onClick={closeMenu}
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </li>
+            )
+          })}
+
+          {/* Category menu inside mobile menu */}
+          {categories.map((cat) => (
+            <li key={cat.slug}>
               <Link
-                to={link.path}
-                className="text-2xl tracking-widest transition-opacity hover:opacity-70"
-                style={{ transitionDelay: `${STAGGER_DELAYS[i]}ms` }}
+                to={`/projects/${cat.slug}`}
                 onClick={closeMenu}
+                className="text-xl uppercase tracking-widest transition-colors hover:text-white font-semibold"
               >
-                {link.label}
+                {cat.title}
               </Link>
+              <ul className="mt-2 space-y-1">
+                {(categoryClients[cat.slug] || []).map((client) => (
+                  <li key={client.slug}>
+                    <Link
+                      to={`/projects/${cat.slug}/${client.slug}`}
+                      onClick={closeMenu}
+                      className="text-sm text-white/70 hover:text-white transition-colors"
+                    >
+                      {client.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ul>
