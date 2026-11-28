@@ -37,7 +37,9 @@ export default function HomePage() {
         <div className="flex-1 pb-12">
           {/* Eyebrow */}
           <p className="text-xs uppercase tracking-[0.3em] text-white/60">
-            AI IMPLEMENTATION · AGENT SYSTEMS · AUTOMATION
+            <span className="whitespace-nowrap">AI IMPLEMENTATION</span> ·{' '}
+            <span className="whitespace-nowrap">AGENT SYSTEMS</span> ·{' '}
+            <span className="whitespace-nowrap">AUTOMATION</span>
           </p>
 
           {/* Hero Headline */}
