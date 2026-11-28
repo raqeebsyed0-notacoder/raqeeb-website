@@ -967,7 +967,7 @@ export const aiProjects: AiProject[] = [
     id: 'approval-inbox',
     title: 'Approval Inbox',
     slug: 'approval-inbox',
-    summary: 'Single approval inbox inside Hermes Desktop for anything needing a Founder decision — a task, a post, a reel, a PDF, or any artifact. An agent or the board raises the item and the Founder sees it with its artifact and preview in one panel, then approves or rejects with an optional reason. Where the verdict lands is decided by where the item came from: a Paperclip-raised item gets its verdict written to the Paperclip issue; an agent-raised item routes to the agent board card.',
+    summary: 'Single approval inbox inside Hermes Desktop for anything needing a Founder decision: a task, a post, a reel, a PDF, or any artifact. An agent or the board raises the item and the Founder sees it with its artifact and preview in one panel, then approves or rejects with an optional reason. Where the verdict lands is decided by where the item came from: a Paperclip-raised item gets its verdict written to the Paperclip issue; an agent-raised item routes to the agent board card.',
     role: 'Approval workflow design',
     status: 'Live',
     stack: ['Hermes Desktop', 'Plugin SDK', 'Hermes Agent'],
