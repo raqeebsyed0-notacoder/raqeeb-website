@@ -77,7 +77,7 @@ Only SCOPE paths staged by name:
 - `git add -- src/data/ai-projects.ts .audit-2026-11-28/correction/handoffs/c4-fix.md`
 - `git commit -m "fix(ai): replace SKILL.md stack chip with Markdown on skills-library"`
 
-Commit hash: see `git log -1` output recorded below in the parent handoff channel.
+Commit: see `git log -1 --format=%H` on branch `portfolio-correction` (also reported in the parent handoff and final message).
 
 ## Still open
 Nothing in this SCOPE. c4 criterion is satisfied on the rendered site.
