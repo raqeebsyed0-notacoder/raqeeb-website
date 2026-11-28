@@ -50,7 +50,7 @@ export const aiProjects: AiProject[] = [
     limits: 'Quality varies by skill; a written procedure is only as good as the last time it was tested. No benchmark exists for skill effectiveness, so none is claimed.',
     status: 'Running',
     role: 'Skill authoring & governance',
-    stack: ['SKILL.md', 'YAML Frontmatter', 'Git', 'Hermes Agent'],
+    stack: ['Markdown', 'Git', 'Hermes Agent'],
     architecture: 'assets/ai/diagrams/platform/fig1-skills-path.png',
     screenshots: [],
     links: [
