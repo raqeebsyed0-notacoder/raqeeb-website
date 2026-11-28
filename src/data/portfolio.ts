@@ -1,66 +1,8 @@
-export interface Project {
-  id: string;
-  title: string;
-  slug: string;
-  category: 'brand-identity' | 'presentation' | 'social-media' | 'websites';
-  sourceFolder: string;
-  year: number | null;
-  client: string | null;
-  description: string | null;
-  thumbnail: string;
-  media: string[];
-  mediaTypes: string[];
-  originalFiles: string[];
-  brandColors?: string[];
-  brandFonts?: string[];
-  pdfRatio?: string; // e.g. "960/540" for PDFDeckViewer aspect ratio
-  liveUrl?: string; // full live site URL (opens in new tab)
-  liveFront?: string; // front-page capture shown as the link card
-  liveUrls?: { label: string; url: string }[]; // multiple live versions (e.g. GRC v1-v3)
-}
+import type { Project, Category, AiProject } from './types'
+import { aiProjects } from './ai-projects'
 
-export interface Category {
-  id: string
-  slug: string
-  title: string
-  shortTitle: string
-  description: string
-  sourceFolder: string
-}
-
-export interface SkillInfo {
-  name: string;
-  description: string;
-  status: 'installed' | 'roadmap' | 'project';
-  category?: string;
-}
-
-export interface AiProjectLink {
-  label: string;
-  url: string;
-  type: 'diagram' | 'portal' | 'external' | 'repo';
-}
-
-export interface AiProject {
-  id: string;
-  title: string;
-  slug: string;
-  summary: string;
-  role: string;
-  status: string;
-  stack: string[];
-  architecture: string; // path to the architecture figure
-  screenshots: string[];
-  agent: string;
-  company: string; // 'NOT-IN-SOURCE' where the approved spec is silent (content-spec.md L11)
-  owner: string;
-  why_created: string;
-  day_to_day_value: string;
-  skills: string[];
-  skillDetails?: SkillInfo[];
-  links?: AiProjectLink[];
-  demos: { label: string; url: string }[]; // labelled demo / video slots
-}
+export type { Project, Category, AiProject } from './types'
+export { aiProjects }
 
 export const categories: Category[] = [
   {
@@ -70,6 +12,11 @@ export const categories: Category[] = [
     shortTitle: 'Brand',
     description: 'Logo systems, visual identity, packaging and brand guidelines for companies across sectors.',
     sourceFolder: 'E:\\Portfolio\\Brand Identity',
+  
+    lede: 'Identity work is system work: a mark, a palette, a type scale and the rules that keep them consistent once the client\'s team touches them.',
+    note: 'Two identities. Both shipped with a full document, not a logo file.',
+    seoTitle: 'Brand Identity Work — Logo Systems and Visual Language | Raqeeb Hussain',
+    seoDescription: 'Brand identity projects: Buyology brand document, Euphoria Experiences identity. Logo systems, colour, typography and application.',
   },
   {
     id: 'presentation',
@@ -78,6 +25,11 @@ export const categories: Category[] = [
     shortTitle: 'Deck',
     description: 'Executive presentations, event decks, proposals and corporate brochures.',
     sourceFolder: 'E:\\Portfolio\\Presentations',
+  
+    lede: 'A presentation carries a decision. The design job is to make the argument visible in the order the audience needs it, on a slide that survives being read out loud.',
+    note: 'Eight projects, from a 26-page technical proposal to a 40-page corporate brochure.',
+    seoTitle: 'Presentation Design — Proposals, Event Decks, Brochures | Raqeeb Hussain',
+    seoDescription: 'Eight presentation projects: technical proposals, event decks, brand proposals and corporate brochures for Flowserve, Blaize, Trillium, White Graphics and others.',
   },
   {
     id: 'social-media',
@@ -86,6 +38,11 @@ export const categories: Category[] = [
     shortTitle: 'Social',
     description: 'Campaign creatives, editorial posters, e-commerce ad campaigns and social content systems.',
     sourceFolder: 'E:\\Portfolio\\Social Media',
+  
+    lede: 'Campaign creative is a constraint problem: one message, one product, one grid, and a brand that must stay recognisable after the fourth asset.',
+    note: 'Eleven campaigns, mostly three assets each, kept as a set rather than singles.',
+    seoTitle: 'Social Media and Campaign Creative | Raqeeb Hussain',
+    seoDescription: 'Eleven social campaign projects across beauty, wellness, personal care and education: Arata, Dot & Key, Ustraa, Nirmalaya, Learnbay and more.',
   },
   {
     id: 'websites',
@@ -94,6 +51,11 @@ export const categories: Category[] = [
     shortTitle: 'Web',
     description: 'Digital experience design, website concepts and UI systems for brands and services.',
     sourceFolder: 'E:\\Portfolio\\Websites',
+  
+    lede: 'Website work here is design and layout direction: structure, hierarchy and the visual system a build team can implement. Where a live site exists, it is linked.',
+    note: 'GRC is shown as three iterations; the evolution is the point.',
+    seoTitle: 'Website Design Work — Agency, Corporate, Hospitality | Raqeeb Hussain',
+    seoDescription: 'Four website projects: Euphoria Experiences, GRC (three iterations), Marsa Atelier and Najd Sands. Design and layout direction.',
   },
   {
     id: 'ai',
@@ -102,6 +64,11 @@ export const categories: Category[] = [
     shortTitle: 'AI',
     description: 'Autonomous agents, skill libraries and automation systems built on the Hermes runtime.',
     sourceFolder: 'E:\\Portfolio\\AI & Automation',
+  
+    lede: 'Systems I designed, built and run. Each one starts from a business problem, not from a model: who does the work now, what it costs, and what a machine can honestly take over.',
+    note: 'Four of these are running today, three are pilots or paused. Each card states which.',
+    seoTitle: 'AI Systems Portfolio — Agent Fleets, Automation, Integration | Raqeeb Hussain',
+    seoDescription: 'Seven AI systems built and run by Raqeeb Hussain: agent fleet, skills library, LeadJin lead generation, OrIO operations console, approval inbox, plugin integration and automations.',
   },
 ]
 
@@ -137,6 +104,13 @@ export const projects: Project[] = [
     originalFiles: ['E:\\Portfolio\\Brand Identity\\Buyology-Brand Identity Document.pdf'],
     brandColors: ['#FF6B35', '#1B3A5C', '#FFFFFF', '#F5F5F5'],
     brandFonts: ['Biennale', 'Manrope'],
+  
+    eyebrow: 'BRAND IDENTITY · 2025 · 13-PAGE DOCUMENT',
+    lede: 'A complete identity system and the document that governs it. The deliverable is not the mark: it is the rule set the client\'s team follows after handover.',
+    facts: '13 pages: logo construction, colour palette (#FF6B35, #1B3A5C, white, off-white), type pairing (Biennale + Manrope), and application examples.',
+    look: 'How the orange is rationed across the document, and whether the type scale holds on the application pages.',
+    seoTitle: 'Buyology Brand Identity System | Raqeeb Hussain',
+    seoDescription: 'Buyology brand identity: logo system, colour palette, Biennale and Manrope type framework, and application pages, delivered as a 13-page brand document.',
   },
   {
     id: 'euphoria-experiences-brand',
@@ -151,6 +125,13 @@ export const projects: Project[] = [
     media: ['assets/brand/euphoria/cover.png'],
     mediaTypes: ['image'],
     originalFiles: ['E:\\Portfolio\\Brand Identity\\logo\\Euphoria Experiences.pdf'],
+  
+    eyebrow: 'BRAND IDENTITY · 2026',
+    lede: 'The identity of the studio itself, built to work at two extremes: a mark that holds on a proposal cover and a system that survives a social feed.',
+    facts: 'Wordmark and supporting layout system, applied across this portfolio and the agency\'s own material.',
+    look: 'The wordmark at small size against the page background it actually ships on.',
+    seoTitle: 'Euphoria Experiences Brand Identity | Raqeeb Hussain',
+    seoDescription: 'Euphoria Experiences identity: wordmark and layout system designed for the studio\'s own proposals, portfolio and social presence.',
   },
   // ── PRESENTATION DESIGN ────────────────────────────────────────
   {
@@ -194,6 +175,13 @@ export const projects: Project[] = [
     mediaTypes: ['pdf'],
     pdfRatio: '960/540',
     originalFiles: ['E:\\\\Portfolio\\\\Presentations\\\\Blaize technical proposal.pdf'],
+  
+    eyebrow: 'TECHNICAL PROPOSAL · 2025 · 26 PAGES',
+    lede: 'A technical proposal has to be read by two audiences at once: the engineer checking the method and the buyer checking the risk. The layout carries both without splitting the document.',
+    facts: '26 pages, including technical content pages and the visual system that holds them together.',
+    look: 'Where the document switches between evidence and argument, and whether the reading order still works at page 20.',
+    seoTitle: 'Blaize Technical Proposal Design | Raqeeb Hussain',
+    seoDescription: '26-page technical proposal for Blaize: layout and information design built for two audiences, technical reviewers and commercial decision makers.',
   },
   {
     id: 'chashmawala',
@@ -219,6 +207,13 @@ export const projects: Project[] = [
     mediaTypes: ['pdf'],
     pdfRatio: '960/540',
     originalFiles: ['E:\\Portfolio\\Presentations\\dr-chashmawala-proposal-light.pdf'],
+  
+    eyebrow: 'BRAND PROPOSAL · 2025 · 9 PAGES',
+    lede: 'A brand proposal that also has to demo the identity it is proposing. The deck argues for a direction and shows it at the same time.',
+    facts: '9 pages, combining the proposal narrative with identity direction.',
+    look: 'Whether the proposed visual direction is demonstrated on the pages rather than described in them.',
+    seoTitle: 'Dr. Chashmawala Brand Proposal Design | Raqeeb Hussain',
+    seoDescription: 'Brand proposal and identity presentation for Dr. Chashmawala: nine pages that argue for a direction and show it in place.',
   },
   {
     id: 'flowserve',
@@ -274,6 +269,13 @@ export const projects: Project[] = [
     mediaTypes: ['pdf'],
     pdfRatio: '1191/842',
     originalFiles: ['E:\\Portfolio\\Presentations\\FLOWSERVE EVENT PRESENTATION.pdf'],
+  
+    eyebrow: 'EVENT PRESENTATION · 2025 · 39 PAGES',
+    lede: 'An event deck is read from a distance, at speed, often over a stage. The layouts are built to survive projection and still make sense as a leave-behind.',
+    facts: '39 pages covering the event programme and the corporate content around it.',
+    look: 'Slide density: how much text survives when the page is projected rather than read on a laptop.',
+    seoTitle: 'Flowserve Event Presentation Design | Raqeeb Hussain',
+    seoDescription: '39-page event presentation for Flowserve: stage-legible layout system that also works as a take-away document.',
   },
   {
     id: 'jalal',
@@ -303,6 +305,13 @@ export const projects: Project[] = [
     pdfRatio: '842/595',
     originalFiles: ['E:\\Portfolio\\Presentations\\JALAL EVENT PRESENTATION.pdf',
       'E:\\Portfolio\\Presentations\\Size A4 Booklet Jalal.pdf',],
+  
+    eyebrow: 'EVENT PRESENTATION + A4 BOOKLET · 2025',
+    lede: 'A deck and an A4 booklet from one brief: the deck runs with the speaker, the booklet has to work alone. Same system, two reading speeds.',
+    facts: '12 pages across the presentation and the A4 booklet.',
+    look: 'How the same layout system behaves at projection scale and at A4 scale.',
+    seoTitle: 'Jalal Event Presentation and Booklet | Raqeeb Hussain',
+    seoDescription: 'Event presentation and matching A4 booklet for Jalal: one visual system serving both a projected deck and a printed document.',
   },
   {
     id: 'shafa-al-shams',
@@ -323,6 +332,13 @@ export const projects: Project[] = [
     mediaTypes: ['pdf'],
     pdfRatio: '960/540',
     originalFiles: ['E:\\Portfolio\\Presentations\\Shafa al shams.pdf'],
+  
+    eyebrow: 'PRESENTATION · 2025 · 4 PAGES',
+    lede: 'A short deck with no room to hide: four pages to establish the brand and carry the proposal.',
+    facts: '4 pages.',
+    look: 'What is left out. In four pages the editing is the design work.',
+    seoTitle: 'Shafa Al Shams Presentation Design | Raqeeb Hussain',
+    seoDescription: 'Four-page presentation for Shafa Al Shams: a short deck where the editing carries the argument.',
   },
   {
     id: 'stage-nine',
@@ -355,6 +371,13 @@ export const projects: Project[] = [
     mediaTypes: ['pdf'],
     pdfRatio: '960/540',
     originalFiles: ['E:\\Portfolio\\Presentations\\Stage Nine.pdf'],
+  
+    eyebrow: 'BRAND PROPOSAL · 2025 · 16 PAGES',
+    lede: 'A brand proposal that has to show a visual system, not just a logo. Sixteen pages move from the problem to the system to the application.',
+    facts: '16 pages.',
+    look: 'The transition from proposal language to system demonstration around the middle of the deck.',
+    seoTitle: 'Stage Nine Brand Proposal | Raqeeb Hussain',
+    seoDescription: 'Sixteen-page brand proposal and visual system presentation for Stage Nine.',
   },
   {
     id: 'trillium',
@@ -383,6 +406,13 @@ export const projects: Project[] = [
     mediaTypes: ['pdf'],
     pdfRatio: '1191/842',
     originalFiles: ['E:\\Portfolio\\Presentations\\TRILLIUM EVENT PROPOSAL.pdf'],
+  
+    eyebrow: 'EVENT PROPOSAL · 2025 · 12 PAGES',
+    lede: 'An event proposal is a sales document: it has to make the programme feel inevitable before anyone discusses cost.',
+    facts: '12 pages.',
+    look: 'The order of the argument: programme, then experience, then commercial.',
+    seoTitle: 'Trillium Event Proposal Design | Raqeeb Hussain',
+    seoDescription: 'Twelve-page event proposal for Trillium, structured programme first and commercial last.',
   },
   {
     id: 'white-graphics-brochure',
@@ -439,6 +469,13 @@ export const projects: Project[] = [
     mediaTypes: ['pdf'],
     pdfRatio: '870/595',
     originalFiles: ['E:\\Portfolio\\Presentations\\WHITE GRAPHICS BROCHURE.pdf'],
+  
+    eyebrow: 'CORPORATE BROCHURE · 2025 · 40 PAGES',
+    lede: 'A forty-page corporate brochure is a print system: a grid that survives forty spreads, a type hierarchy that stays legible in the hand, and colour that behaves on paper.',
+    facts: '40 pages.',
+    look: 'The grid on a dense spread against a quiet one; the section openers.',
+    seoTitle: 'White Graphics Corporate Brochure | Raqeeb Hussain',
+    seoDescription: 'Forty-page corporate brochure for White Graphics: grid, type hierarchy and print colour across forty spreads.',
   },
 
   // ── SOCIAL MEDIA ───────────────────────────────────────────────
@@ -463,6 +500,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\_selected\\arata\\creative ad arata 3.png',
       'E:\\Portfolio\\Social Media\\_selected\\arata\\creative ad arata 4.png',
     ],
+  
+    eyebrow: 'CAMPAIGN CREATIVE · 2023 · 3 ASSETS',
+    lede: 'Three campaign assets for Arata, kept as a set: one message carried across formats rather than three unrelated posts.',
+    facts: '3 assets, 2023.',
+    look: 'Whether the brand survives the crop: the same identity at feed, story and square.',
+    seoTitle: 'Arata Campaign Creative | Raqeeb Hussain',
+    seoDescription: 'Three-asset social campaign for Arata (2023): one message carried across formats.',
   },
   {
     id: 'dot-and-key',
@@ -485,6 +529,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\_selected\\dot-and-key\\2.png',
       'E:\\Portfolio\\Social Media\\_selected\\dot-and-key\\3.png',
     ],
+  
+    eyebrow: 'CAMPAIGN CREATIVE · 2023 · 3 ASSETS',
+    lede: 'Beauty campaign creative where the product has to stay the hero across a set of three.',
+    facts: '3 assets, 2023.',
+    look: 'Product framing and how the type sits against a busy photographic background.',
+    seoTitle: 'Dot & Key Campaign Creative | Raqeeb Hussain',
+    seoDescription: 'Three-asset beauty campaign for Dot & Key (2023), product-led framing across formats.',
   },
   {
     id: 'euphoria-campaign',
@@ -509,6 +560,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\_selected\\euphoria\\3.webp',
       'E:\\Portfolio\\Social Media\\_selected\\euphoria\\4.webp',
     ],
+  
+    eyebrow: 'EDITORIAL CAMPAIGN · 2026 · 4 ASSETS',
+    lede: 'The agency\'s own editorial voice: a campaign system rather than a single post, built to be extended.',
+    facts: '4 assets, 2026.',
+    look: 'The template logic: what stays fixed and what changes between assets.',
+    seoTitle: 'Euphoria Experiences Campaign System | Raqeeb Hussain',
+    seoDescription: 'Four-asset editorial campaign for Euphoria Experiences (2026), built as an extendable template system.',
   },
   {
     id: 'learnbay',
@@ -531,6 +589,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\_selected\\learnbay\\2.png',
       'E:\\Portfolio\\Social Media\\_selected\\learnbay\\Learnbay2.png',
     ],
+  
+    eyebrow: 'CAMPAIGN CREATIVE · 2022 · 3 ASSETS',
+    lede: 'Education campaign creative, where the offer has to be legible before the brand is.',
+    facts: '3 assets, 2022.',
+    look: 'How much room the offer takes against the brand.',
+    seoTitle: 'Learnbay Campaign Creative | Raqeeb Hussain',
+    seoDescription: 'Three-asset education campaign for Learnbay (2022): offer-first layout.',
   },
   {
     id: 'new-herbs',
@@ -553,6 +618,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\_selected\\new-herbs\\new herbs creative ad 2.png',
       'E:\\Portfolio\\Social Media\\_selected\\new-herbs\\new herbs creative ad 3.png',
     ],
+  
+    eyebrow: 'CAMPAIGN CREATIVE · 2023 · 3 ASSETS',
+    lede: 'Wellness campaign creative built around natural-product cues without tipping into cliché.',
+    facts: '3 assets, 2023.',
+    look: 'Colour and texture choices against the product photography.',
+    seoTitle: 'New Herbs Campaign Creative | Raqeeb Hussain',
+    seoDescription: 'Three-asset wellness campaign for New Herbs (2023).',
   },
   {
     id: 'nirmalaya',
@@ -575,6 +647,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\_selected\\nirmalaya\\nirmalaya creative ad 2.png',
       'E:\\Portfolio\\Social Media\\_selected\\nirmalaya\\nirmalaya creative ad 3.png',
     ],
+  
+    eyebrow: 'CAMPAIGN CREATIVE · 2023 · 3 ASSETS',
+    lede: 'Incense and fragrance creative: the product is small, so the atmosphere does the selling.',
+    facts: '3 assets, 2023.',
+    look: 'How much of the frame the product actually occupies.',
+    seoTitle: 'Nirmalaya Campaign Creative | Raqeeb Hussain',
+    seoDescription: 'Three-asset fragrance campaign for Nirmalaya (2023).',
   },
   {
     id: 'organic-b',
@@ -597,6 +676,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\_selected\\organic-b\\organic b creative ad 2.png',
       'E:\\Portfolio\\Social Media\\_selected\\organic-b\\organic b creative ad 3.png',
     ],
+  
+    eyebrow: 'CAMPAIGN CREATIVE · 2023 · 3 ASSETS',
+    lede: 'Personal-care campaign creative held together by one palette across the set.',
+    facts: '3 assets, 2023.',
+    look: 'Palette consistency between assets, and the type treatment over it.',
+    seoTitle: 'Organic B Campaign Creative | Raqeeb Hussain',
+    seoDescription: 'Three-asset personal care campaign for Organic B (2023).',
   },
   {
     id: 'rustic-art',
@@ -617,6 +703,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\_selected\\rustic-art\\rustic art creative ad 2.png',
       'E:\\Portfolio\\Social Media\\_selected\\rustic-art\\rustic art creative ad 3.png',
     ],
+  
+    eyebrow: 'CAMPAIGN CREATIVE · 2023 · 2 ASSETS',
+    lede: 'A two-asset campaign: the smallest set on the site, and the clearest test of whether a template holds.',
+    facts: '2 assets, 2023.',
+    look: 'Whether two assets read as one campaign or as two posts.',
+    seoTitle: 'Rustic Art Campaign Creative | Raqeeb Hussain',
+    seoDescription: 'Two-asset campaign for Rustic Art (2023).',
   },
   {
     id: 'satthwa',
@@ -639,6 +732,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\_selected\\satthwa\\satthwa creative ad 2.png',
       'E:\\Portfolio\\Social Media\\_selected\\satthwa\\satthwa creative ad 3.png',
     ],
+  
+    eyebrow: 'CAMPAIGN CREATIVE · 2023 · 3 ASSETS',
+    lede: 'Personal-care campaign creative where the ingredient story drives the layout.',
+    facts: '3 assets, 2023.',
+    look: 'How the copy and the product share the frame.',
+    seoTitle: 'Satthwa Campaign Creative | Raqeeb Hussain',
+    seoDescription: 'Three-asset personal care campaign for Satthwa (2023).',
   },
   {
     id: 'ustraa',
@@ -661,6 +761,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\_selected\\ustraa\\ustraa creative ad 2.png',
       'E:\\Portfolio\\Social Media\\_selected\\ustraa\\ustraa creative ad 3.png',
     ],
+  
+    eyebrow: 'CAMPAIGN CREATIVE · 2023 · 3 ASSETS',
+    lede: 'Men\'s grooming campaign creative: direct, product-forward, built for a fast scroll.',
+    facts: '3 assets, 2023.',
+    look: 'The hook in the first frame, before any reading happens.',
+    seoTitle: 'Ustraa Campaign Creative | Raqeeb Hussain',
+    seoDescription: 'Three-asset men\'s grooming campaign for Ustraa (2023).',
   },
   {
     id: 'editorial-posters',
@@ -685,6 +792,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Social Media\\poster\\photo_2026-09-11_03-41-53.jpg',
       'E:\\Portfolio\\Social Media\\poster\\photo_2026-09-11_03-42-06.jpg',
     ],
+  
+    eyebrow: 'EDITORIAL POSTERS · 2026 · 4 ASSETS',
+    lede: 'Poster work across several brands, where the design carries the message without a product photograph to lean on.',
+    facts: '4 posters, 2026, multiple brands.',
+    look: 'Type as the image: hierarchy, scale and negative space.',
+    seoTitle: 'Editorial Poster Design | Raqeeb Hussain',
+    seoDescription: 'Editorial poster series (2026) across several brands, built on typographic hierarchy rather than product photography.',
   },
 
   // ── WEBSITES ───────────────────────────────────────────────────
@@ -708,6 +822,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Websites\\web\\euphoria-experiences@1400w.jpg',
       'E:\\Portfolio\\Websites\\web\\euphoria-experiences@1920w.jpg',
     ],
+  
+    eyebrow: 'WEBSITE DESIGN · 2026',
+    lede: 'The agency site: positioning, page structure and visual system, captured at desktop scale.',
+    facts: 'Design and layout direction; captures at desktop and large resolution.',
+    look: 'The first screen: what a visitor is supposed to conclude in five seconds.',
+    seoTitle: 'Euphoria Experiences Website Design | Raqeeb Hussain',
+    seoDescription: 'Euphoria Experiences website: structure, hierarchy and visual system for the agency\'s own site.',
   },
   {
     id: 'grc',
@@ -743,6 +864,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Websites\\web\\grc-evolution-sheet.jpg',
       'E:\\Portfolio\\Websites\\web\\grc-evolution-sheet@1400w.jpg',
     ],
+  
+    eyebrow: 'WEBSITE ITERATIONS · 2026 · 3 VERSIONS',
+    lede: 'Three iterations of the same corporate site, shown as a sequence. The value is the comparison, not any single version.',
+    facts: '3 iterations, 5 captures.',
+    look: 'What changed between v1 and v3, and what was deliberately kept.',
+    seoTitle: 'GRC Website Iterations | Raqeeb Hussain',
+    seoDescription: 'Three iterations of the GRC corporate website, shown as a design evolution rather than a single final screen.',
   },
   {
     id: 'marsa-atelier',
@@ -769,6 +897,13 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Websites\\web\\marsa-atelier-hero@1400w.jpg',
       'E:\\Portfolio\\Websites\\web\\marsa-atelier-hero@1920w.jpg',
     ],
+  
+    eyebrow: 'WEBSITE CONCEPT · 2026',
+    lede: 'A concept for an architecture and interiors studio, where the work itself must be the interface.',
+    facts: 'Design concept and layout direction, 4 captures.',
+    look: 'How much chrome the design removes so the project photography leads.',
+    seoTitle: 'Marsa Atelier Website Concept | Raqeeb Hussain',
+    seoDescription: 'Website concept for Marsa Atelier, an architecture and interiors studio: photography-led structure and layout direction.',
   },
   {
     id: 'najd-sands',
@@ -795,317 +930,16 @@ export const projects: Project[] = [
       'E:\\Portfolio\\Websites\\web\\najd-sands-hero@1400w.jpg',
       'E:\\Portfolio\\Websites\\web\\najd-sands-hero@1920w.jpg',
     ],
+  
+    eyebrow: 'WEBSITE CONCEPT · 2026 · ALULA',
+    lede: 'A luxury desert resort concept for AlUla, where the site has to sell a place before a room.',
+    facts: 'Design concept and layout direction, 4 captures.',
+    look: 'Whether the landscape does the persuasion and the interface stays out of its way.',
+    seoTitle: 'Najd Sands Website Concept, AlUla | Raqeeb Hussain',
+    seoDescription: 'Website concept for Najd Sands, a luxury desert resort in AlUla: landscape-led structure and layout direction.',
   },
 ];
 
-export const aiProjects: AiProject[] = [
-  {
-    id: 'agent-fleet',
-    title: 'Agent Fleet',
-    slug: 'agent-fleet',
-    summary: 'Multi-agent operating system coordinating 9 autonomous seat profiles (sovereign, marshal, mason, prism, crucible, lantern, herald, steward, mother) and an orchestration lane. Governed through a centralized Paperclip issue board with gateway event routing, model churn loop protection, and automated health monitoring.',
-    role: 'Systems architecture & fleet orchestration',
-    status: 'Live',
-    stack: ['Hermes Agent', 'Paperclip', 'Cron', 'MCP'],
-    architecture: 'assets/ai/diagrams/fleet/fleet-topology.png',
-    screenshots: [],
-    agent: 'sovereign (CEO & governance owner)',
-    company: 'NOT-IN-SOURCE',
-    owner: 'sovereign (CEO & governance owner)',
-    why_created: 'To coordinate 9 autonomous seat profiles and an orchestration lane as one governed system rather than isolated agents.',
-    day_to_day_value: 'Fleet runs as one coordinated system: centralized Paperclip issue board, gateway event routing, model churn loop protection, automated health monitoring.',
-    skills: ['fleet-model-allocation', 'dispatch-discipline', 'cron-dispatch-triage'],
-    skillDetails: [
-      {
-        name: 'fleet-model-allocation',
-        status: 'installed',
-        description: 'Apply a Founder-approved model blueprint fleet-wide across all agent profiles in config.yaml.',
-      },
-      {
-        name: 'dispatch-discipline',
-        status: 'installed',
-        description: 'Pre-dispatch verification checklist: verify slugs, exact key paths, bounded scope, and live readbacks.',
-      },
-      {
-        name: 'cron-dispatch-triage',
-        status: 'installed',
-        description: 'Triage failed or ownerless cron jobs with live-API re-derivation and explicit verdicts.',
-      },
-    ],
-    links: [
-      { label: 'Interactive Fleet Topology', url: 'assets/ai/diagrams/fleet/fleet-topology.html', type: 'diagram' },
-      { label: 'Fleet Request Journey Sequence', url: 'assets/ai/diagrams/fleet/fleet-request-chain.html', type: 'diagram' },
-    ],
-    demos: [{ label: 'Fleet Overview Walkthrough', url: '' }],
-  },
-  {
-    id: 'skills-library',
-    title: 'Skills Library',
-    slug: 'skills-library',
-    summary: 'Standardized procedural memory framework replacing lossy session context with verifiable, versioned SKILL.md packages. Built on a triple-provenance model (upstream adaptation, per-profile projection, and internal operational capture) governed by automated curator hygiene.',
-    role: 'Skill authoring & governance',
-    status: 'Live',
-    stack: ['SKILL.md', 'YAML Frontmatter', 'Git', 'Hermes Agent'],
-    architecture: 'assets/ai/diagrams/platform/fig1-skills-path.png',
-    screenshots: [],
-    agent: 'steward (Fleet maintainer & skills custodian)',
-    company: 'NOT-IN-SOURCE',
-    owner: 'steward (Fleet maintainer & skills custodian)',
-    why_created: 'To replace lossy session context with verifiable, versioned SKILL.md packages.',
-    day_to_day_value: 'Every agent reads the same verifiable SKILL.md; roadmap skills omh-skill-health and omh-skill-scout have no SKILL.md yet.',
-    skills: ['skill-maintainer', 'omh-skill-health', 'omh-skill-scout'],
-    skillDetails: [
-      {
-        name: 'skill-maintainer',
-        status: 'installed',
-        description: 'Track upstream drift, sync, and publish adapted skill libraries across seats (meta-skill).',
-      },
-      {
-        name: 'omh-skill-health',
-        status: 'roadmap',
-        description: 'OMH plugin capability scoring and skill portfolio health auditing (Roadmap).',
-      },
-      {
-        name: 'omh-skill-scout',
-        status: 'roadmap',
-        description: 'Skill reuse discovery and redundancy prevention before authoring new skills (Roadmap).',
-      },
-    ],
-    links: [
-      { label: 'Interactive Skills Path Dataflow', url: 'assets/ai/diagrams/platform/fig1-skills-path.html', type: 'diagram' },
-    ],
-    demos: [{ label: 'Skill Authoring & Projection Walkthrough', url: '' }],
-  },
-  {
-    id: 'orio-operations',
-    title: 'OrIO Operations',
-    slug: 'orio-operations',
-    summary: 'Innovex OrIO operations console, tracking rig, well and job cycle lifecycles in real time. Features automated reconciliation, Material Data Delivery (MDD) verification, and an active market intelligence feed.',
-    role: 'Console design & build',
-    status: 'Pilot live',
-    stack: ['Hermes Desktop', 'FastAPI', 'SQLite', 'Plugin SDK'],
-    architecture: 'assets/ai/diagrams/orio/orio-operations.png',
-    screenshots: [],
-    agent: 'Innovex OrIO',
-    company: 'Innovex',
-    owner: 'Innovex OrIO',
-    why_created: 'Built as the Innovex operations product for its 90 day AI operations pilot.',
-    day_to_day_value: 'Real-time tracking of rig, well and job-cycle lifecycles; automated reconciliation and MDD verification gates; daily operational digest for field operators; active regional market-intelligence feed.',
-    skills: ['orio-operations-core', 'orio-market-intelligence', 'orio-validation', 'orio-morning-report'],
-    skillDetails: [
-      {
-        name: 'orio-operations-core',
-        status: 'project',
-        description: 'Core domain operations and rig lifecycle telemetry (ORIO pilot package).',
-      },
-      {
-        name: 'orio-market-intelligence',
-        status: 'project',
-        description: 'Automated tracking and extraction of regional market intelligence signals (ORIO pilot).',
-      },
-      {
-        name: 'orio-validation',
-        status: 'project',
-        description: 'Well telemetry and MDD reconciliation verification gates (ORIO pilot).',
-      },
-      {
-        name: 'orio-morning-report',
-        status: 'project',
-        description: 'Daily operational digest generation for field operators (ORIO pilot).',
-      },
-    ],
-    links: [
-      { label: 'Interactive Operations Architecture', url: 'assets/ai/diagrams/orio/orio-operations.html', type: 'diagram' },
-      { label: 'Market Intelligence Dataflow', url: 'assets/ai/diagrams/orio/orio-market-intel.html', type: 'diagram' },
-    ],
-    // Posters follow the demoPoster() convention: <video-basename>-poster.jpg.
-    // Both matching poster frames ship beside these two mp4s on disk.
-    demos: [
-      { label: 'Operations Pilot Walkthrough', url: 'assets/ai/videos/orio-operations-pilot-demo.mp4' },
-      { label: 'Market Intelligence Feature Demo', url: 'assets/ai/videos/orio-market-intelligence-demo.mp4' },
-    ],
-  },
-  {
-    id: 'leadjin-portal',
-    title: 'LeadJin',
-    slug: 'leadjin-portal',
-    summary: 'Business module for KSA lead generation. Combines automated discovery pipelines with official commercial registry validation and feeds verified company profiles, decision-maker contacts and place data into Twenty CRM over GraphQL.',
-    role: 'Business module build',
-    status: 'Pilot',
-    stack: ['React 19', 'Vite', 'Express', 'SQLite', 'Twenty CRM'],
-    architecture: 'assets/ai/diagrams/products/leadjin-portal.png',
-    screenshots: [],
-    agent: 'mason (Fullstack lead)',
-    company: 'NOT-IN-SOURCE',
-    owner: 'mason (Fullstack lead)',
-    why_created: 'To generate verified KSA leads for Euphoria Experiences.',
-    day_to_day_value: 'Verified KSA lead discovery fed directly into Twenty CRM; no manual commercial registry lookups; currently a Pilot.',
-    skills: ['verified-lead-discovery', 'euphoria-places-lead-discovery', 'twenty-crm'],
-    skillDetails: [
-      {
-        name: 'verified-lead-discovery',
-        status: 'installed',
-        description: 'Keyless KSA verified-lead discovery pipeline with per-gate evidence URLs.',
-      },
-      {
-        name: 'euphoria-places-lead-discovery',
-        status: 'installed',
-        description: 'Gated prospecting flow via Google Places for Saudi business entities.',
-      },
-      {
-        name: 'twenty-crm',
-        status: 'installed',
-        description: 'Twenty CRM GraphQL integration managing stages from NEW to CUSTOMER.',
-      },
-    ],
-    links: [
-      { label: 'Interactive LeadJin Architecture', url: 'assets/ai/diagrams/products/leadjin-portal.html', type: 'diagram' },
-    ],
-    demos: [{ label: 'Pipeline & Discovery Demo', url: '' }],
-  },
-  {
-    id: 'approval-inbox',
-    title: 'Approval Inbox',
-    slug: 'approval-inbox',
-    summary: 'Single approval inbox inside Hermes Desktop for anything needing a Founder decision: a task, a post, a reel, a PDF, or any artifact. An agent or the board raises the item and the Founder sees it with its artifact and preview in one panel, then approves or rejects with an optional reason. Where the verdict lands is decided by where the item came from: a Paperclip-raised item gets its verdict written to the Paperclip issue; an agent-raised item routes to the agent board card.',
-    role: 'Approval workflow design',
-    status: 'Live',
-    stack: ['Hermes Desktop', 'Plugin SDK', 'Hermes Agent'],
-    architecture: 'assets/ai/diagrams/products/approval-inbox.png',
-    screenshots: [],
-    agent: 'steward (Governance custodian)',
-    company: 'NOT-IN-SOURCE',
-    owner: 'steward (Governance custodian)',
-    why_created: 'To give the Founder one panel for every high-impact decision: a Paperclip-raised item gets its verdict written to the Paperclip issue, an agent-raised item to the agent board card.',
-    day_to_day_value: 'Items raised by agents or the board land in one panel: approve carries out the next action and reject relays the reason to the owner, and a verdict that fails to write is parked as pending-apply and applied later.',
-    skills: ['euphoria-approval-queue', 'proposal-send'],
-    skillDetails: [
-      {
-        name: 'euphoria-approval-queue',
-        status: 'installed',
-        description: 'Founder approval workflow with artifact version gating; a failed write parks the verdict as pending-apply and applies it later.',
-      },
-      {
-        name: 'proposal-send',
-        status: 'installed',
-        description: 'Verified proposal dispatch with snapshot auditing and OTP safeguards.',
-      },
-    ],
-    links: [
-      { label: 'Interactive Architecture Diagram', url: 'assets/ai/diagrams/products/approval-inbox.html', type: 'diagram' },
-    ],
-    demos: [{ label: 'Approval Queue & Decision Flow', url: '' }],
-  },
-  {
-    id: 'paperclip-plugin',
-    title: 'Paperclip Plugin',
-    slug: 'paperclip-plugin',
-    summary: 'Native desktop and agent integration layer connecting Hermes runtimes to Paperclip company boards. Enables autonomous issue checkout, heartbeat reporting, attachment uploads, and recovery-action disposition without breaking context.',
-    role: 'Plugin engineering',
-    status: 'Live',
-    stack: ['Hermes Agent', 'Plugin SDK', 'TypeScript', 'Paperclip API'],
-    architecture: 'assets/ai/diagrams/platform/fig3-paperclip.png',
-    screenshots: [],
-    agent: 'mason (Integration engineer)',
-    company: 'NOT-IN-SOURCE',
-    owner: 'mason (Integration engineer)',
-    why_created: 'To connect Hermes runtimes to Paperclip company boards for autonomous issue checkout, heartbeat reporting, attachment uploads, and recovery disposition.',
-    day_to_day_value: 'Agents operate Paperclip company boards autonomously. Checkout, heartbeat, upload and recover happen without breaking context.',
-    skills: ['paperclip-sop', 'hermes-plugin-development'],
-    skillDetails: [
-      {
-        name: 'paperclip-sop',
-        status: 'installed',
-        description: 'Paperclip governance SOP: issues, attachments, runs, and recovery actions.',
-      },
-      {
-        name: 'hermes-plugin-development',
-        status: 'installed',
-        description: 'Plugin SDK lifecycle: hot-reload, contract registration, and persistence.',
-      },
-    ],
-    links: [
-      { label: 'Interactive Plugin Architecture', url: 'assets/ai/diagrams/platform/fig3-paperclip.html', type: 'diagram' },
-    ],
-    demos: [{ label: 'Plugin Execution & Checkout Demo', url: '' }],
-  },
-  {
-    id: 'hermes-engine',
-    title: 'Hermes Runtime Integration',
-    slug: 'hermes-engine',
-    summary: 'Open source Hermes runtime, configured and extended to build agents, plugins and automation workflows with governed routing and isolated per profile configuration.',
-    role: 'Runtime configuration & orchestration',
-    status: 'Live',
-    stack: ['Hermes Agent', 'Python', 'YAML', 'Plugins'],
-    architecture: 'assets/ai/diagrams/platform/fig2-engine-fork.png',
-    screenshots: [],
-    agent: 'steward (Core runtime maintainer)',
-    company: 'NOT-IN-SOURCE',
-    owner: 'steward (Core runtime maintainer)',
-    why_created: 'To use the open source Hermes runtime as the base for building agents, plugins and automation workflows.',
-    day_to_day_value: 'Deterministic multi-agent execution across local and cloud backends; Rule 0 gates and Step 0 pre-flight validation enforced.',
-    skills: ['hermes-agent', 'plugin-discipline', 'omh-routing'],
-    skillDetails: [
-      {
-        name: 'hermes-agent',
-        status: 'installed',
-        description: 'Core runtime management: profiles, model providers, and bot orchestration.',
-      },
-      {
-        name: 'plugin-discipline',
-        status: 'installed',
-        description: 'Plugin lifecycle auditing: enforcing standing workflows per installed extension.',
-      },
-      {
-        name: 'omh-routing',
-        status: 'roadmap',
-        description: 'Mixture-of-agents task delegation and OMH meta-router (Roadmap).',
-      },
-    ],
-    links: [
-      { label: 'Interactive Runtime Architecture', url: 'assets/ai/diagrams/platform/fig2-engine-fork.html', type: 'diagram' },
-    ],
-    demos: [{ label: 'Runtime Lifecycle & Rule 0 Demo', url: '' }],
-  },
-  {
-    id: 'automations',
-    title: 'Automations',
-    slug: 'automations',
-    summary: 'Scheduled background intelligence infrastructure running 38+ autonomous cron workflows across the fleet. Powers continuous news dedup digests, social media publishing bridges, and live API drift monitoring with zero human intervention.',
-    role: 'Automation design & monitoring',
-    status: 'Live',
-    stack: ['Hermes Agent', 'Cron', 'Paperclip', 'MCP'],
-    architecture: 'assets/ai/diagrams/platform/fig4-automations.png',
-    screenshots: [],
-    agent: 'lantern (Operations & automation lead)',
-    company: 'NOT-IN-SOURCE',
-    owner: 'lantern (Operations & automation lead)',
-    why_created: 'To run 38+ autonomous cron workflows with zero human intervention.',
-    day_to_day_value: 'Continuous news dedup digests, social publishing bridges, live API drift monitoring. Zero human intervention.',
-    skills: ['cron-dispatch-triage', 'scheduled-cronjob-review', 'topic-digest-cron'],
-    skillDetails: [
-      {
-        name: 'cron-dispatch-triage',
-        status: 'installed',
-        description: 'Failure detection and auto-recovery for root cron registry jobs.',
-      },
-      {
-        name: 'scheduled-cronjob-review',
-        status: 'installed',
-        description: 'Scheduled watch verification against live external APIs.',
-      },
-      {
-        name: 'topic-digest-cron',
-        status: 'installed',
-        description: 'Automated deduplicated news digest pipelines with routing.',
-      },
-    ],
-    links: [
-      { label: 'Interactive Automation Workflow', url: 'assets/ai/diagrams/platform/fig4-automations.html', type: 'diagram' },
-    ],
-    demos: [{ label: 'Automated Sweep & Dedup Pipeline', url: '' }],
-  },
-];
 
 export function getProjectsByCategory(categorySlug: string): Project[] {
   // Resolve slug to category id (e.g. 'presentation-design' → 'presentation')
