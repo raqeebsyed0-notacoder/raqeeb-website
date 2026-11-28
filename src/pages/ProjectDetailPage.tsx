@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, Navigate } from 'react-router-dom'
 import PageLayout from '../components/PageLayout'
 import { getProject, getNextProject, getPreviousProject, getCategoryBySlug, getCategoryById, getAiProject } from '../data/portfolio'
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
@@ -10,14 +10,8 @@ export default function ProjectDetailPage() {
 
   if (category === 'ai') {
     const aiProject = getAiProject(slug || '')
-    if (!aiProject) {
-      return (
-        <PageLayout>
-          <p className="text-white/60">Project not found.</p>
-          <Link to="/projects/ai" className="text-red-500 hover:text-red-400 mt-4 inline-block">← Back to projects</Link>
-        </PageLayout>
-      )
-    }
+    // Unknown slug under AI: send the visitor to the AI index, not a dead end.
+    if (!aiProject) return <Navigate to="/projects/ai" replace />
     return <AiProjectDetail project={aiProject} categorySlug={category} />
   }
 
@@ -25,14 +19,8 @@ export default function ProjectDetailPage() {
   const next = project ? getNextProject(project) : null
   const prev = project ? getPreviousProject(project) : null
 
-  if (!project) {
-    return (
-      <PageLayout>
-        <p className="text-white/60">Project not found.</p>
-        <Link to="/projects" className="text-red-500 hover:text-red-400 mt-4 inline-block">← Back to projects</Link>
-      </PageLayout>
-    )
-  }
+  // Unknown category or slug: send the visitor to the work index, not a dead end.
+  if (!project) return <Navigate to="/projects" replace />
 
   const categoryInfo = getCategoryBySlug(category || '') || getCategoryById(project.category)
   const categorySlug = categoryInfo?.slug || category || project.category

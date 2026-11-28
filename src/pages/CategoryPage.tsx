@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, Navigate } from 'react-router-dom'
 import PageLayout from '../components/PageLayout'
 import { getAiProjects, getCategory } from '../data/portfolio'
 import type { SqueezeSlide } from '../components/ui/carousel-squeeze'
@@ -45,14 +45,9 @@ export default function CategoryPage() {
   const cat = getCategory(category || '')
 
   if (!cat) {
-    return (
-      <PageLayout>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase font-normal leading-[0.9] mb-4">
-          Category not found
-        </h1>
-        <Link to="/projects" className="text-red-500 hover:text-red-400 mt-4 inline-block">← Back to projects</Link>
-      </PageLayout>
-    )
+    // An unknown category is a mistyped address, not a dead end: send the
+    // visitor to the work index instead of a near-empty page.
+    return <Navigate to="/projects" replace />
   }
 
 
