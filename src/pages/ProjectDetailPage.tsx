@@ -49,15 +49,16 @@ export default function ProjectDetailPage() {
 
         {/* Hero section */}
         <div className="mb-12">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wide uppercase font-normal leading-[0.9] mb-6">
+          <p className="font-mono text-xs uppercase tracking-widest text-white/50 mb-4">
+            {project.eyebrow}
+          </p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wide uppercase font-normal leading-[0.9] mb-4">
             {project.title}
           </h1>
           {project.client && (
             <p className="text-lg text-white/60">{project.client}</p>
           )}
-          {project.description && (
-            <p className="text-base text-white/70 mt-4 max-w-2xl">{project.description}</p>
-          )}
+          <p className="text-lg text-white/70 mt-4 max-w-2xl">{project.lede}</p>
         </div>
 
         {/* Live site preview — front page visible, click opens full site */}
@@ -113,13 +114,34 @@ export default function ProjectDetailPage() {
               <div key={i} className="mb-6 break-inside-avoid rounded-xl overflow-hidden bg-neutral-950 border border-neutral-800">
                 <img
                   src={src}
-                  alt={`${project.title} ${i + 1}`}
+                  alt={`${project.title} page ${i + 1}`}
                   className="w-full h-auto block"
                 />
               </div>
             ))}
           </div>
         )}
+
+        {/* What was delivered and What to look at */}
+        <div className="mt-12 space-y-8">
+          <section className="rounded-xl border border-neutral-800 bg-neutral-900/40">
+            <h2 className="text-sm font-semibold text-white/90 uppercase tracking-wide px-5 py-3 border-b border-neutral-800">
+              What was delivered
+            </h2>
+            <p className="text-sm text-white/70 leading-relaxed px-5 pb-5">
+              {project.facts}
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-neutral-800 bg-neutral-900/40">
+            <h2 className="text-sm font-semibold text-white/90 uppercase tracking-wide px-5 py-3 border-b border-neutral-800">
+              What to look at
+            </h2>
+            <p className="text-sm text-white/70 leading-relaxed px-5 pb-5">
+              {project.look}
+            </p>
+          </section>
+        </div>
 
         {/* Prev/Next navigation */}
         <div className="mt-16 flex items-center justify-between border-t border-neutral-800 pt-8">

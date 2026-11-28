@@ -44,7 +44,7 @@ export default function CategoryPage() {
   const { category } = useParams<{ category: string }>()
   const cat = getCategory(category || '')
 
-  if (!cat && category !== 'all') {
+  if (!cat) {
     return (
       <PageLayout>
         <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase font-normal leading-[0.9] mb-4">
@@ -85,21 +85,13 @@ export default function CategoryPage() {
     }
   })
 
-  const allSlides: SqueezeSlide[] = [
-    ...brandSlides,
-    ...presentationSlides,
-    ...socialSlides,
-    ...websiteSlides,
-    ...aiSlides,
-  ]
-
   const slides =
     category === 'brand-identity' ? brandSlides :
     category === 'presentation-design' ? presentationSlides :
     category === 'social-media' ? socialSlides :
     category === 'websites' ? websiteSlides :
     category === 'ai' ? aiSlides :
-    category === 'all' ? allSlides : []
+    []
 
   const label =
     category === 'brand-identity' ? 'Brand Identity Gallery' :
@@ -107,7 +99,7 @@ export default function CategoryPage() {
     category === 'social-media' ? 'Social Media Design Gallery' :
     category === 'websites' ? 'Web & UI Design Gallery' :
     category === 'ai' ? 'AI & Automation Gallery' :
-    category === 'all' ? 'All Projects' : undefined
+    undefined
 
   return (
     <PageLayout>
@@ -117,12 +109,12 @@ export default function CategoryPage() {
         </Link>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase font-normal leading-[0.9] mb-4">
-          {category === 'all' ? 'All Projects' : cat.title}
+          {cat.title}
         </h1>
-        <p className="text-lg text-white/60 mb-12 max-w-2xl">{cat.description}</p>
+        <p className="text-lg text-white/70 mt-4 mb-12 max-w-2xl">{cat.lede}</p>
 
         {slides.length > 0 && (
-          <div className="-mx-5 sm:-mx-6 md:-mx-10 lg:-mx-14">
+          <div className="-mx-5 sm:-mx-6 md:-mx-10 lg:-mx-13">
             <SqueezeCarousel
               slides={slides}
               height={400}
@@ -134,6 +126,10 @@ export default function CategoryPage() {
               categorySlug={category}
             />
           </div>
+        )}
+
+        {cat.note && (
+          <p className="mt-8 text-sm text-white/50">{cat.note}</p>
         )}
       </div>
     </PageLayout>

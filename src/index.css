@@ -8,9 +8,14 @@
   --font-pixel: 'Questrial', 'ui-monospace', monospace;
 }
 
+/*
+  No Inter (or Playfair/Questrial) binary ships in this repo and no Google
+  Fonts request is made, so the body uses the local system stack. Keeping
+  'Inter' first lets it render natively where the user already has it.
+*/
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
