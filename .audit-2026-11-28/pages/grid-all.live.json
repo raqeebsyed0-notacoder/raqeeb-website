@@ -1,0 +1,20 @@
+{
+ "url": "https://raqeeb-website-mu.vercel.app/#/projects/all",
+ "title": "Raqeeb Hussain - Graphic & Visual Designer",
+ "description": "Raqeeb Hussain is a graphic and visual designer based in Dammam, Saudi Arabia. Specializing in brand identity, presentation design, social media creative, and digital experiences.",
+ "h1": [],
+ "h2": [],
+ "h3": [],
+ "textLen": 0,
+ "text": "",
+ "imgs": 0,
+ "imgsNoAlt": 0,
+ "bundle": [
+  "/assets/index-ClAKsNce.js"
+ ],
+ "name": "grid-all",
+ "env": "live",
+ "errs": [
+  "TypeError: Cannot read properties of undefined (reading 'description')"
+ ]
+}

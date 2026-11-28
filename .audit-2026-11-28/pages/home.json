@@ -1,0 +1,48 @@
+{
+ "url": "https://raqeeb-website-mu.vercel.app/#/",
+ "title": "Raqeeb Hussain - Graphic & Visual Designer",
+ "description": "Raqeeb Hussain is a graphic and visual designer based in Dammam, Saudi Arabia. Specializing in brand identity, presentation design, social media creative, and digital experiences.",
+ "ogTitle": "Raqeeb Hussain - Graphic & Visual Designer",
+ "ogDescription": "Visual designer creating clear, polished work across brands, presentations, campaigns and digital experiences.",
+ "ogImage": null,
+ "canonical": null,
+ "h1": [
+  "I CREATEVISUAL SYSTEMSFOR BRANDS & DIGITALEXPERIENCES"
+ ],
+ "h2": [],
+ "h3": [],
+ "textLen": 506,
+ "brokenImgs": [],
+ "imgCount": 0,
+ "imgsNoAlt": 0,
+ "emptyLinks": 0,
+ "links": [
+  "#/",
+  "#/about",
+  "#/process",
+  "#/projects",
+  "#/resume",
+  "mailto:raqeebsyed0@gmail.com"
+ ],
+ "btnTexts": [],
+ "videos": [
+  {
+   "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260725_114042_d2ed2a89-f2fa-449b-9609-da456344257b.mp4",
+   "readyState": 4,
+   "err": null
+  }
+ ],
+ "placeholders": [],
+ "scriptBundles": [
+  "/assets/index-ClAKsNce.js"
+ ],
+ "name": "home",
+ "hash": "#/",
+ "errs": [],
+ "failed": [
+  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260725_114042_d2ed2a89-f2fa-449b-9609-da456344257b.mp4 :: net::ERR_ABORTED",
+  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260725_114042_d2ed2a89-f2fa-449b-9609-da456344257b.mp4 :: net::ERR_ABORTED"
+ ],
+ "ok": true,
+ "text": "RAQEEB HUSSAIN\nABOUT\nPROCESS\nPROJECTS\nRESUME\nGRAPHIC &\nVISUAL DESIGN\nWHAT I DO\n\nI turn complex ideas into clear, polished visual communication for brands, presentations, campaigns and digital experiences.\n\nMY EXPERTISE\nBrand Identity\nPresentation Design\nSocial Media Creative\nAI & Automation\nWebsite & Digital Design\nI CREATE\nVISUAL SYSTEMS\nFOR BRANDS & DIGITAL\nEXPERIENCES\n\nAvailable for freelance, contract and full-time opportunities. Let's talk\n\nBrand Identity • Presentations • Social Media • Websites"
+}

@@ -1,0 +1,1419 @@
+[
+  {
+    "route": "/",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2F#/",
+    "title": "Raqeeb Hussain — AI Implementation Specialist | Agent Systems, Automation & Integration",
+    "description": "AI implementation specialist in Dammam, Saudi Arabia. I build agent workflows, automation pipelines and integrations, with a design and business background. Work: LeadJin, OrIO, Agent Fleet, Approval Inbox.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/",
+    "ogTitle": "Raqeeb Hussain — AI Implementation Specialist | Agent Systems, Automation & Integration",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/brand/euphoria/cover.png",
+    "h1": [
+      "I TURN BUSINESS PROBLEMS INTO WORKING AI SYSTEMS"
+    ],
+    "h1Count": 1,
+    "h2Count": 3,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/about",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fabout#/about",
+    "title": "About Raqeeb Hussain — AI Implementation Specialist in Dammam",
+    "description": "From visual communication and client-facing sales to AI implementation: how Raqeeb Hussain designs and builds agent systems, automation and integrations.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/about",
+    "ogTitle": "About Raqeeb Hussain — AI Implementation Specialist in Dammam",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/brand/euphoria/cover.png",
+    "h1": [
+      "RAQEEB HUSSAIN"
+    ],
+    "h1Count": 1,
+    "h2Count": 3,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/process",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprocess#/process",
+    "title": "How I Work — AI Implementation Process | Raqeeb Hussain",
+    "description": "Seven steps from problem to running system: diagnose, define, design, build with AI agents, integrate, verify, operate.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/process",
+    "ogTitle": "How I Work — AI Implementation Process | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/brand/euphoria/cover.png",
+    "h1": [
+      "HOW I WORK"
+    ],
+    "h1Count": 1,
+    "h2Count": 8,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects#/projects",
+    "title": "Work — AI Systems and Design Projects | Raqeeb Hussain",
+    "description": "Eight AI systems and twenty-five design projects: agent fleets, CRM lead generation, operations consoles, approval layers, brand identity, presentations and campaigns.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects",
+    "ogTitle": "Work — AI Systems and Design Projects | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/brand/euphoria/cover.png",
+    "h1": [
+      "WORK"
+    ],
+    "h1Count": 1,
+    "h2Count": 5,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/resume",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fresume#/resume",
+    "title": "Resume — Raqeeb Hussain, AI Implementation Specialist",
+    "description": "Resume of Raqeeb Hussain: AI implementation, agent systems, automation and integration, on a foundation of brand and communication design. Dammam, Saudi Arabia.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/resume",
+    "ogTitle": "Resume — Raqeeb Hussain, AI Implementation Specialist",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/brand/euphoria/cover.png",
+    "h1": [
+      "RAQEEB HUSSAIN"
+    ],
+    "h1Count": 1,
+    "h2Count": 7,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/brand-identity",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fbrand-identity#/projects/brand-identity",
+    "title": "Brand Identity Work — Logo Systems and Visual Language | Raqeeb Hussain",
+    "description": "Brand identity projects: Buyology brand document, Euphoria Experiences identity. Logo systems, colour, typography and application.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/brand-identity",
+    "ogTitle": "Brand Identity Work — Logo Systems and Visual Language | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/brand/euphoria/cover.png",
+    "h1": [
+      "Brand Identity"
+    ],
+    "h1Count": 1,
+    "h2Count": 0,
+    "h2BeforeH3": false,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/presentation-design",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fpresentation-design#/projects/presentation-design",
+    "title": "Presentation Design — Proposals, Event Decks, Brochures | Raqeeb Hussain",
+    "description": "Eight presentation projects: technical proposals, event decks, brand proposals and corporate brochures for Flowserve, Blaize, Trillium, White Graphics and others.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/presentation-design",
+    "ogTitle": "Presentation Design — Proposals, Event Decks, Brochures | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/presentation/blaize/blaize-01.jpg",
+    "h1": [
+      "Presentation Design"
+    ],
+    "h1Count": 1,
+    "h2Count": 0,
+    "h2BeforeH3": false,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media#/projects/social-media",
+    "title": "Social Media and Campaign Creative | Raqeeb Hussain",
+    "description": "Eleven social campaign projects across beauty, wellness, personal care and education: Arata, Dot & Key, Ustraa, Nirmalaya, Learnbay and more.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media",
+    "ogTitle": "Social Media and Campaign Creative | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/arata/arata-1.png",
+    "h1": [
+      "Social Media"
+    ],
+    "h1Count": 1,
+    "h2Count": 0,
+    "h2BeforeH3": false,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/websites",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fwebsites#/projects/websites",
+    "title": "Website Design Work — Agency, Corporate, Hospitality | Raqeeb Hussain",
+    "description": "Four website projects: Euphoria Experiences, GRC (three iterations), Marsa Atelier and Najd Sands. Design and layout direction.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/websites",
+    "ogTitle": "Website Design Work — Agency, Corporate, Hospitality | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/websites/marsa-atelier@1400w.jpg",
+    "h1": [
+      "Websites"
+    ],
+    "h1Count": 1,
+    "h2Count": 0,
+    "h2BeforeH3": false,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/ai",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fai#/projects/ai",
+    "title": "AI Systems Portfolio — Agent Fleets, Automation, Integration | Raqeeb Hussain",
+    "description": "Eight AI systems built and run by Raqeeb Hussain: agent fleet, skills library, LeadJin lead generation, OrIO operations console, approval inbox, plugin integration, runtime integration and automations.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/ai",
+    "ogTitle": "AI Systems Portfolio — Agent Fleets, Automation, Integration | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/ai/diagrams/fleet/fleet-topology.png",
+    "h1": [
+      "AI & Automation"
+    ],
+    "h1Count": 1,
+    "h2Count": 0,
+    "h2BeforeH3": false,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/brand-identity/buyology",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fbrand-identity%2Fbuyology#/projects/brand-identity/buyology",
+    "title": "Buyology Brand Identity System | Raqeeb Hussain",
+    "description": "Buyology brand identity: logo system, colour palette, Biennale and Manrope type framework, and application pages, delivered as a 13-page brand document.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/brand-identity/buyology",
+    "ogTitle": "Buyology Brand Identity System | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/projects/buyology/buyology-01.png",
+    "h1": [
+      "Buyology"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/brand-identity/euphoria-experiences-brand",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fbrand-identity%2Feuphoria-experiences-brand#/projects/brand-identity/euphoria-experiences-brand",
+    "title": "Euphoria Experiences Brand Identity | Raqeeb Hussain",
+    "description": "Euphoria Experiences identity: wordmark and layout system designed for the studio's own proposals, portfolio and social presence.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/brand-identity/euphoria-experiences-brand",
+    "ogTitle": "Euphoria Experiences Brand Identity | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/brand/euphoria/cover.png",
+    "h1": [
+      "Euphoria Experiences"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/presentation-design/blaize",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fpresentation-design%2Fblaize#/projects/presentation-design/blaize",
+    "title": "Blaize Technical Proposal Design | Raqeeb Hussain",
+    "description": "26-page technical proposal for Blaize: layout and information design built for two audiences, technical reviewers and commercial decision makers.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/presentation-design/blaize",
+    "ogTitle": "Blaize Technical Proposal Design | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/presentation/blaize/blaize-01.jpg",
+    "h1": [
+      "Blaize Technical Proposal"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/presentation-design/chashmawala",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fpresentation-design%2Fchashmawala#/projects/presentation-design/chashmawala",
+    "title": "Dr. Chashmawala Brand Proposal Design | Raqeeb Hussain",
+    "description": "Brand proposal and identity presentation for Dr. Chashmawala: nine pages that argue for a direction and show it in place.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/presentation-design/chashmawala",
+    "ogTitle": "Dr. Chashmawala Brand Proposal Design | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/presentation/chashmawala/chashmawala-01.jpg",
+    "h1": [
+      "Dr. Chashmawala Proposal"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/presentation-design/flowserve",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fpresentation-design%2Fflowserve#/projects/presentation-design/flowserve",
+    "title": "Flowserve Event Presentation Design | Raqeeb Hussain",
+    "description": "39-page event presentation for Flowserve: stage-legible layout system that also works as a take-away document.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/presentation-design/flowserve",
+    "ogTitle": "Flowserve Event Presentation Design | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/presentation/flowserve/flowserve-01.jpg",
+    "h1": [
+      "Flowserve Event Presentation"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/presentation-design/jalal",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fpresentation-design%2Fjalal#/projects/presentation-design/jalal",
+    "title": "Jalal Event Presentation and Booklet | Raqeeb Hussain",
+    "description": "Event presentation and matching A4 booklet for Jalal: one visual system serving both a projected deck and a printed document.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/presentation-design/jalal",
+    "ogTitle": "Jalal Event Presentation and Booklet | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/presentation/jalal/jalal-01.jpg",
+    "h1": [
+      "Jalal Event Presentation"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/presentation-design/shafa-al-shams",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fpresentation-design%2Fshafa-al-shams#/projects/presentation-design/shafa-al-shams",
+    "title": "Shafa Al Shams Presentation Design | Raqeeb Hussain",
+    "description": "Four-page presentation for Shafa Al Shams: a short deck where the editing carries the argument.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/presentation-design/shafa-al-shams",
+    "ogTitle": "Shafa Al Shams Presentation Design | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/presentation/shafa-al-shams/shafa-al-shams-01.jpg",
+    "h1": [
+      "Shafa Al Shams"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/presentation-design/stage-nine",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fpresentation-design%2Fstage-nine#/projects/presentation-design/stage-nine",
+    "title": "Stage Nine Brand Proposal | Raqeeb Hussain",
+    "description": "Sixteen-page brand proposal and visual system presentation for Stage Nine.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/presentation-design/stage-nine",
+    "ogTitle": "Stage Nine Brand Proposal | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/presentation/stage-nine/stage-nine-01.jpg",
+    "h1": [
+      "Stage Nine"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/presentation-design/trillium",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fpresentation-design%2Ftrillium#/projects/presentation-design/trillium",
+    "title": "Trillium Event Proposal Design | Raqeeb Hussain",
+    "description": "Twelve-page event proposal for Trillium, structured programme first and commercial last.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/presentation-design/trillium",
+    "ogTitle": "Trillium Event Proposal Design | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/presentation/trillium/trillium-01.jpg",
+    "h1": [
+      "Trillium Event Proposal"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/presentation-design/white-graphics-brochure",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fpresentation-design%2Fwhite-graphics-brochure#/projects/presentation-design/white-graphics-brochure",
+    "title": "White Graphics Corporate Brochure | Raqeeb Hussain",
+    "description": "Forty-page corporate brochure for White Graphics: grid, type hierarchy and print colour across forty spreads.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/presentation-design/white-graphics-brochure",
+    "ogTitle": "White Graphics Corporate Brochure | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/presentation/white-graphics-brochure/white-graphics-brochure-01.jpg",
+    "h1": [
+      "White Graphics Brochure"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/arata",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Farata#/projects/social-media/arata",
+    "title": "Arata Campaign Creative | Raqeeb Hussain",
+    "description": "Three-asset social campaign for Arata (2023): one message carried across formats.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/arata",
+    "ogTitle": "Arata Campaign Creative | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/arata/arata-1.png",
+    "h1": [
+      "Arata Campaign"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/dot-and-key",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Fdot-and-key#/projects/social-media/dot-and-key",
+    "title": "Dot & Key Campaign Creative | Raqeeb Hussain",
+    "description": "Three-asset beauty campaign for Dot & Key (2023), product-led framing across formats.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/dot-and-key",
+    "ogTitle": "Dot & Key Campaign Creative | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/dot-and-key/1.png",
+    "h1": [
+      "Dot & Key Campaign"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/euphoria-campaign",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Feuphoria-campaign#/projects/social-media/euphoria-campaign",
+    "title": "Euphoria Experiences Campaign System | Raqeeb Hussain",
+    "description": "Four-asset editorial campaign for Euphoria Experiences (2026), built as an extendable template system.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/euphoria-campaign",
+    "ogTitle": "Euphoria Experiences Campaign System | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/euphoria/1.webp",
+    "h1": [
+      "Euphoria Campaign"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/learnbay",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Flearnbay#/projects/social-media/learnbay",
+    "title": "Learnbay Campaign Creative | Raqeeb Hussain",
+    "description": "Three-asset education campaign for Learnbay (2022): offer-first layout.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/learnbay",
+    "ogTitle": "Learnbay Campaign Creative | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/learnbay/1.png",
+    "h1": [
+      "Learnbay Campaign"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/new-herbs",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Fnew-herbs#/projects/social-media/new-herbs",
+    "title": "New Herbs Campaign Creative | Raqeeb Hussain",
+    "description": "Three-asset wellness campaign for New Herbs (2023).",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/new-herbs",
+    "ogTitle": "New Herbs Campaign Creative | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/new-herbs/1.png",
+    "h1": [
+      "New Herbs Campaign"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/nirmalaya",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Fnirmalaya#/projects/social-media/nirmalaya",
+    "title": "Nirmalaya Campaign Creative | Raqeeb Hussain",
+    "description": "Three-asset fragrance campaign for Nirmalaya (2023).",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/nirmalaya",
+    "ogTitle": "Nirmalaya Campaign Creative | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/nirmalaya/1.png",
+    "h1": [
+      "Nirmalaya Campaign"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/organic-b",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Forganic-b#/projects/social-media/organic-b",
+    "title": "Organic B Campaign Creative | Raqeeb Hussain",
+    "description": "Three-asset personal care campaign for Organic B (2023).",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/organic-b",
+    "ogTitle": "Organic B Campaign Creative | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/organic-b/1.png",
+    "h1": [
+      "Organic B Campaign"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/rustic-art",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Frustic-art#/projects/social-media/rustic-art",
+    "title": "Rustic Art Campaign Creative | Raqeeb Hussain",
+    "description": "Two-asset campaign for Rustic Art (2023).",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/rustic-art",
+    "ogTitle": "Rustic Art Campaign Creative | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/rustic-art/2.png",
+    "h1": [
+      "Rustic Art Campaign"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/satthwa",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Fsatthwa#/projects/social-media/satthwa",
+    "title": "Satthwa Campaign Creative | Raqeeb Hussain",
+    "description": "Three-asset personal care campaign for Satthwa (2023).",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/satthwa",
+    "ogTitle": "Satthwa Campaign Creative | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/satthwa/1.png",
+    "h1": [
+      "Satthwa Campaign"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/ustraa",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Fustraa#/projects/social-media/ustraa",
+    "title": "Ustraa Campaign Creative | Raqeeb Hussain",
+    "description": "Three-asset men's grooming campaign for Ustraa (2023).",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/ustraa",
+    "ogTitle": "Ustraa Campaign Creative | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/ustraa/1.png",
+    "h1": [
+      "Ustraa Campaign"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/social-media/editorial-posters",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fsocial-media%2Feditorial-posters#/projects/social-media/editorial-posters",
+    "title": "Editorial Poster Design | Raqeeb Hussain",
+    "description": "Editorial poster series (2026) across several brands, built on typographic hierarchy rather than product photography.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/social-media/editorial-posters",
+    "ogTitle": "Editorial Poster Design | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/social/posters/photo_2026-09-11_03-41-43.jpg",
+    "h1": [
+      "Editorial Posters"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/websites/euphoria-website",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fwebsites%2Feuphoria-website#/projects/websites/euphoria-website",
+    "title": "Euphoria Experiences Website Design | Raqeeb Hussain",
+    "description": "Euphoria Experiences website: structure, hierarchy and visual system for the agency's own site.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/websites/euphoria-website",
+    "ogTitle": "Euphoria Experiences Website Design | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/websites/live/euphoria.jpg",
+    "h1": [
+      "Euphoria Experiences Website"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/websites/grc",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fwebsites%2Fgrc#/projects/websites/grc",
+    "title": "GRC Website Iterations | Raqeeb Hussain",
+    "description": "Three iterations of the GRC corporate website, shown as a design evolution rather than a single final screen.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/websites/grc",
+    "ogTitle": "GRC Website Iterations | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/websites/live/grc-v1.jpg",
+    "h1": [
+      "GRC Website Evolution"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/websites/marsa-atelier",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fwebsites%2Fmarsa-atelier#/projects/websites/marsa-atelier",
+    "title": "Marsa Atelier Website Concept | Raqeeb Hussain",
+    "description": "Website concept for Marsa Atelier, an architecture and interiors studio: photography-led structure and layout direction.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/websites/marsa-atelier",
+    "ogTitle": "Marsa Atelier Website Concept | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/websites/marsa-atelier-hero@1400w.jpg",
+    "h1": [
+      "Marsa Atelier"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/websites/najd-sands",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fwebsites%2Fnajd-sands#/projects/websites/najd-sands",
+    "title": "Najd Sands Website Concept, AlUla | Raqeeb Hussain",
+    "description": "Website concept for Najd Sands, a luxury desert resort in AlUla: landscape-led structure and layout direction.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/websites/najd-sands",
+    "ogTitle": "Najd Sands Website Concept, AlUla | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/websites/live/najd.jpg",
+    "h1": [
+      "Najd Sands"
+    ],
+    "h1Count": 1,
+    "h2Count": 2,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/ai/agent-fleet",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fai%2Fagent-fleet#/projects/ai/agent-fleet",
+    "title": "Agent Fleet — Coordinating Nine AI Agents as One System | Raqeeb Hussain",
+    "description": "How nine AI agents are coordinated as one governed system: written role contracts, a single routing chain, and live roster health instead of status messages.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/ai/agent-fleet",
+    "ogTitle": "Agent Fleet — Coordinating Nine AI Agents as One System | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/ai/diagrams/fleet/fleet-topology.png",
+    "h1": [
+      "AGENT FLEET"
+    ],
+    "h1Count": 1,
+    "h2Count": 7,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/ai/skills-library",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fai%2Fskills-library#/projects/ai/skills-library",
+    "title": "Skills Library — Reusable Agent Procedures | Raqeeb Hussain",
+    "description": "Why reusable, versioned agent skills beat one-off prompts: when to use, what to do, commands that work, and the mistakes to avoid, in one file.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/ai/skills-library",
+    "ogTitle": "Skills Library — Reusable Agent Procedures | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/ai/diagrams/platform/fig1-skills-path.png",
+    "h1": [
+      "SKILLS LIBRARY"
+    ],
+    "h1Count": 1,
+    "h2Count": 7,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/ai/orio-operations",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fai%2Forio-operations#/projects/ai/orio-operations",
+    "title": "OrIO Operations — Drilling Operations Console | Raqeeb Hussain",
+    "description": "Operations console for a drilling services pilot: rig, well and job-cycle tracking, document reconciliation, exception handling, and a separate market intelligence track.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/ai/orio-operations",
+    "ogTitle": "OrIO Operations — Drilling Operations Console | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/ai/diagrams/orio/orio-operations.png",
+    "h1": [
+      "ORIO OPERATIONS"
+    ],
+    "h1Count": 1,
+    "h2Count": 8,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/ai/leadjin-portal",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fai%2Fleadjin-portal#/projects/ai/leadjin-portal",
+    "title": "LeadJin — Verified KSA Lead Generation | Raqeeb Hussain",
+    "description": "LeadJin: KSA lead discovery, contact harvesting, triple verification and consent-bound outreach, running locally on an open model with no paid API key.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/ai/leadjin-portal",
+    "ogTitle": "LeadJin — Verified KSA Lead Generation | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/ai/diagrams/products/leadjin-portal.png",
+    "h1": [
+      "LEADJIN"
+    ],
+    "h1Count": 1,
+    "h2Count": 7,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/ai/approval-inbox",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fai%2Fapproval-inbox#/projects/ai/approval-inbox",
+    "title": "Approval Inbox — Human Review for AI Agent Actions | Raqeeb Hussain",
+    "description": "An approval inbox that puts the artefact in front of a human before an agent acts: previews, named confirmations, reasons on rejection, and a fail-closed link to the working session.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/ai/approval-inbox",
+    "ogTitle": "Approval Inbox — Human Review for AI Agent Actions | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/ai/diagrams/products/approval-inbox.png",
+    "h1": [
+      "APPROVAL INBOX"
+    ],
+    "h1Count": 1,
+    "h2Count": 7,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/ai/paperclip-plugin",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fai%2Fpaperclip-plugin#/projects/ai/paperclip-plugin",
+    "title": "Paperclip Plugin — Wiring AI Agents Into a Work Board | Raqeeb Hussain",
+    "description": "Integration layer that lets AI agents claim, report and close work on a company board, with attachments and failure reasons kept on the task.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/ai/paperclip-plugin",
+    "ogTitle": "Paperclip Plugin — Wiring AI Agents Into a Work Board | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/ai/diagrams/platform/fig3-paperclip.png",
+    "h1": [
+      "PAPERCLIP PLUGIN"
+    ],
+    "h1Count": 1,
+    "h2Count": 7,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/ai/hermes-engine",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fai%2Fhermes-engine#/projects/ai/hermes-engine",
+    "title": "Agent Runtime Integration — Models, Tools, Memory | Raqeeb Hussain",
+    "description": "What an agent runtime is and how it is configured: per-agent models and tools, memory separated from authority, plugin-registered capabilities and recorded runs.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/ai/hermes-engine",
+    "ogTitle": "Agent Runtime Integration — Models, Tools, Memory | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/ai/diagrams/platform/fig2-engine-fork.png",
+    "h1": [
+      "HERMES RUNTIME INTEGRATION"
+    ],
+    "h1Count": 1,
+    "h2Count": 7,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  },
+  {
+    "route": "/projects/ai/automations",
+    "finalUrl": "http://127.0.0.1:4178/?qa=%2Fprojects%2Fai%2Fautomations#/projects/ai/automations",
+    "title": "Automation Workflows — Trigger, Input, Output | Raqeeb Hussain",
+    "description": "How automated workflows are specified and run: trigger, input, processing, output and the human step, with the honest state of the current scheduler.",
+    "canonical": "https://raqeeb-website-mu.vercel.app/#/projects/ai/automations",
+    "ogTitle": "Automation Workflows — Trigger, Input, Output | Raqeeb Hussain",
+    "ogImage": "https://raqeeb-website-mu.vercel.app/assets/ai/diagrams/platform/fig4-automations.png",
+    "h1": [
+      "AUTOMATIONS"
+    ],
+    "h1Count": 1,
+    "h2Count": 7,
+    "h2BeforeH3": true,
+    "imagesMissingAlt": 0,
+    "missingAltSources": [],
+    "overflow1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "overflow375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false
+    },
+    "consoleErrors": [],
+    "pageErrors": [],
+    "screenshots": [
+      "1440x900",
+      "375x812",
+      "768x1024"
+    ],
+    "ogImageStatus": 200
+  }
+]

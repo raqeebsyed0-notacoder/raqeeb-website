@@ -1,0 +1,221 @@
+{
+  "positioning": {
+    "recommended": "AI Implementation Specialist",
+    "options": [
+      {
+        "title": "AI Implementation Specialist",
+        "why": "Matches the evidence exactly: problem definition, system design, building with AI coding agents, integration, and validation. It is a real hiring title in KSA and the Gulf, it does not claim research or formal engineering, and it keeps the design and business background as an asset rather than a contradiction.",
+        "risk": "Broad title, so the site must prove depth with three or four named systems and their status, not adjectives."
+      },
+      {
+        "title": "AI Automation & Agent Workflows Specialist",
+        "why": "The strongest literal match to the fleet, skills library and cron work. Narrower and very legible to operations-heavy employers.",
+        "risk": "Closes doors to implementation and integration roles, and automation is the weakest current evidence because the scheduled workflows are paused."
+      },
+      {
+        "title": "AI Product / Solutions Implementation",
+        "why": "Leans on the client-facing and sales background; fits companies that need someone between the business and the build.",
+        "risk": "Reads as pre-sales or product management, which undersells the hands-on build evidence."
+      }
+    ],
+    "headline": "I TURN BUSINESS PROBLEMS INTO WORKING AI SYSTEMS",
+    "statement": "Agent fleets, automation pipelines and integrations: built with AI coding agents, wired into the tools a business already runs, then tested until they hold.",
+    "supporting": "Design discipline, sales instinct, hands-on build.",
+    "about_opening": "I came to AI through design and sales, not through a research lab. Years of visual communication taught me to structure information so a decision becomes obvious. Client-facing work taught me what a business actually needs before it needs a tool. Now I build that as systems: agents that hold a real role, skills that make their behaviour repeatable, and automation that removes the manual step.",
+    "role_line": "AI Implementation Specialist · Design and Visual Communication foundation",
+    "capabilities": [
+      "AI implementation and agent systems",
+      "Automation and scheduled workflows",
+      "Integration between AI runtimes and business tools",
+      "CRM and data pipeline design",
+      "Requirements translation and workflow design",
+      "Testing, validation and failure triage"
+    ]
+  },
+  "pages": {
+    "home": {
+      "route": "#/",
+      "current_h1": "I CREATE VISUAL SYSTEMS FOR BRANDS & DIGITAL EXPERIENCES",
+      "text_len": 506,
+      "problems": [
+        "Positioning is design-only in the first screen; AI appears as the fifth expertise item.",
+        "Hero video is hosted on a third-party CDN (cloudfront) and the brand font is loaded from onlinewebfonts; both failed on the live capture.",
+        "No featured project, no evidence and no CTA to the AI work inside the first screen."
+      ],
+      "seo_title": "Raqeeb Hussain — AI Implementation Specialist | Agent Systems, Automation & Integration",
+      "meta": "AI implementation specialist in Dammam, Saudi Arabia. I build agent workflows, automation pipelines and integrations, with a design and business background. Work: LeadJin, OrIO, Agent Fleet, Approval Inbox.",
+      "eyebrow": "AI IMPLEMENTATION · AGENT SYSTEMS · AUTOMATION",
+      "h1": "I TURN BUSINESS PROBLEMS INTO WORKING AI SYSTEMS",
+      "subhead": "Agent fleets, automation pipelines and integrations: built with AI coding agents, wired into the tools a business already runs, then tested until they hold.",
+      "intro": "I came to AI through design and sales, not through a research lab. Visual communication taught me to structure information so a decision becomes obvious. Client work taught me what a business needs before it needs a tool. Now I build that as systems: agents that hold a real role, skills that make their behaviour repeatable, and automation that removes the manual step.",
+      "primary_cta": { "label": "See the AI work", "href": "#/projects/ai" },
+      "secondary_cta": { "label": "How I work", "href": "#/process" },
+      "featured": [
+        "leadjin-portal",
+        "orio-operations",
+        "agent-fleet",
+        "approval-inbox"
+      ],
+      "foundation_strip": "25 design projects: brand systems, presentations, campaign creative and websites. The foundation the AI work is built on.",
+      "contact": "If a workflow eats hours of your week, tell me what it is and who does it now."
+    },
+    "about": {
+      "route": "#/about",
+      "current_h1": "Raqeeb Hussain",
+      "text_len": 1704,
+      "problems": [
+        "Opens as 'Graphic & Visual Designer'; the AI paragraph reads as a footnote.",
+        "Claims '38+ scheduled background workflows' while all 47 scheduled jobs on this machine are paused.",
+        "Discipline list puts AI fifth, after four design disciplines."
+      ],
+      "seo_title": "About Raqeeb Hussain — AI Implementation Specialist in Dammam",
+      "meta": "From visual communication and client-facing sales to AI implementation: how Raqeeb Hussain designs and builds agent systems, automation and integrations.",
+      "h1": "RAQEEB HUSSAIN",
+      "role_line": "AI Implementation Specialist · Design and Visual Communication foundation",
+      "narrative": [
+        "I started in visual communication: brand systems, presentation design, campaign creative. The work is the same discipline I use now. Take something complicated, find the structure inside it, and make the next decision obvious.",
+        "Client-facing work added the second half. Selling design across print, retail and hospitality meant learning what a business is actually trying to move: a deal, a hire, a shipment, a margin. A tool that ignores that is a demo.",
+        "In 2025 I started building with AI directly. Not prompting for copy, but running coding agents against real repositories: defining the requirement, writing the instruction, letting the agent build, then reading the failure and fixing it. That loop is the work.",
+        "Today I run a fleet of nine agent seats with their own roles, a library of reusable skills that makes their behaviour repeatable, a lead-generation module wired to a CRM, an operations console for a drilling services company, and an approval layer that puts a human in front of anything irreversible."
+      ],
+      "disciplines_in_order": [
+        { "n": "01", "title": "AI IMPLEMENTATION", "desc": "Agent systems, workflow automation, integration and validation." },
+        { "n": "02", "title": "BUSINESS PROBLEM SOLVING", "desc": "Requirements, process mapping, and deciding what should not be automated." },
+        { "n": "03", "title": "BRAND IDENTITY SYSTEMS", "desc": "Logo, visual language, guidelines." },
+        { "n": "04", "title": "PRESENTATION AND COMMUNICATION DESIGN", "desc": "Executive decks, proposals, technical documents." },
+        { "n": "05", "title": "DIGITAL AND CAMPAIGN DESIGN", "desc": "Websites, social creative, editorial posters." }
+      ],
+      "principles": [
+        { "n": "01", "title": "PROBLEM BEFORE TOOL", "desc": "If the process is wrong, automating it only makes the wrong answer faster." },
+        { "n": "02", "title": "ONE OWNER PER SYSTEM", "desc": "Every component has one responsible seat, so a failure has an address." },
+        { "n": "03", "title": "VERIFY BEFORE CLAIMING", "desc": "A system is done when the live output proves it, not when the build passes." },
+        { "n": "04", "title": "THE ARTEFACT IS THE ARGUMENT", "desc": "Show the working thing, not a description of it." }
+      ]
+    },
+    "process": {
+      "route": "#/process",
+      "current_h1": "How I Work",
+      "text_len": 1437,
+      "problems": [
+        "The process is the design process with an automation step appended at the end; it does not describe how an AI system is actually built.",
+        "The sixth step claims background automation running across every project, which contradicts the paused scheduler state.",
+        "Capabilities list design disciplines first."
+      ],
+      "seo_title": "How I Work — AI Implementation Process | Raqeeb Hussain",
+      "meta": "Seven steps from problem to running system: diagnose, define, design, build with AI agents, integrate, verify, operate.",
+      "h1": "HOW I WORK",
+      "lead": "A system is not finished when the build passes. It is finished when the live output holds under the work it was built for.",
+      "steps": [
+        { "n": "01", "title": "DIAGNOSE", "desc": "Watch the work as it happens today: who does it, how long it takes, where it breaks. The cost of the current process is the business case." },
+        { "n": "02", "title": "DEFINE", "desc": "One page: the input, the decision, the output, the owner, and what must stay human. Anything that cannot be defined here does not get built." },
+        { "n": "03", "title": "DESIGN THE SYSTEM", "desc": "Which agents, which tools, which data, which hand-offs. Drawn before it is written, so the shape can be argued with cheaply." },
+        { "n": "04", "title": "BUILD WITH AI AGENTS", "desc": "Coding agents work against the real repository under written specs. I own the requirement, the review and the failure." },
+        { "n": "05", "title": "INTEGRATE", "desc": "Wire it into what the business already runs: CRM, mail, registry data, internal boards. An isolated tool changes nothing." },
+        { "n": "06", "title": "VERIFY", "desc": "Run it against real data, read the output, break it on purpose. A green build is not evidence; the live result is." },
+        { "n": "07", "title": "OPERATE", "desc": "Monitoring, failure triage and a named owner for every component. Then the next workflow, not a bigger one." }
+      ],
+      "capability_groups": [
+        { "title": "AI SYSTEMS", "items": ["Agent fleets and role design", "Reusable skill libraries", "Approval and human review layers", "Runtime configuration"] },
+        { "title": "AUTOMATION", "items": ["Scheduled workflows", "Data and news pipelines", "Failure triage and monitoring"] },
+        { "title": "INTEGRATION", "items": ["CRM wiring (Twenty, GraphQL)", "Registry and search data", "Desktop plugin surfaces"] },
+        { "title": "DESIGN", "items": ["Brand systems", "Presentations and proposals", "Websites and campaign creative"] }
+      ],
+      "cta": "Have a workflow in mind? Tell me what it costs you today."
+    },
+    "projects": {
+      "route": "#/projects",
+      "current_h1": "Selected Work",
+      "text_len": 3338,
+      "problems": [
+        "Seven 'placeholder' content hits on the page and 'Demo video coming soon' repeated across the AI cards.",
+        "Design categories come before AI, so the strongest current evidence is the last thing a reader sees.",
+        "No repository links and no status distinction between running systems and pilots."
+      ],
+      "seo_title": "Work — AI Systems and Design Projects | Raqeeb Hussain",
+      "meta": "Seven AI systems and twenty-five design projects: agent fleets, CRM lead generation, operations consoles, approval layers, brand identity, presentations and campaigns.",
+      "h1": "WORK",
+      "lead": "Seven AI systems and twenty-five design projects. The AI work is the current practice. The design work is the foundation it stands on.",
+      "order": ["ai", "brand-identity", "presentation-design", "social-media", "websites"],
+      "status_rules": [
+        "Use one vocabulary everywhere: Running, Pilot, Paused, Archived. Never 'Live' for a system whose scheduler is stopped.",
+        "Every AI card shows the repository link where one exists and the diagram or demo where one exists.",
+        "Replace 'Demo video coming soon' with the artefact that exists now: an interactive diagram, a capture, or the repository."
+      ]
+    },
+    "resume": {
+      "route": "#/resume",
+      "current_h1": "Raqeeb Hussain",
+      "text_len": 1129,
+      "problems": [
+        "Profile opens as 'Visual designer'; AI appears only at the end of the strengths list.",
+        "'DOWNLOAD FULL RESUME (PDF)' is offered with no verified PDF file behind it on the page.",
+        "No employment history or dates; only selected clients. That gap must be filled by the owner, not invented."
+      ],
+      "seo_title": "Resume — Raqeeb Hussain, AI Implementation Specialist",
+      "meta": "Resume of Raqeeb Hussain: AI implementation, agent systems, automation and integration, on a foundation of brand and communication design. Dammam, Saudi Arabia.",
+      "h1": "RAQEEB HUSSAIN",
+      "title_line": "AI Implementation Specialist",
+      "summary": "I build working AI systems: agent fleets with defined roles, reusable skill libraries, CRM-connected lead pipelines, operations consoles and human approval layers. Design and sales background: I define the problem in business terms before choosing a tool.",
+      "sections": [
+        { "title": "AI SYSTEMS BUILT", "items": ["Agent Fleet: nine agent seats and an orchestration lane under one governed board", "Skills Library: versioned, reusable agent procedures", "LeadJin: KSA lead discovery, verification and CRM pipeline", "OrIO Operations: rig, well and job-cycle console with reconciliation", "Approval Inbox: human review in front of irreversible agent actions"] },
+        { "title": "CORE STRENGTHS", "items": ["Requirements and workflow definition", "Building with AI coding agents against real repositories", "Integration and troubleshooting", "Testing and validation of AI output", "Presentation and information design"] },
+        { "title": "DESIGN BACKGROUND", "items": ["Brand identity systems", "Executive and technical presentations", "Campaign and social creative", "Website and digital design"] },
+        { "title": "SELECTED CLIENTS", "items": ["Euphoria Experiences", "Buyology", "GRC", "Jalal", "Marsa Atelier", "Najd Sands", "Flowserve", "Blaize", "White Graphics"] }
+      ],
+      "open_item": "Employment history with employers and dates is not in any source I can verify. It must come from you before the resume page claims a career timeline.",
+      "cta": { "label": "Download resume (PDF)", "href": "assets/raqeeb-hussain-resume.pdf", "note": "Ship only after the PDF exists and is linked." }
+    },
+    "categories": {
+      "ai": {
+        "route": "#/projects/ai",
+        "h1": "AI & Automation",
+        "current_lead": "Autonomous agents, skill libraries and automation systems built on the Hermes runtime.",
+        "text_len": 409,
+        "seo_title": "AI Systems Portfolio — Agent Fleets, Automation, Integration | Raqeeb Hussain",
+        "meta": "Seven AI systems built and run by Raqeeb Hussain: agent fleet, skills library, LeadJin lead generation, OrIO operations console, approval inbox, plugin integration and automations.",
+        "lead": "Systems I designed, built and run. Each one starts from a business problem, not from a model: who does the work now, what it costs, and what a machine can honestly take over.",
+        "note": "Four of these are running today, three are pilots or paused. Each card states which."
+      },
+      "brand-identity": {
+        "route": "#/projects/brand-identity",
+        "h1": "Brand Identity",
+        "current_lead": "Logo systems, visual identity, packaging and brand guidelines for companies across sectors.",
+        "text_len": 386,
+        "seo_title": "Brand Identity Work — Logo Systems and Visual Language | Raqeeb Hussain",
+        "meta": "Brand identity projects: Buyology brand document, Euphoria Experiences identity. Logo systems, colour, typography and application.",
+        "lead": "Identity work is system work: a mark, a palette, a type scale and the rules that keep them consistent once the client's team touches them.",
+        "note": "Two identities. Both shipped with a full document, not a logo file."
+      },
+      "presentation-design": {
+        "route": "#/projects/presentation-design",
+        "h1": "Presentation Design",
+        "current_lead": "Executive decks, event presentations, proposals and brochures.",
+        "text_len": 373,
+        "seo_title": "Presentation Design — Proposals, Event Decks, Brochures | Raqeeb Hussain",
+        "meta": "Eight presentation projects: technical proposals, event decks, brand proposals and corporate brochures for Flowserve, Blaize, Trillium, White Graphics and others.",
+        "lead": "A presentation carries a decision. The design job is to make the argument visible in the order the audience needs it, on a slide that survives being read out loud.",
+        "note": "Eight projects, from a 26-page technical proposal to a 40-page corporate brochure."
+      },
+      "social-media": {
+        "route": "#/projects/social-media",
+        "h1": "Social Media",
+        "current_lead": "Campaign systems, editorial posters and advertising creative.",
+        "text_len": 382,
+        "seo_title": "Social Media and Campaign Creative | Raqeeb Hussain",
+        "meta": "Eleven social campaign projects across beauty, wellness, personal care and education: Arata, Dot & Key, Ustraa, Nirmalaya, Learnbay and more.",
+        "lead": "Campaign creative is a constraint problem: one message, one product, one grid, and a brand that must stay recognisable after the fourth asset.",
+        "note": "Eleven campaigns, mostly three assets each, kept as a set rather than singles."
+      },
+      "websites": {
+        "route": "#/projects/websites",
+        "h1": "Websites",
+        "current_lead": "Agency, corporate and hospitality website design.",
+        "text_len": 374,
+        "seo_title": "Website Design Work — Agency, Corporate, Hospitality | Raqeeb Hussain",
+        "meta": "Four website projects: Euphoria Experiences, GRC (three iterations), Marsa Atelier and Najd Sands. Design and layout direction.",
+        "lead": "Website work here is design and layout direction: structure, hierarchy and the visual system a build team can implement. Where a live site exists, it is linked.",
+        "note": "GRC is shown as three iterations; the evolution is the point."
+      }
+    }
+  }
+}

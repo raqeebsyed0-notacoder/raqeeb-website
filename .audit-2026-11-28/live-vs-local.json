@@ -1,0 +1,288 @@
+{
+ "diffs": [
+  {
+   "name": "home",
+   "same": true,
+   "liveHash": "26120830",
+   "localHash": "26120830",
+   "liveLen": 502,
+   "localLen": 502
+  },
+  {
+   "name": "about",
+   "same": true,
+   "liveHash": "b5957ff8",
+   "localHash": "b5957ff8",
+   "liveLen": 1667,
+   "localLen": 1667
+  },
+  {
+   "name": "process",
+   "same": true,
+   "liveHash": "b8c241c9",
+   "localHash": "b8c241c9",
+   "liveLen": 1417,
+   "localLen": 1417
+  },
+  {
+   "name": "projects",
+   "same": true,
+   "liveHash": "381d17d7",
+   "localHash": "381d17d7",
+   "liveLen": 3297,
+   "localLen": 3297
+  },
+  {
+   "name": "resume",
+   "same": true,
+   "liveHash": "a7ba7c92",
+   "localHash": "a7ba7c92",
+   "liveLen": 1094,
+   "localLen": 1094
+  },
+  {
+   "name": "grid-brand-identity",
+   "same": true,
+   "liveHash": "ffb805e5",
+   "localHash": "ffb805e5",
+   "liveLen": 379,
+   "localLen": 379
+  },
+  {
+   "name": "grid-presentation-design",
+   "same": true,
+   "liveHash": "93157589",
+   "localHash": "93157589",
+   "liveLen": 366,
+   "localLen": 366
+  },
+  {
+   "name": "grid-social-media",
+   "same": true,
+   "liveHash": "3d546653",
+   "localHash": "3d546653",
+   "liveLen": 375,
+   "localLen": 375
+  },
+  {
+   "name": "grid-websites",
+   "same": true,
+   "liveHash": "c1989e4a",
+   "localHash": "c1989e4a",
+   "liveLen": 367,
+   "localLen": 367
+  },
+  {
+   "name": "grid-ai",
+   "same": true,
+   "liveHash": "f3eb4a73",
+   "localHash": "f3eb4a73",
+   "liveLen": 402,
+   "localLen": 402
+  },
+  {
+   "name": "detail-buyology",
+   "same": true,
+   "liveHash": "6d1e0458",
+   "localHash": "6d1e0458",
+   "liveLen": 406,
+   "localLen": 406
+  },
+  {
+   "name": "detail-euphoria-experiences-brand",
+   "same": true,
+   "liveHash": "1373ab8e",
+   "localHash": "1373ab8e",
+   "liveLen": 332,
+   "localLen": 332
+  },
+  {
+   "name": "detail-blaize",
+   "same": true,
+   "liveHash": "443603bd",
+   "localHash": "443603bd",
+   "liveLen": 330,
+   "localLen": 330
+  },
+  {
+   "name": "detail-chashmawala",
+   "same": true,
+   "liveHash": "33a2a837",
+   "localHash": "33a2a837",
+   "liveLen": 381,
+   "localLen": 381
+  },
+  {
+   "name": "detail-flowserve",
+   "same": true,
+   "liveHash": "ce587fcd",
+   "localHash": "ce587fcd",
+   "liveLen": 366,
+   "localLen": 366
+  },
+  {
+   "name": "detail-jalal",
+   "same": true,
+   "liveHash": "5b703257",
+   "localHash": "5b703257",
+   "liveLen": 366,
+   "localLen": 366
+  },
+  {
+   "name": "detail-shafa-al-shams",
+   "same": true,
+   "liveHash": "73542b3e",
+   "localHash": "73542b3e",
+   "liveLen": 340,
+   "localLen": 340
+  },
+  {
+   "name": "detail-stage-nine",
+   "same": true,
+   "liveHash": "bb997122",
+   "localHash": "bb997122",
+   "liveLen": 344,
+   "localLen": 344
+  },
+  {
+   "name": "detail-trillium",
+   "same": true,
+   "liveHash": "04e39090",
+   "localHash": "04e39090",
+   "liveLen": 346,
+   "localLen": 346
+  },
+  {
+   "name": "detail-white-graphics-brochure",
+   "same": true,
+   "liveHash": "9ce48baf",
+   "localHash": "9ce48baf",
+   "liveLen": 345,
+   "localLen": 345
+  },
+  {
+   "name": "detail-arata",
+   "same": true,
+   "liveHash": "0d3bff50",
+   "localHash": "0d3bff50",
+   "liveLen": 288,
+   "localLen": 288
+  },
+  {
+   "name": "detail-dot-and-key",
+   "same": true,
+   "liveHash": "6490b576",
+   "localHash": "6490b576",
+   "liveLen": 310,
+   "localLen": 310
+  },
+  {
+   "name": "detail-euphoria-campaign",
+   "same": true,
+   "liveHash": "f1c5f3d5",
+   "localHash": "f1c5f3d5",
+   "liveLen": 346,
+   "localLen": 346
+  },
+  {
+   "name": "detail-learnbay",
+   "same": true,
+   "liveHash": "b6361bdd",
+   "localHash": "b6361bdd",
+   "liveLen": 325,
+   "localLen": 325
+  },
+  {
+   "name": "detail-new-herbs",
+   "same": true,
+   "liveHash": "fb6331cc",
+   "localHash": "fb6331cc",
+   "liveLen": 328,
+   "localLen": 328
+  },
+  {
+   "name": "detail-nirmalaya",
+   "same": true,
+   "liveHash": "6d44f0bc",
+   "localHash": "6d44f0bc",
+   "liveLen": 329,
+   "localLen": 329
+  },
+  {
+   "name": "detail-organic-b",
+   "same": true,
+   "liveHash": "101ea5c3",
+   "localHash": "101ea5c3",
+   "liveLen": 330,
+   "localLen": 330
+  },
+  {
+   "name": "detail-rustic-art",
+   "same": true,
+   "liveHash": "91b12040",
+   "localHash": "91b12040",
+   "liveLen": 330,
+   "localLen": 330
+  },
+  {
+   "name": "detail-satthwa",
+   "same": true,
+   "liveHash": "fb90b5d4",
+   "localHash": "fb90b5d4",
+   "liveLen": 321,
+   "localLen": 321
+  },
+  {
+   "name": "detail-ustraa",
+   "same": true,
+   "liveHash": "80128152",
+   "localHash": "80128152",
+   "liveLen": 317,
+   "localLen": 317
+  },
+  {
+   "name": "detail-editorial-posters",
+   "same": true,
+   "liveHash": "d514d45c",
+   "localHash": "d514d45c",
+   "liveLen": 323,
+   "localLen": 323
+  },
+  {
+   "name": "detail-euphoria-website",
+   "same": true,
+   "liveHash": "14189707",
+   "localHash": "14189707",
+   "liveLen": 404,
+   "localLen": 404
+  },
+  {
+   "name": "detail-grc",
+   "same": true,
+   "liveHash": "1cbb7fba",
+   "localHash": "1cbb7fba",
+   "liveLen": 428,
+   "localLen": 428
+  },
+  {
+   "name": "detail-marsa-atelier",
+   "same": true,
+   "liveHash": "71d26b4c",
+   "localHash": "71d26b4c",
+   "liveLen": 405,
+   "localLen": 405
+  },
+  {
+   "name": "detail-najd-sands",
+   "same": true,
+   "liveHash": "6b3ec89e",
+   "localHash": "6b3ec89e",
+   "liveLen": 372,
+   "localLen": 372
+  }
+ ],
+ "gridAllErrors": [
+  "TypeError: Cannot read properties of undefined (reading 'description')\n    at ui (http://127.0.0.1:4173/assets/index-Yj9FpTjx.js:11:103830)\n    at ns (http://127.0.0.1:4173/assets/index-Yj9FpTjx.js:8:49195)\n    at Jc (http://127.0.0.1:4173/assets/index-Yj9FpTjx.js:8:71881)\n    at hl (http://127.0.0.1:4173/assets/index-Yj9FpTjx.js:8:82793)\n    at Zd (http://127.0.0.1:4173/assets/index-Yj9FpTjx.js:8:127978)\n    at Jd (http://127.0.0.1:4173/assets/index-Yj9FpTjx.js:8:127061)\n    at qd (http://127.0.0.1:4173/assets/index-Yj9FpTjx.js:8:126900)\n    at Fd (http://127.0.0.1:4173/assets/index-Yj9FpTjx."
+ ],
+ "gridAllHtml": "\n    <div id=\"root\"></div>\n  \n\n"
+}

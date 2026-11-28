@@ -1,0 +1,34 @@
+{
+ "url": "http://127.0.0.1:4173/#/projects/ai/skills-library",
+ "title": "Raqeeb Hussain - Graphic & Visual Designer",
+ "description": "Raqeeb Hussain is a graphic and visual designer based in Dammam, Saudi Arabia. Specializing in brand identity, presentation design, social media creative, and digital experiences.",
+ "h1": [
+  "Skills Library"
+ ],
+ "h2": [
+  "Live Systems & Interactive Architecture",
+  "Stack",
+  "Architecture",
+  "Skill Authoring & Governance Framework",
+  "Responsible Agent Seat",
+  "Procedural Skills & Capabilities",
+  "Demonstrations & Video Telemetry"
+ ],
+ "h3": [
+  "Interactive Skills Path Dataflow",
+  "Standardized SKILL.md",
+  "Triple Provenance",
+  "Curator Hygiene Gate",
+  "steward (Fleet maintainer & skills custodian)"
+ ],
+ "textLen": 2276,
+ "text": "RAQEEB HUSSAIN\nABOUT\nPROCESS\nPROJECTS\nRESUME\n← Back to AI & Automation\nSKILLS LIBRARY\n\nSkill authoring & governance\n\nLIVE\n\nStandardized procedural memory framework replacing lossy session context with verifiable, versioned SKILL.md packages. Built on a triple-provenance model (upstream adaptation, per-profile projection, and internal operational capture) governed by automated curator hygiene.\n\nLIVE SYSTEMS & INTERACTIVE ARCHITECTURE\nDIAGRAM\nOPEN VIEWER ↗\nInteractive Skills Path Dataflow\n\nassets/ai/diagrams/platform/fig1-skills-path.html\n\nSTACK\nSKILL.md\nYAML Frontmatter\nGit\nHermes Agent\nARCHITECTURE\nSystem architecture diagram\nOpen interactive viewer\nSKILL AUTHORING & GOVERNANCE FRAMEWORK\n01 / SPECIFICATION\nStandardized SKILL.md\n\nEvery skill encapsulates YAML frontmatter (name, trigger, version, tags) with rigorous step-by-step procedures, references, and validation scripts.\n\n02 / PROVENANCE\nTriple Provenance\n\nMaintained via upstream adaptation (UPSTREAM_MANIFEST.md), seat projection (PROJECTION_MANIFEST.json), and operational runbook capture.\n\n03 / VERIFICATION\nCurator Hygiene Gate\n\nAutomated curator sweeps eliminate stale instructions, enforce Rule 0 gates, and audit live tool usage across all agent seats.\n\nomh-skill-health\nROADMAP\n\nOMH plugin capability scoring and skill portfolio health auditing (Roadmap).\n\nomh-skill-scout\nROADMAP\n\nSkill reuse discovery and redundancy prevention before authoring new skills (Roadmap).\n\nRESPONSIBLE AGENT SEAT\nsteward (Fleet maintainer & skills custodian)\n\nAutonomous profile assigned to execute and govern this domain with bounded tool access and dedicated memory isolation.\n\nPROCEDURAL SKILLS & CAPABILITIES\nskill-maintainer\nINSTALLED\n\nTrack upstream drift, sync, and publish adapted skill libraries across seats (meta-skill).\n\nomh-skill-health\nROADMAP\n\nOMH plugin capability scoring and skill portfolio health auditing (Roadmap).\n\nomh-skill-scout\nROADMAP\n\nSkill reuse discovery and redundancy prevention before authoring new skills (Roadmap).\n\nDEMONSTRATIONS & VIDEO TELEMETRY\nDemo video coming soon. Awaiting founder production footage\nAGENT FLEET\nORIO OPERATIONS\n\nAvailable for freelance, contract and full-time opportunities. Let's talk\n\nBrand Identity • Presentations • Social Media • Websites • AI & Automation",
+ "imgs": 1,
+ "imgsNoAlt": 0,
+ "bundle": [
+  "/assets/index-Yj9FpTjx.js"
+ ],
+ "name": "detail-skills-library",
+ "env": "local",
+ "errs": []
+}

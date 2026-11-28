@@ -1,0 +1,476 @@
+[
+ {
+  "name": "home",
+  "hash": "#/",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "I CREATEVISUAL SYSTEMSFOR BRANDS & DIGITALEXPERIENCES"
+  ],
+  "textLen": 506,
+  "errs": 0,
+  "failed": 2,
+  "placeholders": []
+ },
+ {
+  "name": "about",
+  "hash": "#/about",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "RaqeebHussain"
+  ],
+  "textLen": 1704,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "process",
+  "hash": "#/process",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "How IWork"
+  ],
+  "textLen": 1437,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "projects",
+  "hash": "#/projects",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "SelectedWork"
+  ],
+  "textLen": 3338,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": [
+   "coming soon",
+   "coming soon",
+   "coming soon",
+   "coming soon",
+   "coming soon",
+   "coming soon",
+   "coming soon"
+  ]
+ },
+ {
+  "name": "resume",
+  "hash": "#/resume",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Raqeeb Hussain"
+  ],
+  "textLen": 1129,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "grid-brand-identity",
+  "hash": "#/projects/brand-identity",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Brand Identity"
+  ],
+  "textLen": 386,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "grid-presentation-design",
+  "hash": "#/projects/presentation-design",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Presentation Design"
+  ],
+  "textLen": 373,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "grid-social-media",
+  "hash": "#/projects/social-media",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Social Media"
+  ],
+  "textLen": 382,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "grid-websites",
+  "hash": "#/projects/websites",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Websites"
+  ],
+  "textLen": 374,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "grid-ai",
+  "hash": "#/projects/ai",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "AI & Automation"
+  ],
+  "textLen": 409,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "grid-all",
+  "hash": "#/projects/all",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [],
+  "textLen": 0,
+  "errs": 1,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-buyology",
+  "hash": "#/projects/brand-identity/buyology",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Buyology"
+  ],
+  "textLen": 411,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-euphoria-experiences-brand",
+  "hash": "#/projects/brand-identity/euphoria-experiences-brand",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Euphoria Experiences"
+  ],
+  "textLen": 337,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-blaize",
+  "hash": "#/projects/presentation-design/blaize",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Blaize Technical Proposal"
+  ],
+  "textLen": 335,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-chashmawala",
+  "hash": "#/projects/presentation-design/chashmawala",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Dr. Chashmawala Proposal"
+  ],
+  "textLen": 386,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-flowserve",
+  "hash": "#/projects/presentation-design/flowserve",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Flowserve Event Presentation"
+  ],
+  "textLen": 371,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-jalal",
+  "hash": "#/projects/presentation-design/jalal",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Jalal Event Presentation"
+  ],
+  "textLen": 371,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-shafa-al-shams",
+  "hash": "#/projects/presentation-design/shafa-al-shams",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Shafa Al Shams"
+  ],
+  "textLen": 345,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-stage-nine",
+  "hash": "#/projects/presentation-design/stage-nine",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Stage Nine"
+  ],
+  "textLen": 349,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-trillium",
+  "hash": "#/projects/presentation-design/trillium",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Trillium Event Proposal"
+  ],
+  "textLen": 351,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-white-graphics-brochure",
+  "hash": "#/projects/presentation-design/white-graphics-brochure",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "White Graphics Brochure"
+  ],
+  "textLen": 350,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-arata",
+  "hash": "#/projects/social-media/arata",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Arata Campaign"
+  ],
+  "textLen": 293,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-dot-and-key",
+  "hash": "#/projects/social-media/dot-and-key",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Dot & Key Campaign"
+  ],
+  "textLen": 315,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-euphoria-campaign",
+  "hash": "#/projects/social-media/euphoria-campaign",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Euphoria Campaign"
+  ],
+  "textLen": 351,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-learnbay",
+  "hash": "#/projects/social-media/learnbay",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Learnbay Campaign"
+  ],
+  "textLen": 330,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-new-herbs",
+  "hash": "#/projects/social-media/new-herbs",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "New Herbs Campaign"
+  ],
+  "textLen": 333,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-nirmalaya",
+  "hash": "#/projects/social-media/nirmalaya",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Nirmalaya Campaign"
+  ],
+  "textLen": 334,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-organic-b",
+  "hash": "#/projects/social-media/organic-b",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Organic B Campaign"
+  ],
+  "textLen": 335,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-rustic-art",
+  "hash": "#/projects/social-media/rustic-art",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Rustic Art Campaign"
+  ],
+  "textLen": 335,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-satthwa",
+  "hash": "#/projects/social-media/satthwa",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Satthwa Campaign"
+  ],
+  "textLen": 326,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-ustraa",
+  "hash": "#/projects/social-media/ustraa",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Ustraa Campaign"
+  ],
+  "textLen": 322,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-editorial-posters",
+  "hash": "#/projects/social-media/editorial-posters",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Editorial Posters"
+  ],
+  "textLen": 328,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-euphoria-website",
+  "hash": "#/projects/websites/euphoria-website",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Euphoria Experiences Website"
+  ],
+  "textLen": 409,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-grc",
+  "hash": "#/projects/websites/grc",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "GRC Website Evolution"
+  ],
+  "textLen": 433,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-marsa-atelier",
+  "hash": "#/projects/websites/marsa-atelier",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Marsa Atelier"
+  ],
+  "textLen": 410,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ },
+ {
+  "name": "detail-najd-sands",
+  "hash": "#/projects/websites/najd-sands",
+  "ok": true,
+  "title": "Raqeeb Hussain - Graphic & Visual Designer",
+  "h1": [
+   "Najd Sands"
+  ],
+  "textLen": 377,
+  "errs": 0,
+  "failed": 0,
+  "placeholders": []
+ }
+]

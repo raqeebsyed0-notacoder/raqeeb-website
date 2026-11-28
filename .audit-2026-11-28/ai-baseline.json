@@ -1,0 +1,178 @@
+[
+ {
+  "name": "detail-agent-fleet",
+  "env": "live",
+  "ok": true,
+  "h1": [
+   "Agent Fleet"
+  ],
+  "len": 1652,
+  "errs": 0
+ },
+ {
+  "name": "detail-skills-library",
+  "env": "live",
+  "ok": true,
+  "h1": [
+   "Skills Library"
+  ],
+  "len": 2276,
+  "errs": 0
+ },
+ {
+  "name": "detail-orio-operations",
+  "env": "live",
+  "ok": true,
+  "h1": [
+   "OrIO Operations"
+  ],
+  "len": 1631,
+  "errs": 0
+ },
+ {
+  "name": "detail-leadjin-portal",
+  "env": "live",
+  "ok": true,
+  "h1": [
+   "LeadJin"
+  ],
+  "len": 1387,
+  "errs": 0
+ },
+ {
+  "name": "detail-approval-inbox",
+  "env": "live",
+  "ok": true,
+  "h1": [
+   "Approval Inbox"
+  ],
+  "len": 1289,
+  "errs": 0
+ },
+ {
+  "name": "detail-paperclip-plugin",
+  "env": "live",
+  "ok": true,
+  "h1": [
+   "Paperclip Plugin"
+  ],
+  "len": 1317,
+  "errs": 0
+ },
+ {
+  "name": "detail-hermes-engine",
+  "env": "live",
+  "ok": true,
+  "h1": [
+   "Hermes Runtime Integration"
+  ],
+  "len": 1341,
+  "errs": 0
+ },
+ {
+  "name": "detail-automations",
+  "env": "live",
+  "ok": true,
+  "h1": [
+   "Automations"
+  ],
+  "len": 1375,
+  "errs": 0
+ },
+ {
+  "name": "grid-all",
+  "env": "live",
+  "ok": true,
+  "h1": [],
+  "len": 0,
+  "errs": 1
+ },
+ {
+  "name": "detail-agent-fleet",
+  "env": "local",
+  "ok": true,
+  "h1": [
+   "Agent Fleet"
+  ],
+  "len": 1652,
+  "errs": 0
+ },
+ {
+  "name": "detail-skills-library",
+  "env": "local",
+  "ok": true,
+  "h1": [
+   "Skills Library"
+  ],
+  "len": 2276,
+  "errs": 0
+ },
+ {
+  "name": "detail-orio-operations",
+  "env": "local",
+  "ok": true,
+  "h1": [
+   "OrIO Operations"
+  ],
+  "len": 1631,
+  "errs": 0
+ },
+ {
+  "name": "detail-leadjin-portal",
+  "env": "local",
+  "ok": true,
+  "h1": [
+   "LeadJin"
+  ],
+  "len": 1387,
+  "errs": 0
+ },
+ {
+  "name": "detail-approval-inbox",
+  "env": "local",
+  "ok": true,
+  "h1": [
+   "Approval Inbox"
+  ],
+  "len": 1289,
+  "errs": 0
+ },
+ {
+  "name": "detail-paperclip-plugin",
+  "env": "local",
+  "ok": true,
+  "h1": [
+   "Paperclip Plugin"
+  ],
+  "len": 1317,
+  "errs": 0
+ },
+ {
+  "name": "detail-hermes-engine",
+  "env": "local",
+  "ok": true,
+  "h1": [
+   "Hermes Runtime Integration"
+  ],
+  "len": 1341,
+  "errs": 0
+ },
+ {
+  "name": "detail-automations",
+  "env": "local",
+  "ok": true,
+  "h1": [
+   "Automations"
+  ],
+  "len": 1375,
+  "errs": 0
+ },
+ {
+  "name": "grid-all",
+  "env": "local",
+  "ok": true,
+  "h1": [],
+  "len": 0,
+  "errs": 1
+ }
+]
