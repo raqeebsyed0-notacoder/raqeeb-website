@@ -40,7 +40,7 @@ const PAGES: Record<string, { title: string; description: string }> = {
   '/projects': {
     title: 'Work — AI Systems and Design Projects | Raqeeb Hussain',
     description:
-      'Seven AI systems and twenty-five design projects: agent fleets, CRM lead generation, operations consoles, approval layers, brand identity, presentations and campaigns.',
+      'Eight AI systems and twenty-five design projects: agent fleets, CRM lead generation, operations consoles, approval layers, brand identity, presentations and campaigns.',
   },
   '/resume': {
     title: 'Resume — Raqeeb Hussain, AI Implementation Specialist',
